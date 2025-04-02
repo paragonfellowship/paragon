@@ -197,7 +197,7 @@ export const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
 export const AIRTABLE_URL = process.env.AIRTABLE_URL;
 export const MAIL_LIST_URL = "https://forms.gle/hAVRwpTkid44jAZY8"
 export const NEWSLETTER_URL = "https://paragonpolicyfellowship.substack.com/"
-export const FA_APP_URL = "https://airtable.com/appD9YuZjLzgT3p58/pagnaXfOC5ByK0hoY/form"
+export const FA_APP_URL = "https://airtable.com/appDqtLGrF88LO8wI/pag6HK7ZRduVx50bk/form"
 
 export type MenuOption = {
     name: string,
