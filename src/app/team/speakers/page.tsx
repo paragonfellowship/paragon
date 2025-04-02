@@ -65,7 +65,7 @@ import BgGrid from "@/components/BgGrid"
 import { RiArrowDownLine } from "react-icons/ri"
 import { Heading } from "@/components/Typography"
 import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '@/constants'
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '@/app/constants'
 import TopBar from '@/components/TopBar'
 
 const NO_REGION = "";

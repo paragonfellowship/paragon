@@ -62,7 +62,7 @@ import Footer, { FooterLink, FooterSection } from '@/components/Footer'
 import Image from "next/image"
 import { ElementType } from "react"
 import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '../../constants'
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '@/app/constants'
 import TopBar from '@/components/TopBar'
 import BgGrid from "@/components/BgGrid"
 import { Heading } from "@/components/Typography"
