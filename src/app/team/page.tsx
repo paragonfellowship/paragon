@@ -58,7 +58,7 @@ interface PersonRecord {
 }
 
 import Card from "@/components/Card"
-import Footer, { FooterLink, FooterSection } from '@/components/Footer'
+import Footer from '@/components/Footer'
 import Image from "next/image"
 import { ElementType } from "react"
 import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
@@ -128,13 +128,7 @@ export default async function Team() {
             <TeamSection title="Organizing Team" peopleByRegion={organizingByRegion} />
             <TeamSection title="Organizing Team Alumni" peopleByRegion={formerByRegion} />
         </main>
-        <Footer>
-            <FooterSection title='Our Organization'>
-                <FooterLink href='/'>Home</FooterLink>
-                <FooterLink href='/team'>Team Directory</FooterLink>
-                <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-            </FooterSection>
-        </Footer>
+        <Footer/>
     </>
 }
 

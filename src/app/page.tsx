@@ -2,7 +2,7 @@ import Section from "@/components/Section";
 import { Subheading, Text } from '@/components/Typography';
 import Image from "next/image";
 import Carousel from '@/components/Carousel';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import TopBar from '@/components/TopBar';
 import {governments} from '@/app/constants';
@@ -52,7 +52,7 @@ export default function Home() {
       <Subheading>Our Reach</Subheading>
       <GrayDivider />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 w-full py-8 md:py-16 px-4">
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="flex flex-col items-center text-center">
           <TickText text={202} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             <span className="font-bold">fellows</span> placed on{" "}
@@ -60,20 +60,20 @@ export default function Home() {
             <span className="font-bold">80+</span> colleges and universities nationally
           </p>
         </div>
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="flex flex-col items-center text-center">
           <TickText text={60} suffix="%" className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             identify as <span className="font-bold">underrepresented</span> in
             technology and policy
           </p>
         </div>
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <TickText text={7500} className="text-5xl md:text-7xl font-bold text-black" />
+        <div className="flex flex-col items-center text-center">
+          <TickText text={14000} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             hours <span className="font-bold">volunteered</span> towards tech policy research
           </p>
         </div>
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="flex flex-col items-center text-center">
           <TickText text={17} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             established partnerships with state and local governments across{" "}
@@ -123,6 +123,7 @@ export default function Home() {
       <Section className='overflow-y-hidden'>
         <Subheading>Our Partners</Subheading>
         <GrayDivider/>
+        <a href='/projects' className='text-blue-500 block w-full overflow-hidden'>
         <Carousel className='mt-10' speed={0.5}>
           {
             govLogos.map((logo, index) => (
@@ -130,13 +131,9 @@ export default function Home() {
             ))
           }
         </Carousel>
+        </a>
       </Section>
-      <Footer>
-        <FooterSection title='Our Organization'>
-          <FooterLink href='/team'>Team Directory</FooterLink>
-          <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-        </FooterSection>
-      </Footer>
+      <Footer/>
     </>
   );
 }

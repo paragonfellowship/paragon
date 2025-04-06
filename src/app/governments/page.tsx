@@ -1,5 +1,5 @@
 import Button from '@/components/Button';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
 import {governments} from '@/app/constants';
@@ -76,10 +76,10 @@ export default function About() {
 
       <div className="flex justify-center md:justify-end md:pr-20 pt-4 md:pt-10 mb-20 md:mb-0">
         <Button 
-          className="fade-in"
+          className="fade-in md:z-30"
           style="secondary"
           inNewTab 
-          url="mailto:internal@paragonfellowship.org"
+          url="https://forms.gle/Y2tckRZyg5Yice3f7"
         >
           Interest Form
         </Button>
@@ -92,7 +92,7 @@ export default function About() {
   </div>
 
   {/* Gradient overlay - desktop only */}
-  <div className="absolute -bottom-1 left-0 w-full h-1/5 bg-gradient-to-b from-transparent to-dark md:block hidden" />
+  {/* <div className="absolute -bottom-1 left-0 w-full h-1/5 bg-gradient-to-b from-transparent to-dark md:block hidden" /> */}
   
   {/* Background overlay */}
   <div className="absolute top-0 left-0 w-full h-full bg-[#050022] md:bg-opacity-65 bg-opacity-40 -z-10" />
@@ -106,7 +106,7 @@ export default function About() {
   <Subheading className='text-3xl md:text-5xl mb-4'>Our Impact</Subheading>
   {/* <GrayDivider /> */}
   <Text className="text-base md:text-lg">
-    Over the last year, Paragon has partnered with 11 governments across 8 states through 21 projects.
+    Over the last year, Paragon has partnered with 17 governments across 11 states through 28 projects.
   </Text>
   {/* <Text>Spring (5 new / 5 total): Boston; Lebanon, NH; Georgia; St. Louis, MO; San Jose, CA</Text>
    <Text>Summer (2 new / 7 total): CalHHS, Santa Clara</Text>
@@ -185,12 +185,7 @@ export default function About() {
       </Section>
 
 
-      <Footer>
-        <FooterSection title='Our Organization'>
-          <FooterLink href='/team'>Team Directory</FooterLink>
-          <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-        </FooterSection>
-      </Footer>
+      <Footer/>
 
     </div>
   );

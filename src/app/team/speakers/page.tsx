@@ -58,7 +58,7 @@ interface PersonRecord {
 }
 
 import Card from "@/components/Card"
-import Footer, { FooterLink, FooterSection } from '@/components/Footer'
+import Footer from '@/components/Footer'
 import Image from "next/image"
 import { ElementType } from "react"
 import BgGrid from "@/components/BgGrid"
@@ -125,14 +125,7 @@ export default async function Team() {
             <TeamSection title="Invited Speakers" peopleByRegion={speakersByRegion} />  {/* New Section */}
         </main>
 
-        <Footer>
-            <FooterSection title='Our Organization'>
-                <FooterLink href='/'>Home</FooterLink>
-                <FooterLink href='/team'>Team Directory</FooterLink>
-                <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-                <FooterLink href='/faq'>FAQs</FooterLink>
-            </FooterSection>
-        </Footer>
+        <Footer/>
     </>
 }
 

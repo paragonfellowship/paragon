@@ -1,9 +1,8 @@
-import { FA_APP_URL } from '@/app/constants';
 import CAPITOL_LINEART from '@/assets/capitol-lineart.png';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
-import {Subheading, Text } from '@/components/Typography';
+import {Subheading, Text, SmallText } from '@/components/Typography';
 import Image from 'next/image';
 
 export default function SJ() {
@@ -92,14 +91,24 @@ work includes:
           </Text>
         </Section>
   
-        <Footer>
-          <FooterSection title='Our Organization'>
-            <FooterLink href={FA_APP_URL}>Apply Now</FooterLink>
-            <FooterLink href='/team'>Team Directory</FooterLink>
-            <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-            <FooterLink href='/faq'>FAQs</FooterLink>
-          </FooterSection>
-        </Footer>
+        <Section>
+        <Subheading>Contributors</Subheading>
+          <div className='grid md:grid-cols-3 sm:grid-cols-2 gap-4'>
+            {[
+              { name: 'Favour Nerrise', role: 'Project Lead', school: 'Stanford University'},
+              { name: 'Minh Phan', role: 'Fellow', school: 'UCLA'},
+              { name: 'Shruti Verma', role: 'Fellow', school: 'Stanford University'},
+            ].map((contributor, index) => (
+              <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
+                <Text className='text-center font-semibold'>{contributor.name}</Text>
+                <SmallText className='text-center'>{contributor.role}</SmallText>
+                <SmallText className='text-center'>{contributor.school}</SmallText>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Footer/>
       </>
     );
   }

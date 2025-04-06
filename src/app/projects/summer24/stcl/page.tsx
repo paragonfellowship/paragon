@@ -1,7 +1,5 @@
-
-import { FA_APP_URL } from '@/app/constants';
 import CAPITOL_LINEART from '@/assets/capitol-lineart.png';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
 import { SmallText, Subheading, Text } from '@/components/Typography';
@@ -61,30 +59,24 @@ export default function STCL() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-3 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Prince Osaj', role: 'Project Lead' },
-            { name: 'Wendy Zeng', role: 'Associate Project Lead' },
-            { name: 'Sarah Lawson Pitler', role: 'Associate Project Lead' },
-            { name: 'Ches Weinfeld', role: 'Fellow' },
-            { name: 'Eric Ye', role: 'Fellow' },
-            { name: 'Vimala Machiraju', role: 'Fellow' },
-            { name: 'Ngoc-Mai Huynh', role: 'Fellow' }
+            { name: 'Prince Osaj', role: 'Project Lead', school: 'Yale University' },
+            { name: 'Wendy Zeng', role: 'Associate Project Lead', school: 'UC Berkeley' },
+            { name: 'Sarah Lawson Pitler', role: 'Associate Project Lead', school: 'University of North Texas' },
+            { name: 'Ches Weinfeld', role: 'Fellow', school: 'Swarthmore University' },
+            { name: 'Eric Ye', role: 'Fellow', school: 'University of Southern California' },
+            { name: 'Vimala Machiraju', role: 'Fellow', school: 'UC Irvine' },
+            { name: 'Ngoc-Mai Huynh', role: 'Fellow', school: 'Howard University' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
               <Text className='text-center font-semibold'>{contributor.name}</Text>
               <SmallText className='text-center'>{contributor.role}</SmallText>
+              <SmallText className='text-center'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>
       </Section>
 
-      <Footer>
-        <FooterSection title='Our Organization'>
-          <FooterLink href={FA_APP_URL}>Apply Now</FooterLink>
-          <FooterLink href='/team'>Team Directory</FooterLink>
-          <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-          <FooterLink href='/faq'>FAQs</FooterLink>
-        </FooterSection>
-      </Footer>
+      <Footer/>
     </>
   );
 }

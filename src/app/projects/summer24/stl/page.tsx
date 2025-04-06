@@ -1,5 +1,5 @@
 import CAPITOL_LINEART from '@/assets/capitol-lineart.png';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar'; 
 import {SmallText, Subheading, Text} from '@/components/Typography'; 
@@ -74,32 +74,26 @@ export default function STL() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-3 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Lucas Fluegel', role: 'Project Lead' },
-            { name: 'Rachel Arnold', role: 'Fellow' },
-            { name: 'Rhea Banerjee', role: 'Fellow' },
-            { name: 'Wil Czeschin', role: 'Fellow' },
-            { name: 'Devashri Khadke', role: 'Fellow' },
-            { name: 'Deepali Paasham', role: 'Fellow' },
-            { name: 'Eman Teshome', role: 'Fellow' },
-            { name: 'Marvel Zhou', role: 'Fellow' }
+            { name: 'Lucas Fluegel', role: 'Project Lead', school: "University of Minnesota"},
+            { name: 'Rachel Arnold', role: 'Fellow', school: 'Hunter College' },
+            { name: 'Rhea Banerjee', role: 'Fellow', school: 'Georgetown University' },
+            { name: 'Wil Czeschin', role: 'Fellow', school: 'University of Missouri' },
+            { name: 'Devashri Khadke', role: 'Fellow', school: 'University of Chicago' },
+            { name: 'Deepali Paasham', role: 'Fellow', school: 'University of North Carolina at Chapel Hill' },
+            { name: 'Eman Teshome', role: 'Fellow', school: 'Washington University in St. Louis' },
+            { name: 'Marvel Zhou', role: 'Fellow', school: 'Ohio State University' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
               <Text className='text-center font-semibold'>{contributor.name}</Text>
               <SmallText className='text-center'>{contributor.role}</SmallText>
+              <SmallText className='text-center'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>
       </Section>
 
       {/* Footer */}
-      <Footer>
-        <FooterSection title='Our Organization'>
-          <FooterLink href=''>Apply Now</FooterLink>
-          <FooterLink href='/team'>Team Directory</FooterLink>
-          <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-          <FooterLink href='/faq'>FAQs</FooterLink>
-        </FooterSection>
-      </Footer>
+      <Footer/>
     </>
   );
 }

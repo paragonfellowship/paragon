@@ -17,11 +17,11 @@ import bostonLogo from '@/assets/governments/Boston.png';
 import stLouisLogo from '@/assets/governments/StLouis.png';
 import georgiaLogo from '@/assets/governments/Georgia.png';
 import losAngelesLogo from '@/assets/governments/LosAngeles.png';
-import southBendLogo from '@/assets/governments/SouthBend.png';
-import oaklandLogo from '@/assets/governments/Oakland.png';
+//import southBendLogo from '@/assets/governments/SouthBend.png';
+//import oaklandLogo from '@/assets/governments/Oakland.png';
 // import nycLogo from '@/assets/governments/NYC.png';
-import southCarolinaLogo from '@/assets/governments/SouthCarolina.png';
-import doeLogo from '@/assets/governments/DoE.png';
+//import southCarolinaLogo from '@/assets/governments/SouthCarolina.png';
+// import doeLogo from '@/assets/governments/DoE.png';
 import tempeLogo from '@/assets/governments/Tempe.png'; 
 import santaClaraLogo from '@/assets/governments/Santa Clara.png';
 import sanJoseLogo from '@/assets/governments/SanJose.png'; 
@@ -29,12 +29,28 @@ import lebanonLogo from '@/assets/governments/Lebanon.png';
 import AlbuquerqueLogo from '@/assets/governments/Albuquerque Logo.png';
 import AlexandriaLogo from '@/assets/governments/Alexandria Logo.png';
 import CDIILogo from '@/assets/governments/CDII Logo.png';
-import FortlauderdaleLogo from '@/assets/governments/Fort Lauderdale.png';
+//import FortlauderdaleLogo from '@/assets/governments/Fort Lauderdale.png';
 import MadisonLogo from '@/assets/governments/Madison.png';
 import MissoulaLogo from '@/assets/governments/Missoula.png';
 import MontanaSITSDLogo from '@/assets/governments/Montana SITSD.png';
+import USStateLogo from '@/assets/governments/US State Logo.png';
 import { StaticImageData } from 'next/image';
-
+//San Jose,
+//Santa Clara County, 
+//LA, 
+//CA HHS, 
+//Tempe, 
+//Albuquerque, 
+//Montana, 
+//Missoula, 
+//St. Louis, 
+//Georgia, 
+//Boston, 
+//Lebanon, 
+//State department, 
+//Alexandria, 
+//Madison, 
+//Brownsville
 export const governments: {
     [key: string]: {
         name: string,
@@ -65,26 +81,26 @@ export const governments: {
         name: 'Los Angeles',
         logo: losAngelesLogo
     },
-    southBend: {
-        name: 'South Bend',
-        logo: southBendLogo
-    },
-    oakland: {
-        name: 'Oakland',
-        logo: oaklandLogo
-    },
+    // southBend: {
+    //     name: 'South Bend',
+    //     logo: southBendLogo
+    // },
+    // oakland: {
+    //     name: 'Oakland',
+    //     logo: oaklandLogo
+    // },
     // nyc: {
     //     name: 'New York City',
     //     logo: nycLogo
     // },
-    southCarolina: {
-        name: 'South Carolina',
-        logo: southCarolinaLogo
-    },
-    doe: {
-        name: 'Department of Energy',
-        logo: doeLogo
-    },
+    // southCarolina: {
+    //     name: 'South Carolina',
+    //     logo: southCarolinaLogo
+    // },
+    // doe: {
+    //     name: 'Department of Energy',
+    //     logo: doeLogo
+    // },
     tempe: {
         name: 'Tempe',
         logo: tempeLogo
@@ -113,10 +129,10 @@ export const governments: {
         name: 'CDII',
         logo: CDIILogo
     },
-    Fortlauderdale: {
-        name: 'Fortlauderdale',
-        logo: FortlauderdaleLogo
-    },
+    // Fortlauderdale: {
+    //     name: 'Fortlauderdale',
+    //     logo: FortlauderdaleLogo
+    // },
     Madison: {
         name: 'Madison',
         logo: MadisonLogo
@@ -129,6 +145,10 @@ export const governments: {
         name: 'MontanaSITSD',
         logo: MontanaSITSDLogo
     },
+    USStateDepartment: {
+        name: 'US Department of State',
+        logo: USStateLogo
+    }
 };
 
 export const colleges: {
@@ -198,6 +218,8 @@ export const AIRTABLE_URL = process.env.AIRTABLE_URL;
 export const MAIL_LIST_URL = "https://forms.gle/hAVRwpTkid44jAZY8"
 export const NEWSLETTER_URL = "https://paragonpolicyfellowship.substack.com/"
 export const FA_APP_URL = "https://airtable.com/appDqtLGrF88LO8wI/pag6HK7ZRduVx50bk/form"
+export const INFO_SESSION_URL = "https://forms.gle/6219w6s3B8r4gD3m7"
+
 
 export type MenuOption = {
     name: string,

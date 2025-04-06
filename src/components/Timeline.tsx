@@ -10,13 +10,13 @@ export default function Timeline({ events }: { events: TimelineEvent[] }) {
   return (
     <div className="w-full overflow-x-hidden">
       {/* Desktop Timeline */}
-      <div className="hidden md:flex relative items-center justify-between w-full py-8">
+      <div className="hidden lg:flex relative items-center justify-between w-full py-8">
         {/* Line connecting the events */}
         <div className="absolute transform -translate-y-8 w-full h-1 bg-gray-200 z-0"></div>
         
         {/* Render each event */}
         {events.map((event, index) => (
-          <div key={index} className="relative z-10 flex flex-col items-center">
+          <div key={index} className="relative z-10 flex flex-col mt-1 items-center">
             {/* Diamond Icon */}
             <div className="w-4 h-4 bg-blue-500 transform rotate-45 mb-2"></div>
             {/* Event Date */}
@@ -30,7 +30,7 @@ export default function Timeline({ events }: { events: TimelineEvent[] }) {
       </div>
 
       {/* Mobile Timeline */}
-      <div className="md:hidden flex flex-col space-y-8 py-4 relative">
+      <div className="lg:hidden flex flex-col space-y-8 py-4 relative">
         {/* Vertical line */}
         <div className="absolute left-4 top-0 bottom-0 w-1 bg-gray-200"></div>
         
