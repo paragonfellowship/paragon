@@ -25,7 +25,7 @@ export default function Projects() {
           </Text>
           
           <Text className="text-xl md:text-3xl md:text-right pt-0 md:pt-40 max-w-full px-4 md:ml-auto md:pr-20 font-semibold text-center">
-            View our past fellows&apos; work!
+            View our past Fellows&apos; work!
           </Text>
         </div>
 
@@ -68,16 +68,16 @@ export default function Projects() {
                   projectTitle="STUDENTS IN LEBANON CREATE AI AUDITING FRAMEWORK"
                 />
             </Link>
+			<Link href="/projects/sp24/bos" passHref>
+                <ProjectCard 
+                  timeline='2024 Spring cohort'
+                  projectTitle="BOSTON STUDENTS WORK ON TECH PROCUREMENT GUIDELINES" 
+                />
+            </Link>
             <Link href="/projects/sp24/sj" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
                   projectTitle="SAN JOSE STUDENTS TACKLE PUBLIC INTEGRITY AND AI" 
-                />
-            </Link>
-            <Link href="/projects/sp24/bos" passHref>
-                <ProjectCard 
-                  timeline='2024 Spring cohort'
-                  projectTitle="BOSTON STUDENTS WORK ON TECH PROCUREMENT GUIDELINES" 
                 />
             </Link>
             <Link href="/projects/sp24/sjg" passHref>
