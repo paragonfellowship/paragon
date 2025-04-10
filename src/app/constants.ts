@@ -291,10 +291,6 @@ export const colleges: {
         name: 'UCLA',
         logo: uclaLogo
     },
-	ucsd: {
-        name: 'UC San Diego',
-        logo: ucsdLogo
-    },
 	umaine: {
         name: 'University of Maine',
         logo: umaineLogo
