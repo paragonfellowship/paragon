@@ -150,29 +150,29 @@ export default function About() {
         <Subheading>FAQ</Subheading>
         <GrayDivider/>
         <div>
-        <FAQuestion
-          question="What are the expectations for government partners?"
-          answer="a. We ask that government partners be responsive over email and meet with the Paragon group once every two weeks. Government partners will also be asked to give feedback during a midpoint presentation and a final presentation. Partners are generally responsible for guiding the overall direction of the research."
+		<FAQuestion
+          question="How much does this Fellowship cost? What do I have to do to qualify?"
+          answer="Our work is entirely pro bono! To participate, all government partners must do is agree to virtually meet once every two weeks with the Fellows and provide feedback on their work. Partners are generally responsible for guiding the overall direction of the research."
         />
         <FAQuestion
           question="What can you expect to receive at the end?"
-          answer="a. Governments can expect a research or policy brief at the end of the program."
+          answer="Governments can expect a research or policy brief at the end of the program."
         />
         <FAQuestion
-          question="Will students be compensated for the project?"
-          answer="a. Government partners will not need to compensate students. Students are supported by philanthropic grants via our sponsors at PIT-UN, a Ford Foundation backed initiative, and RTYPF, a project of the Omidyar Network."
+          question="Will Fellows be compensated for the project?"
+          answer="Yes. All Fellows and Project Leads receive a stipend of $500. Paragon provides these stipends thanks to our philanthropic grants."
         />
         <FAQuestion
-          question="How are projects scoped?"
-          answer="a. Project proposals are brought by government partners according to their specific needs and refined in conjunction with the partnerships team. Our partnerships team works with you over the course of a few virtual meetings to understand your needs."
+          question="How do I select which kind of project I would like to do?"
+          answer="Our Partnerships team works with you over the course of a couple virtual meetings to determine your interests then provides you with project descriptions for each idea. After you select one, we refine it into a final Statement of Work."
         />
         <FAQuestion
           question="How long do the projects run?"
-          answer="a. Projects run for about 3 months each. However, government partners with longer term needs can explore recurring projects over the course of multiple cohorts."
+          answer="Projects run for about 3 months each. However, government partners with longer term needs can explore recurring projects over the course of multiple cohorts."
         />
         <FAQuestion
-          question="How many fellows typically work on a project?"
-          answer="a. Each project is supported by a dedicated team of 6-9 students from your area."
+          question="How many Fellows typically work on a project?"
+          answer="Each project is supported by a dedicated team of 5-8 Fellows and 1 Project Lead from your area."
         />
         </div>
       </Section>

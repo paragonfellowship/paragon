@@ -200,7 +200,7 @@ export default function About() {
           answer = "All students who will reside in the United States during the Fellowship and have work authorization are eligible to apply. We will work with international students to attempt to provide them a stipend, though we cannot guarantee this depending on the type of visa you possess."
         />
         <FAQuestion
-          question = "How can I learn more about the fellowship?"
+          question = "How can I learn more about the Fellowship?"
           answer = "Paragon will be hosting two info sessions to give applicants the opportunity to learn more about our mission, understand what the executive team looks for in competitive applications, and hear from our current members on their experiences in the Fellowship. Furthermore, we will be holding office hours a couple of days before the application closes to give you the opportunity to ask last-minute questions. RSVP to an info session or our office hours using the button below."
         />
       </Section>
@@ -208,7 +208,7 @@ export default function About() {
         <Subheading className='flex justify-center text-center'>What impact will you<br />make with Paragon?</Subheading>
         <div className='flex justify-center'>
           <Button url={FA_APP_URL} inNewTab className='mt-4 justify-center'>Apply Now</Button>
-          <Button url={INFO_SESSION_URL} inNewTab className='mt-4 ml-5 justify-center'>Join an Info Session</Button>
+          <Button url={INFO_SESSION_URL} inNewTab className='mt-4 ml-5 justify-center'>RSVP for an Info Session</Button>
         </div>
 
       </Section>

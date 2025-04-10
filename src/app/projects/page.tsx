@@ -25,7 +25,7 @@ export default function Projects() {
           </Text>
           
           <Text className="text-xl md:text-3xl md:text-right pt-0 md:pt-40 max-w-full px-4 md:ml-auto md:pr-20 font-semibold text-center">
-            View our past fellows&apos; work!
+            View our past Fellows&apos; work!
           </Text>
         </div>
 
@@ -42,11 +42,51 @@ export default function Projects() {
 
       <Section>
       <Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Our Projects </Text> 
-      <GrayDivider />
-      <Text className='md:text-2xl text-1xl uppercase font-semibold pt-2'>Summer 2024 </Text> 
+	  <div> </div>
+	  <Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Fall 2024 </Text> 
       <GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">
-            <Link href="/projects/summer24/stl" passHref>
+            <Link href="" passHref>
+                <ProjectCard 
+                  timeline='2024 Fall cohort'
+                  projectTitle="(Coming Soon) Federal Supercomputer Analysis" 
+                />
+            </Link> 
+            <Link href="" passHref>
+                <ProjectCard 
+                  timeline='2024 Fall cohort'
+                  projectTitle="(Coming Soon) Tempe AI Curriculum" 
+                />
+            </Link>
+			<Link href="" passHref>
+                <ProjectCard 
+                  timeline='2024 Fall cohort'
+                  projectTitle="(Coming Soon) Los Angeles CD3 Digital Accessibility" 
+                />
+            </Link>
+			<Link href="" passHref>
+                <ProjectCard 
+                  timeline='2024 Fall cohort'
+                  projectTitle="(Coming Soon) Santa Clara County AI Use Case Guidelines" 
+                />
+            </Link>
+        </div>
+      <Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Summer 2024 </Text> 
+      <GrayDivider />
+        <div className="grid md:grid-cols-3 gap-6 text-center">
+            <Link href="" passHref>
+                <ProjectCard 
+                  timeline='2024 Summer cohort'
+                  projectTitle="(Coming Soon) San José AI Risk Assessment Project" 
+                />
+            </Link> 
+			<Link href="" passHref>
+                <ProjectCard 
+                  timeline='2024 Summer cohort'
+                  projectTitle="(COMING SOON) Lebanon Accessibility Project" 
+                />
+            </Link> 
+			<Link href="/projects/summer24/stl" passHref>
                 <ProjectCard 
                   timeline='2024 Summer cohort'
                   projectTitle="ST. LOUIS STUDENTS EXAMINE TECH-POWERED Cultural DIVERSITY" 
@@ -68,22 +108,22 @@ export default function Projects() {
                   projectTitle="STUDENTS IN LEBANON CREATE AI AUDITING FRAMEWORK"
                 />
             </Link>
-            <Link href="/projects/sp24/sj" passHref>
-                <ProjectCard 
-                  timeline='2024 Spring cohort'
-                  projectTitle="SAN JOSE STUDENTS TACKLE PUBLIC INTEGRITY AND AI" 
-                />
-            </Link>
-            <Link href="/projects/sp24/bos" passHref>
+			<Link href="/projects/sp24/bos" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
                   projectTitle="BOSTON STUDENTS WORK ON TECH PROCUREMENT GUIDELINES" 
                 />
             </Link>
+            <Link href="/projects/sp24/sj" passHref>
+                <ProjectCard 
+                  timeline='2024 Spring cohort'
+                  projectTitle="SAN JOSé STUDENTS TACKLE PUBLIC INTEGRITY AND AI" 
+                />
+            </Link>
             <Link href="/projects/sp24/sjg" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="SAN JOSE STUDENTS PROTECT GOVERNMENT COMMUNICATION FROM AI" 
+                  projectTitle="SAN JOSé STUDENTS PROTECT GOVERNMENT COMMUNICATION FROM AI" 
                 />
             </Link>
             <Link href="/projects/sp24/stl" passHref>

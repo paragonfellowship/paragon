@@ -54,7 +54,7 @@ export default function TopBar() {
                 </div>
                 <div>
                   <Link href="/team/speakers">
-                    <MedText className="text-dark text-xl">Past Speakers</MedText>
+                    <MedText className="text-dark text-xl">Guest Speakers</MedText>
                   </Link>
                 </div>
                 <div>
@@ -102,7 +102,7 @@ export default function TopBar() {
                         className="block px-4 py-2 text-dark hover:bg-gray-100 flex items-center"
                       >
                         <RiArrowRightLine className="mr-2" />
-                        <span>Past Speakers</span>
+                        <span>Guest Speakers</span>
                       </Link>
                     </div>
                   </div>
