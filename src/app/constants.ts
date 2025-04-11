@@ -243,10 +243,10 @@ export const colleges: {
         name: 'Stanford University',
         logo: stanfordLogo
     },
-    ucsd: {
-        name: 'UC San Diego',
-        logo: ucsdLogo
-    },
+    // ucsd: {
+    //     name: 'UC San Diego',
+    //     logo: ucsdLogo
+    // },
     ucb: {
         name: 'UC Berkeley',
         logo: ucbLogo

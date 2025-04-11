@@ -42,8 +42,8 @@ export default function Projects() {
 
       <Section>
       <Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Our Projects </Text> 
-	  <div> </div>
-	  <Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Fall 2024 </Text> 
+	<div> </div>
+	<Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Fall 2024 </Text> 
       <GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">
             <Link href="" passHref>
