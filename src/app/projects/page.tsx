@@ -11,7 +11,7 @@ import ProjectCard from '@/components/ProjectCard';
 import GrayDivider from '@/components/GrayDivider';
 
 export default function Projects() {
-  return (
+  return (  
     <>
       <TopBar />
       <div
@@ -40,11 +40,11 @@ export default function Projects() {
         <div className="absolute top-0 left-0 w-full h-full bg-[#050022] md:bg-opacity-65 bg-opacity-40 -z-10" />
       </div>
 
-      <Section>
-      <Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Our Projects </Text> 
-	<div> </div>
+	<Section>
+	<Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Our Projects </Text> 
+	<div></div>
 	<Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Fall 2024 </Text> 
-      <GrayDivider />
+	<GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">
             <Link href="" passHref>
                 <ProjectCard 

@@ -25,6 +25,7 @@ import untLogo from '@/assets/colleges/unt.svg';
 import uscLogo from '@/assets/colleges/usc.svg';
 import yaleLogo from '@/assets/colleges/yale.svg';
 import utaLogo from '@/assets/colleges/uta.svg';
+import uillinoisucLogo from '@/assets/colleges/uillinois-uc.svg';
 */
 
 //these are the files when using seals
@@ -54,7 +55,7 @@ import untLogo from '@/assets/colleges/unt.png';
 import uscLogo from '@/assets/colleges/usc.png';
 import yaleLogo from '@/assets/colleges/yale.png';
 import utaLogo from '@/assets/colleges/uta.png';
-
+import uillinoisucLogo from '@/assets/colleges/uillinois-uc.png';
 
 
 // import maricopaLogo from '@/assets/governments/Maricopa.png';
@@ -291,10 +292,6 @@ export const colleges: {
         name: 'UCLA',
         logo: uclaLogo
     },
-	ucsd: {
-        name: 'UC San Diego',
-        logo: ucsdLogo
-    },
 	umaine: {
         name: 'University of Maine',
         logo: umaineLogo
@@ -310,6 +307,10 @@ export const colleges: {
 	uta: {
         name: 'University of Texas at Austin',
         logo: utaLogo
+    },
+	uillinoisuc: {
+        name: 'University of Illinois at Urbana-Champaign',
+        logo: uillinoisucLogo
     }
 }
 
