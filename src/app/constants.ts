@@ -57,7 +57,6 @@ import yaleLogo from '@/assets/colleges/yale.png';
 import utaLogo from '@/assets/colleges/uta.png';
 import uillinoisucLogo from '@/assets/colleges/uillinois-uc.png';
 
-
 // import maricopaLogo from '@/assets/governments/Maricopa.png';
 import brownsvilleLogo from '@/assets/governments/Brownsville.png';
 import bostonLogo from '@/assets/governments/Boston.png';
