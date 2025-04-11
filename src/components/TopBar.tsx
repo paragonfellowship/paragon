@@ -45,7 +45,7 @@ export default function TopBar() {
               {/* Mobile Menu Items - Centered */}
               <div className="md:hidden text-center space-y-6">
                 <Link href="/">
-                  <MedText className="text-dark text-xl">About</MedText>
+                  <MedText className="text-dark text-xl">Home</MedText>
                 </Link>
                 <div>
                   <Link href="/team">
@@ -54,7 +54,7 @@ export default function TopBar() {
                 </div>
                 <div>
                   <Link href="/team/speakers">
-                    <MedText className="text-dark text-xl">Past Speakers</MedText>
+                    <MedText className="text-dark text-xl">Guest Speakers</MedText>
                   </Link>
                 </div>
                 <div>
@@ -82,7 +82,7 @@ export default function TopBar() {
               {/* Desktop Menu Items */}
               <div className="hidden md:flex md:items-center md:space-x-8">
                 <Link href="/">
-                  <MedText className="text-white">About</MedText>
+                  <MedText className="text-white">Home</MedText>
                 </Link>
                 <div className="relative group">
                   <Link href="/team">
@@ -102,7 +102,7 @@ export default function TopBar() {
                         className="block px-4 py-2 text-dark hover:bg-gray-100 flex items-center"
                       >
                         <RiArrowRightLine className="mr-2" />
-                        <span>Past Speakers</span>
+                        <span>Guest Speakers</span>
                       </Link>
                     </div>
                   </div>

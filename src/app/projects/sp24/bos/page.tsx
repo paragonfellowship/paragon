@@ -1,6 +1,5 @@
-import { FA_APP_URL } from '@/app/constants';
 import CAPITOL_LINEART from '@/assets/capitol-lineart.png';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
 import { SmallText, Subheading, Text } from '@/components/Typography';
@@ -85,12 +84,12 @@ export default function BOS() {
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
             { name: 'Quinn Wilson', role: 'Project Lead', school: 'UC Berkeley' },
-            { name: 'Anahita Srinivasan', role: 'Research Lead', school: 'MIT' },
-            { name: 'Elisha Ham', role: 'Data Lead', school: 'Wellesley College' },
-            { name: 'Marie Zhang', role: 'Data Lead', school: 'Wellesley College' },
-            { name: 'Sarah Wu', role: 'Stakeholder Lead', school: 'Amherst College' },
-            { name: 'Sofia Rodriguez', role: 'Research Lead', school: 'Wellesley College' },
-            { name: 'Wanru Skuld Shao', role: 'Stakeholder/Client Lead', school: 'Northeastern University' }
+            { name: 'Anahita Srinivasan', role: 'Fellow', school: 'MIT' },
+            { name: 'Elisha Ham', role: 'Fellow', school: 'Wellesley College' },
+            { name: 'Marie Zhang', role: 'Fellow', school: 'Wellesley College' },
+            { name: 'Sarah Wu', role: 'Fellow', school: 'Amherst College' },
+            { name: 'Sofia Rodriguez', role: 'Fellow', school: 'Wellesley College' },
+            { name: 'Wanru Skuld Shao', role: 'Fellow', school: 'Northeastern University' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
               <Text className='text-center font-semibold'>{contributor.name}</Text>
@@ -101,14 +100,7 @@ export default function BOS() {
         </div>
       </Section>
 
-      <Footer>
-        <FooterSection title='Our Organization'>
-          <FooterLink href={FA_APP_URL}>Apply Now</FooterLink>
-          <FooterLink href='/team'>Team Directory</FooterLink>
-          <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-          <FooterLink href='/faq'>FAQs</FooterLink>
-        </FooterSection>
-      </Footer>
+      <Footer/>
     </>
   );
 }

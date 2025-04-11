@@ -1,6 +1,5 @@
-import { FA_APP_URL } from '@/app/constants';
 import CAPITOL_LINEART from '@/assets/capitol-lineart.png';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
 import { SmallText, Subheading, Text } from '@/components/Typography';
@@ -95,14 +94,7 @@ export default function SJ2() {
         </div>
       </Section>
 
-      <Footer>
-        <FooterSection title='Our Organization'>
-          <FooterLink href={FA_APP_URL}>Apply Now</FooterLink>
-          <FooterLink href='/team'>Team Directory</FooterLink>
-          <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-          <FooterLink href='/faq'>FAQs</FooterLink>
-        </FooterSection>
-      </Footer>
+      <Footer/>
 
     </>
   );

@@ -1,6 +1,5 @@
-import { FA_APP_URL } from '@/app/constants';
 import CAPITOL_LINEART from '@/assets/capitol-lineart.png';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
 import { SmallText, Subheading, Text } from '@/components/Typography';
@@ -86,29 +85,24 @@ export default function SJG() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            'Elijah Mercer',
-            'Kaitlyn Cui',
-            'Gene Kim',
-            'Houda Nait El Barj',
-            'Isabelle Anzabi',
-            'Jena Alsup',
-            'Payton Alaama'
-          ].map((name, index) => (
-            <div key={index} className='border border-gray-300 p-4 rounded-lg flex items-center justify-center'>
-              <Text className='text-center'>{name}</Text>
-            </div>
+            {name: 'Elijah Mercer', role: 'Project Lead', school: 'UC Berkeley'},
+            {name: 'Kaitlyn Cui', role: 'Fellow', school: "UCLA"},
+            {name: 'Gene Kim', role: 'Fellow', school: 'Stanford University'},
+            {name: 'Houda Nait El Barj', role: 'Fellow', school: 'Stanford University'},
+            {name: 'Isabelle Anzabi', role: 'Fellow', school: 'Stanford University'},
+            {name: 'Jena Alsup', role: 'Fellow', school: "California Institute of Technology"},
+            {name: 'Payton Alaama', role: 'Fellow', school: "UC Irvine"}
+          ].map((contributor, index) => (
+            <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
+            <Text className='text-center font-semibold'>{contributor.name}</Text>
+            <SmallText className='text-center'>{contributor.role}</SmallText>
+            <SmallText className='text-center'>{contributor.school}</SmallText>
+          </div>
           ))}
         </div>
       </Section>
 
-      <Footer>
-        <FooterSection title='Our Organization'>
-          <FooterLink href={FA_APP_URL}>Apply Now</FooterLink>
-          <FooterLink href='/team'>Team Directory</FooterLink>
-          <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-          <FooterLink href='/faq'>FAQs</FooterLink>
-        </FooterSection>
-      </Footer>
+      <Footer/>
 
     </>
   );

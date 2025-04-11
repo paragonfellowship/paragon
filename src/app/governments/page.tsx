@@ -1,8 +1,8 @@
 import Button from '@/components/Button';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
-import {governments} from '../../constants';
+import {governments} from '@/app/constants';
 import {Subheading, Text } from '@/components/Typography';
 import Image from 'next/image';
 import BgGrid from '@/components/BgGrid';
@@ -11,75 +11,75 @@ import GrayDivider from '@/components/GrayDivider';
 import Carousel from '@/components/Carousel';
 import Testimonials from '@/components/Testimonials';
 import FAQuestion from '@/components/FAQuestion';
-import Timeline from '@/components/Timeline';
+//import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
 
 const sections = [
-  { id: "impact", title: "01 OUR IMPACT" },
-  { id: "projects", title: "02 PAST PROJECTS" },
-  { id: "testimonials", title: "03 TESTIMONIALS" },
-  { id: "timeline", title: "04 PROJECT SCOPING & TIMELINE" },
-  { id: "faq", title: "05 FAQ" },
+  { id: "impact", title: "OUR IMPACT" },
+  // { id: "projects", title: "02 PAST PROJECTS" },
+  { id: "testimonials", title: "TESTIMONIALS" },
+  //{ id: "timeline", title: "03 PROJECT SCOPING & TIMELINE" },
+  { id: "faq", title: "FAQ" },
 ];
 
-const events = [
-  {
-    date: "Late January 2025",
-    title: "Policy Bootcamp",
-    description: "",
-  },
-  {
-    date: "Mid March 2025",
-    title: "Check-ins & Midpoint Review with Paragon Team",
-    description: "",
-  },
-  {
-    date: "Late March 2025",
-    title: "Midpoint Presentation",
-    description: "",
-  },
-  {
-    date: "Late April 2025",
-    title: "Final Policy Brief Presentation",
-    description: "",
-  },
-  {
-    date: "End of April 2025",
-    title: "Final Cohort Presentation & Wrap-Up",
-    description: "",
-  },
-  {
-    date: "May 1st 2025",
-    title: "Cohort End",
-    description: "",
-  },
-];
+// const events = [
+//   {
+//     date: "Late January 2025",
+//     title: "Policy Bootcamp",
+//     description: "",
+//   },
+//   {
+//     date: "Mid March 2025",
+//     title: "Check-ins & Midpoint Review with Paragon Team",
+//     description: "",
+//   },
+//   {
+//     date: "Late March 2025",
+//     title: "Midpoint Presentation",
+//     description: "",
+//   },
+//   {
+//     date: "Late April 2025",
+//     title: "Final Policy Brief Presentation",
+//     description: "",
+//   },
+//   {
+//     date: "End of April 2025",
+//     title: "Final Cohort Presentation & Wrap-Up",
+//     description: "",
+//   },
+//   {
+//     date: "May 1st 2025",
+//     title: "Cohort End",
+//     description: "",
+//   },
+// ];
 
 const govLogos = Object.values(governments).map(government => government.logo);
 
 
 export default function About() {
   return (
-    <>
-      <TopBar />
+<div className="relative w-full overflow-x-hidden">
+  <TopBar />
 <div className="background-container min-h-[100svh] flex flex-col">
   <BgGrid/>
-  <div className="w-full px-4 md:px-0 flex-1 flex flex-col md:block">
+  <div className="w-full px-4 md:px-0 flex-1 flex flex-row md:block">
     <div className="flex-1 flex flex-col justify-center md:block">
-      <Text className='fade-in md:pt-[10%] px-4 md:pl-[12%] text-xl md:text-3xl max-w-full md:max-w-[50%] text-center md:text-left'>
+      <Text className='fade-in md:pt-[20%] px-4 md:pl-[12%] text-xl md:text-3xl text-center md:text-left'>
         Paragon works with state and local governments, <span className='font-semibold'>big and small</span>, from every jurisdiction across the country to provide <span className='font-semibold'>pro-bono tech policy research</span> to inform evidence-based policymaking.
       </Text>
 
-      <Text className='fade-in text-xl md:text-3xl max-w-full md:max-w-[30%] mt-16 md:mt-[5%] mb-12 md:mb-5 text-center md:text-right md:ml-auto md:mr-20'>
+      <Text className='fade-in text-xl md:text-3xl mt-16 md:mt-[5%] mb-12 md:mb-5 text-center md:text-right md:ml-auto md:mr-20'>
         Interested in exploring a partnership with Paragon?
       </Text>
 
       <div className="flex justify-center md:justify-end md:pr-20 pt-4 md:pt-10 mb-20 md:mb-0">
         <Button 
-          className="fade-in"
+          className="fade-in md:z-30"
           style="secondary"
           inNewTab 
-          url="mailto:internal@paragonfellowship.org"
+          url="https://forms.gle/Y2tckRZyg5Yice3f7"
         >
           Interest Form
         </Button>
@@ -92,7 +92,7 @@ export default function About() {
   </div>
 
   {/* Gradient overlay - desktop only */}
-  <div className="absolute -bottom-1 left-0 w-full h-1/5 bg-gradient-to-b from-transparent to-dark md:block hidden" />
+  {/* <div className="absolute -bottom-1 left-0 w-full h-1/5 bg-gradient-to-b from-transparent to-dark md:block hidden" /> */}
   
   {/* Background overlay */}
   <div className="absolute top-0 left-0 w-full h-full bg-[#050022] md:bg-opacity-65 bg-opacity-40 -z-10" />
@@ -103,19 +103,19 @@ export default function About() {
 </Section>
 
 <Section id="impact">
-  <Subheading className='text-3xl md:text-5xl mb-4'>01 Our Impact</Subheading>
-  <GrayDivider />
+  <Subheading className='text-3xl md:text-5xl mb-4'>Our Impact</Subheading>
+  {/* <GrayDivider /> */}
   <Text className="text-base md:text-lg">
-    Over the last year, Paragon has partnered with 11 governments across 8 states through 21 projects.
+    Over the last year, Paragon has partnered with 17 governments across 11 states through 28 projects.
   </Text>
   {/* <Text>Spring (5 new / 5 total): Boston; Lebanon, NH; Georgia; St. Louis, MO; San Jose, CA</Text>
    <Text>Summer (2 new / 7 total): CalHHS, Santa Clara</Text>
    <Text>Fall (5 new / 9 total): Brownsville, TX; Los Angeles, CA; Tempe, AZ</Text> */}
-</Section>
+{/* </Section> */}
 
-<Section id="projects">
+{/* <Section id="projects">
   <Subheading className='text-3xl md:text-5xl mb-4'>02 Past Projects</Subheading>
-  <GrayDivider />
+  <GrayDivider /> */}
   <Text className="text-base md:text-lg">
     We&apos;ve worked with governments and organizations across the country to better science & tech policy processes. Our work ranges has ranged from writing GenAI policy with the State of Georgia, advising on deepfake policy for the City of San Jose, to writing accessibility guidelines for translation software for the City of Lebanon.
   </Text>
@@ -135,44 +135,44 @@ export default function About() {
 </Section>
 
 <Section id="testimonials">
-  <Subheading className='text-3xl md:text-5xl mb-4'>03 Testimonials</Subheading>
+  <Subheading className='text-3xl md:text-5xl mb-4'>Testimonials</Subheading>
   <GrayDivider/>
   <Testimonials/>
 </Section>
 
-<Section id="timeline">
-  <Subheading className='text-3xl md:text-5xl mb-4'>04 Project Scoping &amp; Timeline</Subheading>
+{/* <Section id="timeline">
+  <Subheading className='text-3xl md:text-5xl mb-4'>03 Project Scoping &amp; Timeline</Subheading>
   <GrayDivider/>
   <Text className="text-base md:text-lg mb-6">Our typical project timeline:</Text>
   <Timeline events={events} />
-</Section>
+</Section> */}
       <Section id="faq">
-        <Subheading>05 FAQ</Subheading>
+        <Subheading>FAQ</Subheading>
         <GrayDivider/>
         <div>
-        <FAQuestion
-          question="What are the expectations for government partners?"
-          answer="a. We ask that government partners be responsive over email and meet with the Paragon group once every two weeks. Government partners will also be asked to give feedback during a midpoint presentation and a final presentation. Partners are generally responsible for guiding the overall direction of the research."
+		<FAQuestion
+          question="How much does this Fellowship cost? What do I have to do to qualify?"
+          answer="Our work is entirely pro bono! To participate, all government partners must do is agree to virtually meet once every two weeks with the Fellows and provide feedback on their work. Partners are generally responsible for guiding the overall direction of the research."
         />
         <FAQuestion
           question="What can you expect to receive at the end?"
-          answer="a. Governments can expect a research or policy brief at the end of the program."
+          answer="Governments can expect a research or policy brief at the end of the program."
         />
         <FAQuestion
-          question="Will students be compensated for the project?"
-          answer="a. Government partners will not need to compensate students. Students are supported by philanthropic grants via our sponsors at PIT-UN, a Ford Foundation backed initiative, and RTYPF, a project of the Omidyar Network."
+          question="Will Fellows be compensated for the project?"
+          answer="Yes. All Fellows and Project Leads receive a stipend of $500. Paragon provides these stipends thanks to our philanthropic grants."
         />
         <FAQuestion
-          question="How are projects scoped?"
-          answer="a. Project proposals are brought by government partners according to their specific needs and refined in conjunction with the partnerships team. Our partnerships team works with you over the course of a few virtual meetings to understand your needs."
+          question="How do I select which kind of project I would like to do?"
+          answer="Our Partnerships team works with you over the course of a couple virtual meetings to determine your interests then provides you with project descriptions for each idea. After you select one, we refine it into a final Statement of Work."
         />
         <FAQuestion
           question="How long do the projects run?"
-          answer="a. Projects run for about 3 months each. However, government partners with longer term needs can explore recurring projects over the course of multiple cohorts."
+          answer="Projects run for about 3 months each. However, government partners with longer term needs can explore recurring projects over the course of multiple cohorts."
         />
         <FAQuestion
-          question="How many fellows typically work on a project?"
-          answer="a. Each project is supported by a dedicated team of 6-9 students from your area."
+          question="How many Fellows typically work on a project?"
+          answer="Each project is supported by a dedicated team of 5-8 Fellows and 1 Project Lead from your area."
         />
         </div>
       </Section>
@@ -185,13 +185,8 @@ export default function About() {
       </Section>
 
 
-      <Footer>
-        <FooterSection title='Our Organization'>
-          <FooterLink href='/team'>Team Directory</FooterLink>
-          <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-        </FooterSection>
-      </Footer>
+      <Footer/>
 
-    </>
+    </div>
   );
 }

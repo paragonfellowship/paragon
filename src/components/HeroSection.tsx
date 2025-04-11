@@ -1,7 +1,7 @@
 import { RiArrowDownLine } from "react-icons/ri";
 import { Text } from "./Typography";
 import Button from "./Button";
-import { MAIL_LIST_URL, FA_APP_URL } from "../constants";
+import { FA_APP_URL, NEWSLETTER_URL } from "@/app/constants";
 
 const currentlyApplying = true;
 
@@ -30,11 +30,11 @@ export default function HeroSection() {
         <div className="flex space-x-4 mt-4 justify-center">
           {currentlyApplying && (
             <Button style="secondary" inNewTab url={FA_APP_URL}>
-              APPLY FOR SPRING 2025
+              APPLY FOR SUMMER 2025
             </Button>
           )}
-          <Button style="secondary" inNewTab url={MAIL_LIST_URL}>
-            JOIN MAILING LIST
+          <Button style="secondary" inNewTab url={NEWSLETTER_URL}>
+            SUBSCRIBE TO OUR NEWSLETTER
           </Button>
         </div>
 

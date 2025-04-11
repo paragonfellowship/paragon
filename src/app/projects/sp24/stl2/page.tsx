@@ -1,9 +1,8 @@
-import { FA_APP_URL } from '@/app/constants';
 import CAPITOL_LINEART from '@/assets/capitol-lineart.png';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
-import {Subheading, Text } from '@/components/Typography';
+import {Subheading, Text, SmallText } from '@/components/Typography';
 import Image from 'next/image';
 
 export default function STL2() { 
@@ -69,15 +68,26 @@ export default function STL2() {
         Future work on language access AI in St. Louis can involve several key areas of development. The city could expand the range of languages supported by AI systems to better serve its diverse immigrant communities. Further research and pilot programs can explore advanced AI models tailored specifically for legal and administrative language translation, enhancing accuracy and cultural sensitivity. Continuous improvement of AI governance, including regular updates to policies and training programs, will be necessary to adapt to new ethical challenges and technological advancements. Additionally, the city could engage in partnerships with other municipalities and organizations to share best practices and refine AI deployment strategies. Expanding the scope of AI tools beyond translation, such as incorporating AI-driven community outreach and engagement initiatives, could further bridge language barriers and create a more welcoming and inclusive environment for all residents.
         </Text>
       </Section>
-
-      <Footer>
-        <FooterSection title='Our Organization'>
-          <FooterLink href={FA_APP_URL}>Apply Now</FooterLink>
-          <FooterLink href='/team'>Team Directory</FooterLink>
-          <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-          <FooterLink href='/faq'>FAQs</FooterLink>
-        </FooterSection>
-      </Footer>
+      <Section>
+        <Subheading>Contributors</Subheading>
+        <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
+          {[
+            {name: 'Jude Miller', role: 'Project Lead', school: 'Washington University in St. Louis'},
+            {name: 'Jiayan Luo', role: 'Fellow', school: "Northwestern University"},
+            {name: 'Sana Madhavan', role: 'Fellow', school: 'University of Illinois at Urbana-Champaign'},
+            {name: 'Naren Chittem', role: 'Fellow', school: 'Washington University in St. Louis'},
+            {name: 'Aliana Yoon', role: 'Fellow', school: 'Wellesley College'},
+            {name: 'Shivani Sundarensan', role: 'Fellow', school: "University of Michigan"}
+          ].map((contributor, index) => (
+            <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
+            <Text className='text-center font-semibold'>{contributor.name}</Text>
+            <SmallText className='text-center'>{contributor.role}</SmallText>
+            <SmallText className='text-center'>{contributor.school}</SmallText>
+          </div>
+          ))}
+        </div>
+      </Section>
+      <Footer/>
     </>
   );
 }

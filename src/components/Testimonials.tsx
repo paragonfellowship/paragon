@@ -20,12 +20,15 @@ const testimonials = [
     text: "The team was highly engaged, efficient, and consistently motivated, which made the collaboration both productive and enjoyable... [The Fellows] brought the right mix of skills and competencies needed to successfully tackle nuanced and complex projects.",
     author: "— Christopher Paul, Chief Privacy Officer, Santa Clara County",
   },
-
-  // Fellow Testimonials
   {
-    text: "I have been able to find community in a place that I never thought I would. I've made lifelong connections here and learned so much about the ins and outs of how city government works — all while grappling with some of the biggest issues of today's age. It's rewarding to be charting what feels like the forefront of a movement.",
-    author: "— Sofia Rodriguez, Boston Fellow (Wellesley/Hunter College undergraduate)",
+    text: "Paragon is truly committed to learning and provides countless resources to help you explore different paths of interest. Most importantly, it prepares you for working in actual policy spaces and allows you to harness your own skills. I am proud to be a part of an organization that is so focused on community building and community impact—which makes the work that we do as Fellows especially rewarding.",
+    author: "— Noreen Ahmed, Georgia and Madison Fellow (Rutgers undergraduate)"
   },
+  // Fellow Testimonials
+  // {
+  //   text: "I have been able to find community in a place that I never thought I would. I've made lifelong connections here and learned so much about the ins and outs of how city government works — all while grappling with some of the biggest issues of today's age. It's rewarding to be charting what feels like the forefront of a movement.",
+  //   author: "— Sofia Rodriguez, Boston Fellow (Wellesley/Hunter College undergraduate)",
+  // },
   {
     text: "Paragon has been immensely fulfilling and reaffirmed my commitment to responsible technological advancement. I appreciated directly working with our government partner and being some of the first in helping San Jose build capacity against generative AI miscommunication.",
     author: "— Isabelle Anzabi, San Jose Fellow (Stanford graduate)",
@@ -79,7 +82,7 @@ export default function Testimonials() {
     <div className="relative p-4 md:p-8">
       {/* Testimonial Text */}
       <p
-        className={`text-lg md:text-2xl italic text-black pb-3 md:pb-5 transition-opacity duration-300 max-w-[85%] md:max-w-full mx-auto text-center ${
+        className={`min-h-64 h-auto text-lg md:text-2xl italic text-black pb-3 md:pb-5 transition-opacity duration-300 max-w-[85%] md:max-w-full mx-auto text-center ${
           fade ? "opacity-0" : "opacity-100"
         }`}
       >
@@ -109,7 +112,7 @@ export default function Testimonials() {
 
         {/* Author */}
         <p
-          className={`text-base md:text-lg font-semibold text-gray-600 transition-opacity duration-300 mb-2 md:mb-0 ${
+          className={`h-8 text-base md:text-lg font-semibold text-gray-600 transition-opacity duration-300 mb-2 md:mb-0 ${
             fade ? "opacity-0" : "opacity-100"
           }`}
         >

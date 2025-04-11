@@ -1,6 +1,6 @@
 
 import Button from '@/components/Button';
-import Footer, { FooterLink, FooterSection } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
 import {SmallText, Subheading, Text } from '@/components/Typography';
@@ -16,7 +16,6 @@ export default function Projects() {
       <TopBar />
       <div
         className="background-container relative flex flex-col md:block"
-        style={{ height: '75vh' }}
       >
         <BgGrid lineCount={7} />
         
@@ -25,8 +24,8 @@ export default function Projects() {
             Project Portfolio
           </Text>
           
-          <Text className="text-xl md:text-3xl md:text-right pt-0 md:pt-20 max-w-full px-4 md:max-w-[40%] md:ml-auto md:pr-20 text-center md:text-right">
-            View our past fellows&apos; work!
+          <Text className="text-xl md:text-3xl md:text-right pt-0 md:pt-40 max-w-full px-4 md:ml-auto md:pr-20 font-semibold text-center">
+            View our past Fellows&apos; work!
           </Text>
         </div>
 
@@ -42,48 +41,94 @@ export default function Projects() {
       </div>
 
       <Section>
-      <Text className='md:text-4xl text-2xl uppercase font-semibold pb-5'>Our Projects </Text> 
+      <Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Our Projects </Text> 
+	<div> </div>
+	<Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Fall 2024 </Text> 
       <GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">
-            <Link href="/projects/sp24/leb" passHref>
+            <Link href="" passHref>
                 <ProjectCard 
-                  timeline='2024 cohort'
-                  projectTitle="STUDENTS IN LEBANON CREATE AI AUDITING FRAMEWORK"
+                  timeline='2024 Fall cohort'
+                  projectTitle="(Coming Soon) Federal Supercomputer Analysis" 
+                />
+            </Link> 
+            <Link href="" passHref>
+                <ProjectCard 
+                  timeline='2024 Fall cohort'
+                  projectTitle="(Coming Soon) Tempe AI Curriculum" 
                 />
             </Link>
-            <Link href="/projects/sp24/sj" passHref>
+			<Link href="" passHref>
                 <ProjectCard 
-                  timeline='2024 cohort'
-                  projectTitle="SAN JOSE STUDENTS TACKLE PUBLIC INTEGRITY AND AI" 
+                  timeline='2024 Fall cohort'
+                  projectTitle="(Coming Soon) Los Angeles CD3 Digital Accessibility" 
                 />
             </Link>
-            <Link href="/projects/sp24/bos" passHref>
+			<Link href="" passHref>
                 <ProjectCard 
-                  timeline='2024 cohort'
-                  projectTitle="BOSTON STUDENTS WORK ON TECH PROCUREMENT GUIDELINES" 
+                  timeline='2024 Fall cohort'
+                  projectTitle="(Coming Soon) Santa Clara County AI Use Case Guidelines" 
                 />
             </Link>
-            <Link href="/projects/sp24/sjg" passHref>
+        </div>
+      <Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Summer 2024 </Text> 
+      <GrayDivider />
+        <div className="grid md:grid-cols-3 gap-6 text-center">
+            <Link href="" passHref>
                 <ProjectCard 
-                  timeline='2024 cohort'
-                  projectTitle="SAN JOSE STUDENTS PROTECT GOVERNMENT COMMUNICATION FROM AI" 
+                  timeline='2024 Summer cohort'
+                  projectTitle="(Coming Soon) San José AI Risk Assessment Project" 
                 />
-            </Link>
-            <Link href="/projects/sp24/stl" passHref>
+            </Link> 
+			<Link href="" passHref>
                 <ProjectCard 
-                  timeline='2024 cohort'
+                  timeline='2024 Summer cohort'
+                  projectTitle="(COMING SOON) Lebanon Accessibility Project" 
+                />
+            </Link> 
+			<Link href="/projects/summer24/stl" passHref>
+                <ProjectCard 
+                  timeline='2024 Summer cohort'
                   projectTitle="ST. LOUIS STUDENTS EXAMINE TECH-POWERED Cultural DIVERSITY" 
                 />
             </Link> 
             <Link href="/projects/summer24/stcl" passHref>
                 <ProjectCard 
-                  timeline='2024 cohort'
+                  timeline='2024 Summer cohort'
                   projectTitle="Cybersecurity Risk Prioritization in Santa Clara County" 
                 />
             </Link>
-            <Link href="/projects/sp24/stl2" passHref>
+        </div>
+        <Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Spring 2024 </Text> 
+        <GrayDivider />
+        <div className="grid md:grid-cols-3 gap-6 text-center">
+            <Link href="/projects/sp24/leb" passHref>
                 <ProjectCard 
-                  timeline='2024 cohort'
+                  timeline='2024 Spring cohort'
+                  projectTitle="STUDENTS IN LEBANON CREATE AI AUDITING FRAMEWORK"
+                />
+            </Link>
+			<Link href="/projects/sp24/bos" passHref>
+                <ProjectCard 
+                  timeline='2024 Spring cohort'
+                  projectTitle="BOSTON STUDENTS WORK ON TECH PROCUREMENT GUIDELINES" 
+                />
+            </Link>
+            <Link href="/projects/sp24/sj" passHref>
+                <ProjectCard 
+                  timeline='2024 Spring cohort'
+                  projectTitle="SAN JOSé STUDENTS TACKLE PUBLIC INTEGRITY AND AI" 
+                />
+            </Link>
+            <Link href="/projects/sp24/sjg" passHref>
+                <ProjectCard 
+                  timeline='2024 Spring cohort'
+                  projectTitle="SAN JOSé STUDENTS PROTECT GOVERNMENT COMMUNICATION FROM AI" 
+                />
+            </Link>
+            <Link href="/projects/sp24/stl" passHref>
+                <ProjectCard 
+                  timeline='2024 Spring cohort'
                   projectTitle="AI-Driven Language Access for St. Louis" 
                 />
             </Link>
@@ -101,12 +146,7 @@ export default function Projects() {
 
 
 
-      <Footer>
-        <FooterSection title='Our Organization'>
-          <FooterLink href='/team'>Team Directory</FooterLink>
-          <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-        </FooterSection>
-      </Footer>
+      <Footer/>
 
     </>
   );

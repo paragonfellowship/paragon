@@ -58,11 +58,11 @@ interface PersonRecord {
 }
 
 import Card from "@/components/Card"
-import Footer, { FooterLink, FooterSection } from '@/components/Footer'
+import Footer from '@/components/Footer'
 import Image from "next/image"
 import { ElementType } from "react"
 import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '../../constants'
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '@/app/constants'
 import TopBar from '@/components/TopBar'
 import BgGrid from "@/components/BgGrid"
 import { Heading } from "@/components/Typography"
@@ -128,13 +128,7 @@ export default async function Team() {
             <TeamSection title="Organizing Team" peopleByRegion={organizingByRegion} />
             <TeamSection title="Organizing Team Alumni" peopleByRegion={formerByRegion} />
         </main>
-        <Footer>
-            <FooterSection title='Our Organization'>
-                <FooterLink href='/'>Home</FooterLink>
-                <FooterLink href='/team'>Team Directory</FooterLink>
-                <FooterLink href='mailto:paragonfellowship@gmail.com'>Contact Us</FooterLink>
-            </FooterSection>
-        </Footer>
+        <Footer/>
     </>
 }
 
