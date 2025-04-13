@@ -60,14 +60,15 @@ interface PersonRecord {
 import Card from "@/components/Card"
 import Footer from '@/components/Footer'
 import Image from "next/image"
-import { ElementType } from "react"
-import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
+//import { ElementType } from "react"
+//import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
 import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '@/app/constants'
 import TopBar from '@/components/TopBar'
 import BgGrid from "@/components/BgGrid"
 import { Heading } from "@/components/Typography"
 import { RiArrowDownLine } from "react-icons/ri"
 import GrayDivider from "@/components/GrayDivider"
+import {SocialIcon} from 'react-social-icons';
 
 const NO_REGION = "";
 
@@ -155,10 +156,11 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
 									{colleges[person.fields.school] && <img src={colleges[person.fields.school].logo.src} alt={colleges[person.fields.school].name} className="size-20 h-8 -left-1" />}
                                     <div className="flex flex-row mt-2 gap-2">
                                         {person.fields.email && person.fields.email.trim() !== "" && (
-                                            <IconButton url={`mailto:${person.fields.email}`} icon={RiMailLine} />
+                                            
+											<SocialIcon url={`mailto:${person.fields.email}`}  target='_blank' bgColor="#1e2d5a" className="transition transform hover:scale-110"/>
                                         )}
-                                        {person.fields.linkedin && <IconButton url={person.fields.linkedin} icon={RiLinkedinLine} />}
-                                        {person.fields.website && <IconButton url={person.fields.website} icon={RiLinksLine} />}
+                                        {person.fields.linkedin && <SocialIcon network="linkedin" url={person.fields.linkedin}  target='_blank' bgColor="#1e2d5a" className="transition transform hover:scale-110"/>}
+                                        {person.fields.website && <SocialIcon url={person.fields.website}  target='_blank' bgColor="#1e2d5a" className="transition transform hover:scale-110"/>} 
                                     </div>
                                 </div>
                             </Card>
@@ -170,8 +172,7 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
     );
 }
 
-
-// IconButton component
+/*
 function IconButton({ icon: Icon, url }: { icon: ElementType, url: string }) {
     return (
         <a href={url} target="_blank" rel="noopener noreferrer">
@@ -181,3 +182,4 @@ function IconButton({ icon: Icon, url }: { icon: ElementType, url: string }) {
         </a>
     );
 }
+*/

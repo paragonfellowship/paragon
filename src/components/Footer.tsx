@@ -21,8 +21,9 @@ export default function Footer() {
         </div>
       </div>
       <div className='w-full flex flex-row justify-center'>
-        <SocialIcon url="https://www.linkedin.com/company/paragon-fellowship" target='_blank' bgColor="#1e2d5a"/>
-        <SocialIcon url="https://www.instagram.com/paragonfellowship/" target='_blank' bgColor="#1e2d5a"/>
+        <SocialIcon url="https://www.linkedin.com/company/paragon-fellowship" target='_blank' bgColor="#1e2d5a" className="transition transform hover:scale-110"/>
+        <SocialIcon url="https://www.instagram.com/paragonfellowship/" target='_blank' bgColor="#1e2d5a" className="transition transform hover:scale-110"/>
+		<SocialIcon url="https://paragonpolicyfellowship.substack.com/" target='_blank' bgColor="#1e2d5a" className="transition transform hover:scale-110"/>
       </div>
       <p className='text-gray-400 mt-2 text-center'>© 2025 The Paragon Policy Fellowship</p>
     </footer>
