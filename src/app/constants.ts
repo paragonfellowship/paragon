@@ -1,5 +1,5 @@
-/* THESE are the files when using logos
-import brownLogo from '@/assets/colleges/brown.svg';
+//THESE are the files when using logos
+import brownLogo from '@/assets/colleges/brownlogo.png';
 import dukeLogo from '@/assets/colleges/duke.svg';
 import georgemasonLogo from '@/assets/colleges/georgemason.svg';
 import georgetownLogo from '@/assets/colleges/georgetown.svg';
@@ -19,16 +19,17 @@ import uchicagoLogo from '@/assets/colleges/uchicago.svg';
 import uciLogo from '@/assets/colleges/uci.svg';
 import uclaLogo from '@/assets/colleges/ucla.svg';
 import ucsdLogo from '@/assets/colleges/ucsdlogo.png';
-import ugaLogo from '@/assets/colleges/uga.png';
+import ugaLogo from '@/assets/colleges/ugalogo.png';
 import umaineLogo from '@/assets/colleges/umaine.svg';
 import untLogo from '@/assets/colleges/unt.svg';
 import uscLogo from '@/assets/colleges/usc.svg';
 import yaleLogo from '@/assets/colleges/yale.svg';
 import utaLogo from '@/assets/colleges/uta.svg';
 import uillinoisucLogo from '@/assets/colleges/uillinois-uc.svg';
-*/
+
 
 //these are the files when using seals
+/*
 import brownLogo from '@/assets/colleges/brown.png';
 import dukeLogo from '@/assets/colleges/duke.png';
 import georgemasonLogo from '@/assets/colleges/georgemason.png';
@@ -56,6 +57,7 @@ import uscLogo from '@/assets/colleges/usc.png';
 import yaleLogo from '@/assets/colleges/yale.png';
 import utaLogo from '@/assets/colleges/uta.png';
 import uillinoisucLogo from '@/assets/colleges/uillinois-uc.png';
+*/
 
 // import maricopaLogo from '@/assets/governments/Maricopa.png';
 import brownsvilleLogo from '@/assets/governments/Brownsville.png';

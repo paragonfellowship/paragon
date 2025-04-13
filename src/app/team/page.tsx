@@ -147,11 +147,12 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
                             <Card key={i} className="flex flex-row w-full">
                                 <div className='relative h-min'>
                                     {person.fields.image && <img src={person.fields.image[0].thumbnails.large.url} alt={person.fields.name} className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg " />}
-                                    {colleges[person.fields.school] && <img src={colleges[person.fields.school].logo.src} alt={colleges[person.fields.school].name} className="h-12 aspect-square object-contain mt-2 absolute -bottom-1 -right-1" />}
+                                    
                                 </div>
                                 <div className="flex flex-col h-full justify-center ml-5 w-4/6">
                                     <p className="text-3xl font-semibold">{person.fields.name}</p>
                                     <p className="text-xl">{person.fields.team}</p>
+									{colleges[person.fields.school] && <img src={colleges[person.fields.school].logo.src} alt={colleges[person.fields.school].name} className="size-20 h-8 -left-1" />}
                                     <div className="flex flex-row mt-2 gap-2">
                                         {person.fields.email && person.fields.email.trim() !== "" && (
                                             <IconButton url={`mailto:${person.fields.email}`} icon={RiMailLine} />
