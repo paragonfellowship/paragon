@@ -124,7 +124,7 @@ export default function Home() {
         <Subheading>Our Partners</Subheading>
         <GrayDivider/>
         <a href='/projects' className='text-blue-500 block w-full overflow-hidden'>
-        <Carousel className='mt-10' speed={0.5}>
+        <Carousel className='mt-10' speed={35}>
           {
             govLogos.map((logo, index) => (
               <Image key={index} src={logo} alt="Logo" className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />

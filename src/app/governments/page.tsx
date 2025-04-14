@@ -121,7 +121,7 @@ export default function About() {
   </Text>
   
   <a href='/projects' className='text-blue-500 block w-full overflow-hidden'>
-    <Carousel className='mt-6 md:mt-10' speed={0.5}>
+    <Carousel className='mt-6 md:mt-10' speed={35}>
       {govLogos.map((logo, index) => (
         <Image 
           key={index} 
