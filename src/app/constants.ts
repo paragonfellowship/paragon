@@ -82,6 +82,10 @@ import MadisonLogo from '@/assets/governments/Madison.png';
 import MissoulaLogo from '@/assets/governments/Missoula.png';
 import MontanaSITSDLogo from '@/assets/governments/Montana SITSD.png';
 import USStateLogo from '@/assets/governments/US State Logo.png';
+//import FortCollinsLogo from '@/assets/governments/Fort Collins.png';
+//import BismarckLogo from '@/assets/governments/Bismarck.png';
+//import PennsylvaniaLogo from '@/assets/governments/Pennsylvania.png';
+//import USVILogo from '@/assets/governments/USVI.png';
 import { StaticImageData } from 'next/image';
 //San Jose,
 //Santa Clara County, 
@@ -110,23 +114,23 @@ export const governments: {
     //     logo: maricopaLogo
     // },
     brownsville: {
-        name: 'Brownsville',
+        name: 'Brownsville, Texas',
         logo: brownsvilleLogo
     },
     boston: {
-        name: 'Boston',
+        name: 'Boston, Massachusetts',
         logo: bostonLogo
     },
     stLouis: {
-        name: 'St. Louis',
+        name: 'St. Louis, Missouri',
         logo: stLouisLogo
     },
     georgia: {
-        name: 'Georgia',
+        name: 'Georgia Technology Authority',
         logo: georgiaLogo
     },
     losAngeles: {
-        name: 'Los Angeles',
+        name: 'Los Angeles, California',
         logo: losAngelesLogo
     },
     // southBend: {
@@ -150,31 +154,31 @@ export const governments: {
     //     logo: doeLogo
     // },
     tempe: {
-        name: 'Tempe',
+        name: 'Tempe, Arizona',
         logo: tempeLogo
     },
     santaClara: {
-        name: 'Santa Clara',
+        name: 'Santa Clara County, California',
         logo: santaClaraLogo
     },
     sanJose: {
-        name: 'San Jose',
+        name: 'San Jose, California',
         logo: sanJoseLogo
     },
     lebanon: {
-        name: 'Lebanon',
+        name: 'Lebanon, New Hampshire',
         logo: lebanonLogo
     },
     Albequerque: {
-        name: 'Albequerque',
+        name: 'Albuquerque, New Mexico',
         logo: AlbuquerqueLogo
     }, 
     Alexandria: {
-        name: 'Alexandria',
+        name: 'Alexandria, Virginia',
         logo: AlexandriaLogo
     },
     CDII: {
-        name: 'CDII',
+        name: 'California Center for Data Insights and Innovation',
         logo: CDIILogo
     },
     // Fortlauderdale: {
@@ -182,21 +186,38 @@ export const governments: {
     //     logo: FortlauderdaleLogo
     // },
     Madison: {
-        name: 'Madison',
+        name: 'Madison, Wisconsin',
         logo: MadisonLogo
     },
     Missoula: {
-        name: 'Missoula',
+        name: 'Missoula, Montana',
         logo: MissoulaLogo
     },
     MontanaSITSD: {
-        name: 'MontanaSITSD',
+        name: 'Montana State Information Technology Services Division',
         logo: MontanaSITSDLogo
     },
     USStateDepartment: {
-        name: 'US Department of State',
+        name: 'U.S. Department of State',
         logo: USStateLogo
     }
+	//,
+	//Bismarck: {
+    //    name: 'Bismarck, North Dakota',
+    //    logo: BismarckLogo
+    //},
+	//FortCollins: {
+    //    name: 'Fort Collins, Colorado',
+    //    logo: FortCollinsLogo
+    //},
+	//Pennsylvania: {
+    //    name: 'Pennsylvania',
+    //    logo: PennsylvaniaLogo
+    //},
+	//USVI: {
+    //    name: 'U.S. Virgin Islands Next Generation Network',
+    //    logo: USVILogo
+    //}
 };
 
 export const colleges: {
