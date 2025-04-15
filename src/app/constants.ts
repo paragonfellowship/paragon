@@ -26,7 +26,7 @@ import uscLogo from '@/assets/colleges/usclogo.png';
 import yaleLogo from '@/assets/colleges/yale.svg';
 import utaLogo from '@/assets/colleges/uta.svg';
 import uillinoisucLogo from '@/assets/colleges/uillinois-uc.svg';
-
+import cabriniLogo from '@/assets/colleges/cabrinilogo.png';
 
 //these are the files when using seals
 /*
@@ -182,7 +182,7 @@ export const governments: {
         logo: CDIILogo
     },
     // Fortlauderdale: {
-    //     name: 'Fortlauderdale',
+    //     name: 'Fortlauderdale, Florida',
     //     logo: FortlauderdaleLogo
     // },
     Madison: {
@@ -333,6 +333,10 @@ export const colleges: {
 	uillinoisuc: {
         name: 'University of Illinois at Urbana-Champaign',
         logo: uillinoisucLogo
+    },
+	cabrini: {
+        name: 'Cabrini College',
+        logo: cabriniLogo
     }
 }
 
