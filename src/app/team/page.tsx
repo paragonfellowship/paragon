@@ -1,3 +1,4 @@
+/*
 interface Image {
     id: string,
     width: number,
@@ -24,22 +25,7 @@ interface Image {
         }
     }
 }
-
-enum SchoolEnum {
-    Harvard = 'harvard',
-    Brown = 'brown',
-    Stanford = 'stanford',
-    Yale = 'yale',
-    Penn = 'penn',
-    GT = 'gt',
-    UGA = 'uga',
-    RISD = 'risd',
-    IIT = 'iit',
-    Georgetown = 'georgetown',
-    UCSD = 'ucsd',
-    UCB = 'ucb',
-    UCI = 'uci',
-}
+*/
 
 interface PersonRecord {
     id: string,
@@ -47,31 +33,35 @@ interface PersonRecord {
     fields: {
         name: string,
         title: string,
-        school: SchoolEnum,
+        school: string,
         region: string,
         email: string,
         linkedin: string,
         website: string,
-        image: Image[],
+        image: string,
         team: string
     }
 }
 
 import Card from "@/components/Card"
 import Footer from '@/components/Footer'
-import Image from "next/image"
+//import Image from "next/image"
 //import { ElementType } from "react"
 //import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '@/app/constants'
+import { colleges } from '@/app/constants'
 import TopBar from '@/components/TopBar'
 import BgGrid from "@/components/BgGrid"
 import { Heading } from "@/components/Typography"
 import { RiArrowDownLine } from "react-icons/ri"
 import GrayDivider from "@/components/GrayDivider"
 import {SocialIcon} from 'react-social-icons';
-
+import organizingTeam from '@/app/team/Organizing Team.json';
+import strategicAdvisors from '@/app/team/Strategic Advisors.json';
+import formerOrganizingTeam from '@/app/team/Former Team Members.json';
 const NO_REGION = "";
 
+
+/*
 function encodeTableName(tableName: string): string {
     return encodeURIComponent(tableName); // Automatically encodes spaces to %20
 }
@@ -90,8 +80,9 @@ async function retrievePeople(tableName: string): Promise<PersonRecord[]> {
     const rec = await records.json();
     return rec.records;
 }
+*/
 
-// Helper function to group people by region
+// Helper function to group people by region. We don't actually group by region. I am leaving this here until I can figure out how to delete it.
 function groupPeopleByRegion(people: PersonRecord[]) {
     return people.reduce((acc: { [key: string]: PersonRecord[] }, person) => {
         const region = person.fields.region || NO_REGION;
@@ -103,15 +94,10 @@ function groupPeopleByRegion(people: PersonRecord[]) {
     }, {});
 }
 
-export default async function Team() {
-    const organizingTeam = await retrievePeople("Team Members");
-    const formerOrganizingTeam = await retrievePeople("Former Team Members");
-    const strategicAdvisors = await retrievePeople("Strategic Advisors");
-
+export default function Team() {
     const organizingByRegion = groupPeopleByRegion(organizingTeam);
     const advisorsByRegion = groupPeopleByRegion(strategicAdvisors);
     const formerByRegion = groupPeopleByRegion(formerOrganizingTeam);
-
     return <>
         <TopBar />
         <div
@@ -125,9 +111,9 @@ export default async function Team() {
             <div className='absolute top-0 left-0 w-full h-full bg-[#050022] bg-opacity-65 -z-10' />
       </div>
         <main className="m-8">
-            <TeamSection title="Strategic Advisors" peopleByRegion={advisorsByRegion} />
+           <TeamSection title="Strategic Advisors" peopleByRegion={advisorsByRegion} />
             <TeamSection title="Organizing Team" peopleByRegion={organizingByRegion} />
-            <TeamSection title="Organizing Team Alumni" peopleByRegion={formerByRegion} />
+           <TeamSection title="Organizing Team Alumni" peopleByRegion={formerByRegion} />
         </main>
         <Footer/>
     </>
@@ -147,7 +133,7 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
                         {people.map((person, i) => (
                             <Card key={i} className="flex flex-row w-full items-start">
                                 <div className='relative h-min'>
-                                    {person.fields.image && <img src={person.fields.image[0].thumbnails.large.url} alt={person.fields.name} className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg " />}
+									{person.fields.image && <img src={person.fields.image} alt={person.fields.name} className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg " />}
 									<div className="block w-24 h-20 box-border mt-3 mx-auto flex items-center justify-center overflow-hidden">
 										{colleges[person.fields.school] && <img src={colleges[person.fields.school].logo.src} alt={colleges[person.fields.school].name} className="max-w-full max-h-full object-contain"/>}
 									</div>

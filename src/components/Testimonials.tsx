@@ -22,6 +22,10 @@ const testimonials = [
     },
   ],
   [ // Gov partner page testimonials
+	{
+      text: "Paragon Fellows helped our city create a comprehensive AI procurement framework, establishing a structured approach for evaluating AI technologies against core values such as privacy, security, equity, and transparency. This framework will directly benefit over 15,000 residents and ensure all future AI applications align with ethical standards and serve the public responsibly.",
+      author: "—Melanie McDonough, Chief Innovation Officer, City of Lebanon, New Hampshire",
+    },
     {
       text: "Paragon Fellows helped us with Language Access—specifically, in support of the Office of New Americans created in 2024 to assist immigrants in the St. Louis area. Their research laid the groundwork for developing a comprehensive language access plan for our city, and their final report included actionable recommendations that will undoubtedly improve language access services for our residents.",
       author: "—Simon Huang, Chief Technology Officer, City of St. Louis, Missouri",
@@ -29,10 +33,6 @@ const testimonials = [
     {
       text: "While Georgia now has an AI policy in effect, the massive boom of generative AI has brought with it specific challenges. This Spring, Paragon Fellows worked with the GTA to recommend enforcement and education mechanisms to address generative AI's potential effect on government operations at the state level. The work produced by Paragon will help inform a GenAI policy that contains guidelines for the use of generative AI by all 40,000 state employees.",
       author: "—Nikhil Deshpande, Chief Digital and AI Officer, Georgia Technology Authority",
-    },
-	{
-      text: "Paragon Fellows helped our city create a comprehensive AI procurement framework, establishing a structured approach for evaluating AI technologies against core values such as privacy, security, equity, and transparency. This framework will directly benefit over 15,000 residents and ensure all future AI applications align with ethical standards and serve the public responsibly.",
-      author: "—Melanie McDonough, Chief Innovation Officer, City of Lebanon, New Hampshire",
     },
 	{
       text: "The team was highly engaged, efficient, and consistently motivated, which made the collaboration both productive and enjoyable... [The Fellows] brought the right mix of skills and competencies needed to successfully tackle nuanced and complex projects.",
@@ -46,7 +46,11 @@ const testimonials = [
 [ //Student page testimonials
 	{
       text: "Paragon has been immensely fulfilling and reaffirmed my commitment to responsible technological advancement. I appreciated directly working with our government partner and being some of the first in helping San José build capacity against generative AI miscommunication.",
-      author: "— Isabelle Anzabi, Spring 2024 San José Fellow",
+      author: "—Isabelle Anzabi, Spring 2024 San José Fellow",
+    },
+	{
+      text: "As a nontraditional and early career tech policy student, I know how critical it is for students to have early exposure to the tech policy sector; however, the barrier to obtain experience is not often accessible and sometimes not achievable. Paragon provides the opportunity to have hands-on experience working with a government partner on a tech policy initiative—a reality that I did not think was possible. To have the incredible privilege to conduct in-depth research on a real-world tech policy challenge, it reaffirms my passions about public service, making a difference in their community, and learning how to build leadership.",
+      author: "—Yvette Vargas, Spring 2025 Albuquerque Project Lead",
     },
 	{
       text: "Paragon is truly committed to learning and provides countless resources to help you explore different paths of interest. Most importantly, it prepares you for working in actual policy spaces and allows you to harness your own skills. I am proud to be a part of an organization that is so focused on community building and community impact—which makes the work that we do as Fellows especially rewarding.",
@@ -61,6 +65,7 @@ const testimonials = [
       author: "—Jude Miller, Spring 2024 St. Louis Project Lead",
     },
 ]
+
 
 ];
 

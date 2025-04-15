@@ -1,0 +1,302 @@
+[
+  {
+    "id": "reco58DiazW2uDSca",
+    "createdTime": "2025-03-10T22:20:47.000Z",
+    "fields": {
+      "name": "Sam Jung",
+      "title": "Founding Member",
+      "image": "/Headshots/SamJ.jpg",
+      "email": "samjung@upenn.edu",
+      "website": "https://sammjung.com",
+      "school": "penn",
+      "team": "Founding Member",
+      "region": "",
+      "linkedin": ""
+    }
+  },
+  {
+    "id": "recRCsqKv3XazpYP2",
+    "createdTime": "2025-03-10T00:37:09.000Z",
+    "fields": {
+      "name": "Gurman Dhaliwal",
+      "title": "Director of Partnerships",
+      "image": "/Headshots/GurmanD.jpeg",
+      "linkedin": "https://www.linkedin.com/in/gurman-dhaliwal/",
+      "email": "gurmankdhaliwal2@gmail.com",
+      "website": "https://www.gurmandhaliwal.com/about",
+      "school": "ucsd",
+      "team": "Partnerships",
+      "region": ""
+    }
+  },
+  {
+    "id": "rec47A2U8ClmyjWox",
+    "createdTime": "2025-03-10T00:37:11.000Z",
+    "fields": {
+      "name": "Mo Akintan",
+      "title": "Director of Partnerships",
+      "image": "/Headshots/MoA.jpg",
+      "email": "makintan@stanford.edu",
+      "school": "stanford",
+      "team": "Partnerships",
+      "region": "",
+      "linkedin": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "recXcGoDetksRknwS",
+    "createdTime": "2025-03-10T22:17:11.000Z",
+    "fields": {
+      "name": "Neil Rockey",
+      "title": "Director of Partnerships",
+      "image": "/Headshots/NeilR.jpg",
+      "linkedin": "https://www.linkedin.com/in/neil-rockey/",
+      "email": "neil.rockey@maine.edu",
+      "school": "umaine",
+      "team": "Partnerships",
+      "region": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "recR021Ajrcy6ZD16",
+    "createdTime": "2025-03-10T22:20:56.000Z",
+    "fields": {
+      "name": "Henry Ayala Abril",
+      "title": "Policy Director",
+      "image": "/Headshots/HenryA.jpg",
+      "linkedin": "https://www.linkedin.com/in/henryayalaabril/",
+      "email": "henry.ayala@berkeley.edu",
+      "school": "ucb",
+      "team": "Education",
+      "region": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "recElhn9SACkqusmE",
+    "createdTime": "2025-03-10T22:24:42.000Z",
+    "fields": {
+      "name": "James Kent",
+      "title": "Policy Director",
+      "image": "/Headshots/JamesK.jpeg",
+      "linkedin": "https://www.linkedin.com/in/james-ms-kent?trk=contact-info",
+      "email": "jamesmskent@gmail.com",
+      "website": "",
+      "school": "uchicago",
+      "team": "Education",
+      "region": ""
+    }
+  },
+  {
+    "id": "recm45Jm18IjmYHwr",
+    "createdTime": "2025-03-10T22:20:39.000Z",
+    "fields": {
+      "name": "Kashov Sharma",
+      "title": "Policy Director",
+      "image": "/Headshots/KashovS.jpg",
+      "linkedin": "https://www.linkedin.com/in/kashov-sharma/",
+      "email": "kashov24@utexas.edu",
+      "school": "uta",
+      "team": "Education",
+      "region": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "recK3ipDzlDPm2CtJ",
+    "createdTime": "2024-09-25T19:49:56.000Z",
+    "fields": {
+      "name": "Katherine He",
+      "title": "Director of Policy & Education",
+      "image": "/Headshots/KatherineH.PNG",
+      "email": "katherine.he@yale.edu",
+      "school": "yale",
+      "team": "Education",
+      "region": "",
+      "linkedin": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "recdY16q0e8IwZACM",
+    "createdTime": "2024-11-03T20:52:50.000Z",
+    "fields": {
+      "name": "Carolyn Wang",
+      "title": "Director of Advancement",
+      "image": "/Headshots/CarolynW.jpeg",
+      "linkedin": "https://www.linkedin.com/in/carolyn-wang-jy/",
+      "email": "carolynwang.jy@berkeley.edu",
+      "website": "https://www.carolynwang.me/",
+      "school": "ucb",
+      "team": "Advancement",
+      "region": ""
+    }
+  },
+  {
+    "id": "recdfujGGVQS2oLCM",
+    "createdTime": "2024-07-12T20:10:02.000Z",
+    "fields": {
+      "name": "Eileen Chen",
+      "title": "Director of Outreach",
+      "image": "/Headshots/EileenC.jpeg",
+      "linkedin": "https://www.linkedin.com/in/eileenschen",
+      "email": "ec1303@georgetown.edu",
+      "school": "georgetown",
+      "team": "Outreach",
+      "region": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "recv25FQEWFenFBBw",
+    "createdTime": "2025-03-10T22:19:56.000Z",
+    "fields": {
+      "name": "Hamidah Oderinwale",
+      "title": "Analyst",
+      "image": "/Headshots/HamidahO.png",
+      "linkedin": "https://www.linkedin.com/in/hamidahoderinwale/",
+      "email": "hamidah.oderinwale@mail.mcgill.ca",
+      "website": "https://hamidah.me/",
+      "school": "mcgill",
+      "team": "Outreach",
+      "region": ""
+    }
+  },
+  {
+    "id": "rec9HWvwXOWnACn6u",
+    "createdTime": "2025-03-10T22:18:31.000Z",
+    "fields": {
+      "name": "Michael Plancarte",
+      "title": "Director of Outreach",
+      "image": "/Headshots/MichaelP.jpg",
+      "linkedin": "https://www.linkedin.com/in/michael-plancarte",
+      "email": "mplan03@berkeley.edu",
+      "school": "ucb",
+      "team": "Outreach",
+      "region": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "recf5thlVmM1Sg9zN",
+    "createdTime": "2025-03-10T22:19:55.000Z",
+    "fields": {
+      "name": "Minh Pham",
+      "title": "Director of Outreach",
+      "image": "/Headshots/MinhP.jpg",
+      "linkedin": "https://www.linkedin.com/in/khaiminh93/",
+      "email": "phamnguyenkhaiminh93@gmail.com",
+      "website": "https://bio.site/khaiminh93",
+      "school": "ucla",
+      "team": "Outreach",
+      "region": ""
+    }
+  },
+  {
+    "id": "recRyKJEsPF2xMU0e",
+    "createdTime": "2024-07-12T20:11:16.000Z",
+    "fields": {
+      "name": "Ryan Manthy",
+      "title": "Director of Outreach",
+      "image": "/Headshots/RyanM.jpg",
+      "email": "rmanthy@hawk.iit.edu",
+      "school": "iit",
+      "team": "Outreach",
+      "region": "",
+      "linkedin": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "recbepQtF3ownLLd2",
+    "createdTime": "2025-03-10T22:19:54.000Z",
+    "fields": {
+      "name": "Victoria Ren",
+      "title": "Outreach",
+      "image": "/Headshots/VictoriaR.JPEG",
+      "linkedin": "https://www.linkedin.com/in/victoria-ren-315820165/",
+      "email": "victoriazlren@gmail.com",
+      "website": "victoriaren.com",
+      "school": "stanford",
+      "team": "Outreach",
+      "region": ""
+    }
+  },
+  {
+    "id": "recdrzHQyKbboSBUP",
+    "createdTime": "2025-03-19T14:33:32.000Z",
+    "fields": {
+      "name": "Julia Torres",
+      "title": "Director of Operations",
+      "image": "/Headshots/JuliaT.JPG",
+      "linkedin": "https://www.linkedin.com/in/julia-torres-904a3a205",
+      "email": "julsotorres@gmail.com",
+      "school": "ucla",
+      "team": "Operations",
+      "region": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "recQWLAQyhny4PTK8",
+    "createdTime": "2025-03-10T00:36:29.000Z",
+    "fields": {
+      "name": "Mandeep Ladhar",
+      "title": "Director of Finance",
+      "image": "/Headshots/MandeepL.jpg",
+      "email": "ladhar@usc.edu",
+      "school": "usc",
+      "team": "Finance",
+      "region": "",
+      "linkedin": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "recJXt2vqL85Al3K2",
+    "createdTime": "2025-03-10T00:30:15.000Z",
+    "fields": {
+      "name": "Sarah Lawson Pitler",
+      "title": "Finance Team Support",
+      "image": "/Headshots/SarahLP.jpg",
+      "linkedin": "https://www.linkedin.com/in/sarahpitler",
+      "email": "smpitler@gmail.com",
+      "website": "https://sarahpitler.wordpress.com",
+      "school": "unt",
+      "team": "Finance",
+      "region": ""
+    }
+  },
+  {
+    "id": "recrPCyLerYeD5ctY",
+    "createdTime": "2024-07-12T20:10:44.000Z",
+    "fields": {
+      "name": "Joel Yong",
+      "title": "Director of Design",
+      "image": "/Headshots/JoelY.jpg",
+      "email": "jyong@risd.edu",
+      "school": "risd",
+      "team": "Design",
+      "region": "",
+      "linkedin": "",
+      "website": ""
+    }
+  },
+  {
+    "id": "rechWGjIt6AFpaWvH",
+    "createdTime": "2024-07-12T20:11:16.000Z",
+    "fields": {
+      "name": "George Parks",
+      "title": "Director of Technology and Development",
+      "image": "/Headshots/GeorgeP.jpg",
+      "linkedin": "https://www.linkedin.com/in/george-parks/",
+      "email": "george.parks@gatech.edu",
+      "website": "https://georgeparks.me",
+      "school": "gt",
+      "team": "Tech Dev",
+      "region": ""
+    }
+  }
+]

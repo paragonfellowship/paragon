@@ -108,10 +108,10 @@ export default function TopBar() {
                   </div>
                 </div>
                 <Link href="/students">
-                  <MedText className="text-white">Students</MedText>
+                  <MedText className="text-white">For Students</MedText>
                 </Link>
                 <Link href="/governments">
-                  <MedText className="text-white">Governments</MedText>
+                  <MedText className="text-white">For Governments</MedText>
                 </Link>
                 <Link href="/projects">
                   <MedText className="text-white">Projects</MedText>
