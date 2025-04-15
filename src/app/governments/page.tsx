@@ -17,7 +17,7 @@ import Navbar from '@/components/Navbar';
 const sections = [
   { id: "impact", title: "OUR IMPACT" },
   // { id: "projects", title: "02 PAST PROJECTS" },
-  { id: "testimonials", title: "TESTIMONIALS" },
+  { id: "partner testimonials", title: "PARTNER TESTIMONIALS" },
   //{ id: "timeline", title: "03 PROJECT SCOPING & TIMELINE" },
   { id: "faq", title: "FAQ" },
 ];
@@ -106,7 +106,7 @@ export default function About() {
   <Subheading className='text-3xl md:text-5xl mb-4'>Our Impact</Subheading>
   {/* <GrayDivider /> */}
   <Text className="text-base md:text-lg">
-    Over the last year, Paragon has partnered with 17 governments across 11 states through 28 projects.
+    Since our founding, Paragon has partnered with 17 governments across 11 states on 28 projects. We&apos;ve worked with governments and organizations across the country to better science & tech policy processes. Our work ranges has ranged from writing GenAI policy with the State of Georgia, advising on deepfake policy for the City of San José, to writing accessibility guidelines for translation software for the City of Lebanon. For more examples, check our our Projects page to read some of our policy briefs.
   </Text>
   {/* <Text>Spring (5 new / 5 total): Boston; Lebanon, NH; Georgia; St. Louis, MO; San Jose, CA</Text>
    <Text>Summer (2 new / 7 total): CalHHS, Santa Clara</Text>
@@ -116,9 +116,6 @@ export default function About() {
 {/* <Section id="projects">
   <Subheading className='text-3xl md:text-5xl mb-4'>02 Past Projects</Subheading>
   <GrayDivider /> */}
-  <Text className="text-base md:text-lg">
-    We&apos;ve worked with governments and organizations across the country to better science & tech policy processes. Our work ranges has ranged from writing GenAI policy with the State of Georgia, advising on deepfake policy for the City of San Jose, to writing accessibility guidelines for translation software for the City of Lebanon.
-  </Text>
   
   <a href='/projects' className='text-blue-500 block w-full overflow-hidden'>
     <Carousel className='mt-6 md:mt-10' speed={35}>
@@ -134,10 +131,10 @@ export default function About() {
   </a>
 </Section>
 
-<Section id="testimonials">
-  <Subheading className='text-3xl md:text-5xl mb-4'>Testimonials</Subheading>
+<Section id="partner testimonials">
+  <Subheading className='text-3xl md:text-5xl mb-4'>Partner Testimonials</Subheading>
   <GrayDivider/>
-  <Testimonials/>
+  <Testimonials list={1}/>
 </Section>
 
 {/* <Section id="timeline">

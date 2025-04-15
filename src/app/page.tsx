@@ -117,7 +117,7 @@ export default function Home() {
       <Section className='overflow-y-hidden'>
         <Subheading>Testimonials</Subheading>
         <GrayDivider/>
-        <Testimonials/>
+        <Testimonials list={0}/>
       </Section>
 
       <Section className='overflow-y-hidden'>

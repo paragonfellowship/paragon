@@ -4,7 +4,7 @@ import { ComponentProps, useEffect, useRef, useState, useCallback } from "react"
 
 export default function Carousel({
   children,
-  speed = 100000, // ADJUSTED DEFAULT SPEED: Pixels per second. Increase/decrease as needed.
+  speed=40,
   className = "",
   ...props
 }: {

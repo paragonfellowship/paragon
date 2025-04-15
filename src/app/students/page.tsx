@@ -10,6 +10,7 @@ import FAQuestion from '@/components/FAQuestion';
 import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
 import {FA_APP_URL , INFO_SESSION_URL} from '@/app/constants';
+import Testimonials from '@/components/Testimonials';
 
 
 const sections = [
@@ -18,6 +19,7 @@ const sections = [
   { id: "process", title: "APP PROCESS" },
   { id: "timeline", title: "TIMELINE" },
   { id: "dates", title: "IMPORTANT DATES" },
+  { id: "student testimonials", title: "STUDENT TESTIMONIALS" },
   { id: "faq", title: "FAQ" },
 ];
 
@@ -127,7 +129,7 @@ export default function About() {
   <Text className="text-base md:text-lg">For the initial application, the essays are the most important component. While previous experiences and education will help round out an application, we care the most about a potential Fellow&apos;s passion and interest in the tech policy/public service space. Fellows work with their team, Project Lead, and government partner to complete their assigned policy project.</Text>
   
   <Text className='text-gray font-normal text-2xl md:text-3xl mt-8 mb-4'>Track 2 - Project Leads</Text>
-  <Text className="text-base md:text-lg">We are seeking Project Leads with prior managerial or policy experience. Project leads serve as key liaisons between the project teams and government partners, facilitating communication and cooperation to ensure the alignment of project goals and government expectations. Leads will work closely with the government partners and the organizing team to provide support and direction to the team of Fellows. Past candidates have shown a strong ability to steer the project&apos;s direction and navigate ambiguity.</Text>
+  <Text className="text-base md:text-lg">We are seeking Project Leads with prior managerial or policy experience. Project leads serve as key liaisons between the project teams and government partners, facilitating communication and cooperation to ensure the alignment of project goals and government expectations. Leads will work closely with the government partners and the organizing team to provide support and direction to the team of Fellows. Past candidates have shown a strong ability to steer the project&apos;s direction and navigate ambiguity. Our project leads are generally graduate students or PhD candidates.</Text>
   
 </Section>
 
@@ -158,7 +160,11 @@ export default function About() {
     Apps for the Fall 2025 cohort will be expected to open at a later date. Join our <a href={NEWSLETTER_URL} className="underline">mailing list</a> to be notified when apps open.
   </Text> */}
 </Section>
-
+<Section id="student testimonials">
+  <Subheading className='text-3xl md:text-5xl mb-4'>Student Testimonials</Subheading>
+  <GrayDivider/>
+  <Testimonials list={2}/>
+</Section>
       <Section id="faq">
         <Subheading>FAQ</Subheading>
         <GrayDivider/>
