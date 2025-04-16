@@ -64,6 +64,10 @@ const testimonials = [
       text: "Local governments are heavily understaffed. Some of these offices don't have the resources to learn about future technologies, so any opportunity to get students involved is really great. These Fellows didn't just bridge this gap—they provided a creative, academic perspective that only students could bring to the table.",
       author: "—Jude Miller, Spring 2024 St. Louis Project Lead",
     },
+	{
+      text: "The fellowship has given me that rare gift of seeing abstract principles materialize into community impact, all while maintaining that delicate balance between idealism and pragmatism that every effective policy professional must master.",
+      author: "—Catherine Schunk, Spring 2025 U.S. Department of State Fellow",
+    },
 ]
 
 
