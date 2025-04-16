@@ -59,7 +59,7 @@ interface PersonRecord {
 
 import Card from "@/components/Card"
 import Footer from '@/components/Footer'
-//import Image from "next/image"
+import Image from "next/image"
 //import { ElementType } from "react"
 import BgGrid from "@/components/BgGrid"
 import { RiArrowDownLine } from "react-icons/ri"
@@ -141,7 +141,7 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
                         {people.map((person, i) => (
                             <Card key={i} className="flex flex-row w-full items-start">
                                 <div className='relative h-min'>
-                                    {person.fields.image && <img src={person.fields.image} alt={person.fields.name} className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg " />}
+                                    {person.fields.image && <Image src={person.fields.image} alt={person.fields.name} width={128} height={128} className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg " />}
                                     <div className="block w-24 h-20 box-border mt-3 mx-auto flex items-center justify-center overflow-hidden">
 										{colleges[person.fields.school] && <img src={colleges[person.fields.school].logo.src} alt={colleges[person.fields.school].name} className="max-w-full max-h-full object-contain"/>}
 									</div>
