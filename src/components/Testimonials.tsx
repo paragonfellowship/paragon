@@ -67,7 +67,7 @@ const testimonials = [
 	{
       text: "The fellowship has given me that rare gift of seeing abstract principles materialize into community impact, all while maintaining that delicate balance between idealism and pragmatism that every effective policy professional must master.",
       author: "—Catherine Schunk, Spring 2025 U.S. Department of State Fellow",
-    },
+    }
 ]
 
 

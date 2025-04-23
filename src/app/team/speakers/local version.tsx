@@ -1,4 +1,4 @@
-interface Image {
+/*interface Image {
     id: string,
     width: number,
     height: number,
@@ -40,18 +40,19 @@ enum SchoolEnum {
     UCB = 'ucb',
     UCI = 'uci',
 }
+*/
 interface PersonRecord {
     id: string,
     createdTime: string,
     fields: {
         name: string,
         title: string,
-        school: SchoolEnum,
+        school: string,
         region: string,
         email: string,
         linkedin: string,
         website: string,
-        image: Image[],
+        image: string,
         team: string
     }
 }
@@ -64,14 +65,14 @@ import BgGrid from "@/components/BgGrid"
 import { RiArrowDownLine } from "react-icons/ri"
 import { Heading } from "@/components/Typography"
 //import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '@/app/constants'
+import { colleges } from '@/app/constants'
 import TopBar from '@/components/TopBar'
 import {SocialIcon} from 'react-social-icons';
-
+import pastGuestSpeakers from '@/app/team/speakers/Guest Speakers.json';
 const NO_REGION = "";
 
 
-
+/*
 function encodeTableName(tableName: string): string {
     return encodeURIComponent(tableName); // Automatically encodes spaces to %20
 }
@@ -90,7 +91,7 @@ async function retrievePeople(tableName: string): Promise<PersonRecord[]> {
     const rec = await records.json();
     return rec.records;
 }
-
+*/
 // Helper function to group people by region
 function groupPeopleByRegion(people: PersonRecord[]) {
     return people.reduce((acc: { [key: string]: PersonRecord[] }, person) => {
@@ -103,11 +104,7 @@ function groupPeopleByRegion(people: PersonRecord[]) {
     }, {});
 }
 
-export default async function Team() {
-    // const strategicAdvisors = await retrievePeople("Strategic Advisors");
-    const pastGuestSpeakers = await retrievePeople("Guest Speakers");  // Fetch Guest Speakers
-
-    // const advisorsByRegion = groupPeopleByRegion(strategicAdvisors);
+export default function Team() {
     const speakersByRegion = groupPeopleByRegion(pastGuestSpeakers);  // Group Past Guest Speakers by Region
 
     return <>
@@ -124,7 +121,7 @@ export default async function Team() {
         </div>
 
         <main className="m-8">
-            <TeamSection title=""peopleByRegion={speakersByRegion} />  {/* New Section */}
+            <TeamSection title="Invited Speakers" peopleByRegion={speakersByRegion} />  {/* New Section */}
         </main>
 
         <Footer/>
@@ -144,7 +141,7 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
                         {people.map((person, i) => (
                             <Card key={i} className="flex flex-row w-full items-start">
                                 <div className='relative h-min'>
-                                    {person.fields.image && <img src={person.fields.image[0].thumbnails.large.url} alt={person.fields.name} className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg " />}
+                                    {person.fields.image && <Image src={person.fields.image} alt={person.fields.name} width={128} height={128} className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg " />}
                                     <div className="block w-24 h-20 box-border mt-3 mx-auto flex items-center justify-center overflow-hidden">
 										{colleges[person.fields.school] && <img src={colleges[person.fields.school].logo.src} alt={colleges[person.fields.school].name} className="max-w-full max-h-full object-contain"/>}
 									</div>
