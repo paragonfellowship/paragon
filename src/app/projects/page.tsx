@@ -133,7 +133,7 @@ export default function Projects() {
                 />
             </Link>
         </div>
-        <SmallText className='text-xs pt-5'>We&apos;re working on adding the rest of our portfolio, stay tuned for a complete collection!</SmallText>
+        <SmallText className='text-xs pt-5'>We&apos;re working on adding the rest of our portfolio. Stay tuned for a complete collection!</SmallText>
       </Section>
 
       <Section>
