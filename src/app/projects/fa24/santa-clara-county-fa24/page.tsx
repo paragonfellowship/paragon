@@ -83,19 +83,18 @@ We recommend a phased approach to implement this system. The county should begin
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Favour Nerrise', role: 'Project Lead', school: 'Stanford University' },
-			{ name: 'Eesha Agarwal', role: 'Project Lead', school: 'Princeton University' },
-            { name: 'Carmela Wilkins', role: 'Fellow', school: 'Parsons School of Design' },
-            { name: 'Mishayla Harve', role: 'Fellow', school: 'Georgia Institute of Technology' },
-            { name: 'Pranav Dulepet', role: 'Fellow', school: 'University of Maryland' },
-            { name: 'Priti Rangekar', role: 'Fellow', school: 'Stanford University' },
-            { name: 'Tony Wang', role: 'Fellow', school: 'Stanford University' },
-			{ name: 'Atharva Nihalani', role: 'Fellow', school: 'Brown University' }
+            { name: 'Favour Nerrise', role: '(Project Lead)', school: 'Stanford University' },
+			{ name: 'Eesha Agarwal', role: '(Project Lead)', school: 'Princeton University' },
+            { name: 'Carmela Wilkins', role: '', school: 'Parsons School of Design' },
+            { name: 'Mishayla Harve', role: '', school: 'Georgia Institute of Technology' },
+            { name: 'Pranav Dulepet', role: '', school: 'University of Maryland' },
+            { name: 'Priti Rangekar', role: '', school: 'Stanford University' },
+            { name: 'Tony Wang', role: '', school: 'Stanford University' },
+			{ name: 'Atharva Nihalani', role: '', school: 'Brown University' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>

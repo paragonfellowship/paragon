@@ -124,20 +124,19 @@ Looking ahead, we recommend the following:
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Nsisong Udosen', role: 'Project Lead', school: 'Parsons School of Design' },
-            { name: 'Abhay Sastry', role: 'Fellow', school: 'Georgia Institute of Technology' },
-            { name: 'Desiree B. Junfijiah', role: 'Fellow', school: 'Widener University' },
-            { name: 'Elena Ajayi', role: 'Fellow', school: "St. John's University" },
-            { name: 'Noreen Ahmed', role: 'Fellow', school: 'Stanford University' },
-            { name: 'Sharanya Maddukuri', role: 'Fellow', school: 'George Mason University' },
-			{ name: 'Shivam Saran', role: 'Fellow', school: 'Emory University' },
-			{ name: 'Wynee Pintado', role: 'Fellow', school: 'Barnard University' },
-			{ name: 'Zev Van Zanten', role: 'Fellow', school: 'Duke University' },
+            { name: 'Nsisong Udosen', role: '(Project Lead)', school: 'Parsons School of Design' },
+            { name: 'Abhay Sastry', role: '', school: 'Georgia Institute of Technology' },
+            { name: 'Desiree B. Junfijiah', role: '', school: 'Widener University' },
+            { name: 'Elena Ajayi', role: '', school: "St. John's University" },
+            { name: 'Noreen Ahmed', role: '', school: 'Stanford University' },
+            { name: 'Sharanya Maddukuri', role: '', school: 'George Mason University' },
+			{ name: 'Shivam Saran', role: '', school: 'Emory University' },
+			{ name: 'Wynee Pintado', role: '', school: 'Barnard University' },
+			{ name: 'Zev Van Zanten', role: '', school: 'Duke University' },
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>

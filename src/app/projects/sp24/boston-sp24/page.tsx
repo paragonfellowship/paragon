@@ -83,18 +83,17 @@ export default function BOS() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Quinn Wilson', role: 'Project Lead', school: 'UC Berkeley' },
-            { name: 'Anahita Srinivasan', role: 'Fellow', school: 'MIT' },
-            { name: 'Elisha Ham', role: 'Fellow', school: 'Wellesley College' },
-            { name: 'Marie Zhang', role: 'Fellow', school: 'Wellesley College' },
-            { name: 'Sarah Wu', role: 'Fellow', school: 'Amherst College' },
-            { name: 'Sofia Rodriguez', role: 'Fellow', school: 'Wellesley College' },
-            { name: 'Wanru Skuld Shao', role: 'Fellow', school: 'Northeastern University' }
+            { name: 'Quinn Wilson', role: '(Project Lead)', school: 'UC Berkeley' },
+            { name: 'Anahita Srinivasan', role: '', school: 'MIT' },
+            { name: 'Elisha Ham', role: '', school: 'Wellesley College' },
+            { name: 'Marie Zhang', role: '', school: 'Wellesley College' },
+            { name: 'Sarah Wu', role: '', school: 'Amherst College' },
+            { name: 'Sofia Rodriguez', role: '', school: 'Wellesley College' },
+            { name: 'Wanru Skuld Shao', role: '', school: 'Northeastern University' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>

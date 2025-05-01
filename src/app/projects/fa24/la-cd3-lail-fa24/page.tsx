@@ -76,22 +76,21 @@ export default function SJ2() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Wendy Zeng', role: 'Project Lead', school: 'UC Berkeley' },
-			{ name: 'Smita Samanta', role: 'Project Lead', school: 'New York University ' },
-            { name: 'Emma Christie', role: 'Fellow', school: 'UCLA' },
-            { name: 'Asli Kocak', role: 'Fellow', school: 'Tufts University' },
-            { name: 'Antara Chugh', role: 'Fellow', school: 'UCLA' },
-            { name: 'Karina Castro', role: 'Fellow', school: 'San Jose State University' },
-            { name: 'Elizabeth Fonseca', role: 'Fellow', school: 'UC Santa Cruz' },
-			{ name: 'Shreya Taluja', role: 'Fellow', school: 'University of Pennsylvania' },
-			{ name: 'Matheus Dias', role: 'Fellow', school: 'UC Berkeley' },
-			{ name: 'Yasmin Jafari', role: 'Fellow', school: 'UCLA' },
-			{ name: 'Josh Crowley', role: 'Fellow', school: 'Pomona College' },
+            { name: 'Wendy Zeng', role: '(Project Lead)', school: 'UC Berkeley' },
+			{ name: 'Smita Samanta', role: '(Project Lead)', school: 'New York University ' },
+            { name: 'Emma Christie', role: '', school: 'UCLA' },
+            { name: 'Asli Kocak', role: '', school: 'Tufts University' },
+            { name: 'Antara Chugh', role: '', school: 'UCLA' },
+            { name: 'Karina Castro', role: '', school: 'San Jose State University' },
+            { name: 'Elizabeth Fonseca', role: '', school: 'UC Santa Cruz' },
+			{ name: 'Shreya Taluja', role: '', school: 'University of Pennsylvania' },
+			{ name: 'Matheus Dias', role: '', school: 'UC Berkeley' },
+			{ name: 'Yasmin Jafari', role: '', school: 'UCLA' },
+			{ name: 'Josh Crowley', role: '', school: 'Pomona College' },
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>

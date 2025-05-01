@@ -59,18 +59,17 @@ export default function STCL() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-3 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Prince Osaj', role: 'Project Lead', school: 'Yale University' },
-            { name: 'Wendy Zeng', role: 'Associate Project Lead', school: 'UC Berkeley' },
-            { name: 'Sarah Lawson Pitler', role: 'Associate Project Lead', school: 'University of North Texas' },
-            { name: 'Ches Weinfeld', role: 'Fellow', school: 'Swarthmore University' },
-            { name: 'Eric Ye', role: 'Fellow', school: 'University of Southern California' },
-            { name: 'Vimala Machiraju', role: 'Fellow', school: 'UC Irvine' },
-            { name: 'Ngoc-Mai Huynh', role: 'Fellow', school: 'Howard University' }
+            { name: 'Prince Osaj', role: '(Project Lead)', school: 'Yale University' },
+            { name: 'Wendy Zeng', role: '(Associate Project Lead)', school: 'UC Berkeley' },
+            { name: 'Sarah Lawson Pitler', role: '(Associate Project Lead)', school: 'University of North Texas' },
+            { name: 'Ches Weinfeld', role: '', school: 'Swarthmore University' },
+            { name: 'Eric Ye', role: '', school: 'University of Southern California' },
+            { name: 'Vimala Machiraju', role: '', school: 'UC Irvine' },
+            { name: 'Ngoc-Mai Huynh', role: '', school: 'Howard University' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>

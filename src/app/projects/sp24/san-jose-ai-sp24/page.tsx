@@ -14,7 +14,7 @@ export default function SJG() {
       </>}>
         <div className="flex flex-col justify-end h-full pb-4">
           <Text className='md:text-5xl text-3xl uppercase font-semibold'>San José, CA </Text>
-          <Text className='md:text-2xl text-lg md:mt-4 mt-2 uppercase'>Protecting Government<br></br>  Communication from <br></br> AI Manipulation</Text>
+          <Text className='md:text-2xl text-lg md:mt-4 mt-2 uppercase'>Protecting Government Communication<br></br> from AI Manipulation</Text>
         </div>
         <Image src={CAPITOL_LINEART} alt="Capitol Building" className='md:h-[650px] md:w-[650px] h-[280px] w-[280px] object-contain absolute md:-right-10 md:-top-24 right-0 -z-10' />
       </Section>
@@ -85,18 +85,17 @@ export default function SJG() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            {name: 'Elijah Mercer', role: 'Project Lead', school: 'UC Berkeley'},
-            {name: 'Kaitlyn Cui', role: 'Fellow', school: "UCLA"},
-            {name: 'Gene Kim', role: 'Fellow', school: 'Stanford University'},
-            {name: 'Houda Nait El Barj', role: 'Fellow', school: 'Stanford University'},
-            {name: 'Isabelle Anzabi', role: 'Fellow', school: 'Stanford University'},
-            {name: 'Jena Alsup', role: 'Fellow', school: "California Institute of Technology"},
-            {name: 'Payton Alaama', role: 'Fellow', school: "UC Irvine"}
+            {name: 'Elijah Mercer', role: '(Project Lead)', school: 'UC Berkeley'},
+            {name: 'Kaitlyn Cui', role: '', school: "UCLA"},
+            {name: 'Gene Kim', role: '', school: 'Stanford University'},
+            {name: 'Houda Nait El Barj', role: '', school: 'Stanford University'},
+            {name: 'Isabelle Anzabi', role: '', school: 'Stanford University'},
+            {name: 'Jena Alsup', role: '', school: "California Institute of Technology"},
+            {name: 'Payton Alaama', role: '', school: "UC Irvine"}
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-            <Text className='text-center font-semibold'>{contributor.name}</Text>
-            <SmallText className='text-center'>{contributor.role}</SmallText>
-            <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
           </div>
           ))}
         </div>

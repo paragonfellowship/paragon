@@ -72,17 +72,16 @@ export default function STL2() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            {name: 'Jude Miller', role: 'Project Lead', school: 'Washington University in St. Louis'},
-            {name: 'Jiayan Luo', role: 'Fellow', school: "Northwestern University"},
-            {name: 'Sana Madhavan', role: 'Fellow', school: 'University of Illinois at Urbana-Champaign'},
-            {name: 'Naren Chittem', role: 'Fellow', school: 'Washington University in St. Louis'},
-            {name: 'Aliana Yoon', role: 'Fellow', school: 'Wellesley College'},
-            {name: 'Shivani Sundarensan', role: 'Fellow', school: "University of Michigan"}
+            {name: 'Jude Miller', role: '(Project Lead)', school: 'Washington University in St. Louis'},
+            {name: 'Jiayan Luo', role: '', school: "Northwestern University"},
+            {name: 'Sana Madhavan', role: '', school: 'University of Illinois at Urbana-Champaign'},
+            {name: 'Naren Chittem', role: '', school: 'Washington University in St. Louis'},
+            {name: 'Aliana Yoon', role: '', school: 'Wellesley College'},
+            {name: 'Shivani Sundarensan', role: '', school: "University of Michigan"}
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-            <Text className='text-center font-semibold'>{contributor.name}</Text>
-            <SmallText className='text-center'>{contributor.role}</SmallText>
-            <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
           </div>
           ))}
         </div>

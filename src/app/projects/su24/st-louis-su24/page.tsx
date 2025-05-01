@@ -21,16 +21,12 @@ export default function STL() {
             Tech-Powered<br />Cultural Diversity
           </Text>
         </div>
-        <Image 
-          src={CAPITOL_LINEART} 
-          alt="Capitol Building" 
-          className='md:h-[650px] md:w-[650px] h-[280px] w-[280px] object-contain absolute md:-right-10 md:-top-24 right-0 -z-10' 
-        />
+       <Image src={CAPITOL_LINEART} alt="Capitol Building" className='md:h-[650px] md:w-[650px] h-[280px] w-[280px] object-contain absolute md:-right-10 md:-top-24 right-0 -z-10' />
       </Section>
-
-      {/* Summary Section */}
+      <br />
+      <br />
       <Section>
-        <Subheading>SUMMARY</Subheading>
+        <Subheading>Project Description</Subheading>
         <Text>
           St. Louis, Missouri is a city with a remarkable degree of demographic diversity. From a governmental perspective, this unique character has challenged the city’s ability to provide equitable service and an inclusive environment for individuals with limited English proficiency (LEP). Recently, digital tools for translation–including those powered by artificial intelligence (AI)–have expanded in number and scope, providing one route for governmental entities to efficiently improve their language access capabilities. However, the efficacy of these tools remains poorly demonstrated, and robust, generalizable guidelines for their implementation are lacking. Herein, we explore the interface of digital tools and language access for the city of St. Louis and make two targeted recommendations to address current challenges.
         </Text>
@@ -74,19 +70,18 @@ export default function STL() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-3 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Lucas Fluegel', role: 'Project Lead', school: "University of Minnesota"},
-            { name: 'Rachel Arnold', role: 'Fellow', school: 'Hunter College' },
-            { name: 'Rhea Banerjee', role: 'Fellow', school: 'Georgetown University' },
-            { name: 'Wil Czeschin', role: 'Fellow', school: 'University of Missouri' },
-            { name: 'Devashri Khadke', role: 'Fellow', school: 'University of Chicago' },
-            { name: 'Deepali Paasham', role: 'Fellow', school: 'University of North Carolina at Chapel Hill' },
-            { name: 'Eman Teshome', role: 'Fellow', school: 'Washington University in St. Louis' },
-            { name: 'Marvel Zhou', role: 'Fellow', school: 'Ohio State University' }
+            { name: 'Lucas Fluegel', role: '(Project Lead)', school: "University of Minnesota"},
+            { name: 'Rachel Arnold', role: '', school: 'Hunter College' },
+            { name: 'Rhea Banerjee', role: '', school: 'Georgetown University' },
+            { name: 'Wil Czeschin', role: '', school: 'University of Missouri' },
+            { name: 'Devashri Khadke', role: '', school: 'University of Chicago' },
+            { name: 'Deepali Paasham', role: '', school: 'University of North Carolina at Chapel Hill' },
+            { name: 'Eman Teshome', role: '', school: 'Washington University in St. Louis' },
+            { name: 'Marvel Zhou', role: '', school: 'Ohio State University' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>

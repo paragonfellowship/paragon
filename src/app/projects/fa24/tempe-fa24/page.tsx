@@ -116,19 +116,18 @@ In Spring 2025, the Dr. Deitrick plans to implement components of the outlined p
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Osaiyekemwen Ruth Ogbemudia', role: 'Project Lead', school: 'Cornell University' },
-			{ name: 'Helen Song', role: 'Fellow', school: 'University of Wisconsin-Madison' },
-            { name: 'Jackson Luo', role: 'Fellow', school: 'University of Illinois (Chicago)' },
-            { name: 'Samdeet Kahn', role: 'Fellow', school: 'Brown University' },
-            { name: 'Junsuh Kim', role: 'Fellow', school: 'MIT' },
-            { name: 'Alyssa Png', role: 'Fellow', school: 'Columbia University' },
-            { name: 'Kendall Schrohe', role: 'Fellow', school: 'Santa Clara University ' },
-			{ name: 'Anish Wuppalapati', role: 'Fellow', school: 'Georgetown University' }
+            { name: 'Osaiyekemwen Ruth Ogbemudia', role: '(Project Lead)', school: 'Cornell University' },
+			{ name: 'Helen Song', role: '', school: 'University of Wisconsin-Madison' },
+            { name: 'Jackson Luo', role: '', school: 'University of Illinois (Chicago)' },
+            { name: 'Samdeet Kahn', role: '', school: 'Brown University' },
+            { name: 'Junsuh Kim', role: '', school: 'MIT' },
+            { name: 'Alyssa Png', role: '', school: 'Columbia University' },
+            { name: 'Kendall Schrohe', role: '', school: 'Santa Clara University ' },
+			{ name: 'Anish Wuppalapati', role: '', school: 'Georgetown University' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>

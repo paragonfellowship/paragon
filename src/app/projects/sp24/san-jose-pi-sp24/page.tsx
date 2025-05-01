@@ -96,13 +96,12 @@ work includes:
           <div className='grid md:grid-cols-3 sm:grid-cols-2 gap-4'>
             {[
               { name: 'Favour Nerrise', role: 'Project Lead', school: 'Stanford University'},
-              { name: 'Minh Phan', role: 'Fellow', school: 'UCLA'},
-              { name: 'Shruti Verma', role: 'Fellow', school: 'Stanford University'},
+              { name: 'Minh Phan', role: '', school: 'UCLA'},
+              { name: 'Shruti Verma', role: '', school: 'Stanford University'},
             ].map((contributor, index) => (
               <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-                <Text className='text-center font-semibold'>{contributor.name}</Text>
-                <SmallText className='text-center'>{contributor.role}</SmallText>
-                <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
               </div>
             ))}
           </div>

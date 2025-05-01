@@ -114,16 +114,15 @@ these applications adhere to the guidelines of the AI auditing framework.
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-3 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Peter Benzoni', role: 'Project Lead', school: 'UC Berkeley'},
-            { name: 'Jude Ha', role: 'Fellow' , school: 'Harvard University'},
-            { name: 'Erin Parker', role: 'Fellow' , school: 'Dartmouth College'},
-            { name: 'Sanjana Raj', role: 'Fellow' , school: 'Dartmouth College'},
-            { name: 'Yifan Zhang', role: 'Fellow' , school: 'Brown University'}
+            { name: 'Peter Benzoni', role: '(Project Lead)', school: 'UC Berkeley'},
+            { name: 'Jude Ha', role: '' , school: 'Harvard University'},
+            { name: 'Erin Parker', role: '' , school: 'Dartmouth College'},
+            { name: 'Sanjana Raj', role: '' , school: 'Dartmouth College'},
+            { name: 'Yifan Zhang', role: '' , school: 'Brown University'}
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>

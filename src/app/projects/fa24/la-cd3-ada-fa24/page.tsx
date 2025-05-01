@@ -96,19 +96,18 @@ By implementing these recommendations, CD3 will achieve its accessibility goals 
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Yana Sharifullina', role: 'Project Lead', school: 'Swarthmore College' },
-			{ name: 'Cynthia Zheng', role: 'Fellow', school: 'Swarthmore College' },
-            { name: 'Nick Masi', role: 'Fellow', school: 'Brown University' },
-            { name: 'Jun Lee', role: 'Fellow', school: 'Brown University' },
-            { name: 'Autumn Dorsey', role: 'Fellow', school: 'Harvard University' },
-            { name: 'Hana Samad', role: 'Fellow', school: 'McGill University' },
-            { name: 'Madison Harvey', role: 'Fellow', school: 'Brown University' },
-			{ name: 'Tembibolaji Oni', role: 'Fellow', school: 'University of Pennsylvania' }
+            { name: 'Yana Sharifullina', role: '(Project Lead)', school: 'Swarthmore College' },
+			{ name: 'Cynthia Zheng', role: '', school: 'Swarthmore College' },
+            { name: 'Nick Masi', role: '', school: 'Brown University' },
+            { name: 'Jun Lee', role: '', school: 'Brown University' },
+            { name: 'Autumn Dorsey', role: '', school: 'Harvard University' },
+            { name: 'Hana Samad', role: '', school: 'McGill University' },
+            { name: 'Madison Harvey', role: '', school: 'Brown University' },
+			{ name: 'Tembibolaji Oni', role: '', school: 'University of Pennsylvania' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>

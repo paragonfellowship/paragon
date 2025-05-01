@@ -91,18 +91,17 @@ export default function SJ2() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Tomisin Olanrewaju', role: 'Project Lead', school: 'Harvard University' },
-			{ name: 'Caroline Bouisse', role: 'Fellow', school: 'The University of Chicago' },
-            { name: 'Ahmed Diongue', role: 'Fellow', school: 'MIT' },
-            { name: 'Taylor Petrofski', role: 'Fellow', school: 'University of Virginia' },
-            { name: 'Danni Chacon', role: 'Fellow', school: 'Vanderbilt University' },
-            { name: 'Garv Jain', role: 'Fellow', school: 'George Mason University' },
-            { name: 'Dani Benavente', role: 'Fellow', school: 'McGill University' },
-			{ name: 'Rhea Banerjee', role: 'Fellow', school: 'Georgetown University' }
+            { name: 'Tomisin Olanrewaju', role: '(Project Lead)', school: 'Harvard University' },
+			{ name: 'Caroline Bouisse', role: '', school: 'The University of Chicago' },
+            { name: 'Ahmed Diongue', role: '', school: 'MIT' },
+            { name: 'Taylor Petrofski', role: '', school: 'University of Virginia' },
+            { name: 'Danni Chacon', role: '', school: 'Vanderbilt University' },
+            { name: 'Garv Jain', role: '', school: 'George Mason University' },
+            { name: 'Dani Benavente', role: '', school: 'McGill University' },
+			{ name: 'Rhea Banerjee', role: '', school: 'Georgetown University' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} ({contributor.role})</Text>
               <SmallText className='text-center'>{contributor.school}</SmallText>
             </div>
           ))}

@@ -95,19 +95,18 @@ Moving forward, while DOE’s supercomputing infrastructure remains robust, it m
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Jae Wan Ahn', role: 'Project Lead', school: 'University of Chicago' },
-			{ name: 'Audrey Berlie', role: 'Fellow', school: 'Stetson University' },
-            { name: 'Eric Gong', role: 'Fellow', school: 'Harvard University' },
-            { name: 'Bryn Kerslake', role: 'Fellow', school: 'Colby College' },
-            { name: 'Arshi Mahajan', role: 'Fellow', school: 'Dartmouth College' },
-            { name: 'Madison Moreau', role: 'Fellow', school: 'University of Chicago' },
-            { name: 'Uchenna Andrew Offorjebe', role: 'Fellow', school: 'University of Chicago' },
-			{ name: 'Virginia Washington', role: 'Fellow', school: 'University of Chicago' }
+            { name: 'Jae Wan Ahn', role: '(Project Lead)', school: 'University of Chicago' },
+			{ name: 'Audrey Berlie', role: '', school: 'Stetson University' },
+            { name: 'Eric Gong', role: '', school: 'Harvard University' },
+            { name: 'Bryn Kerslake', role: '', school: 'Colby College' },
+            { name: 'Arshi Mahajan', role: '', school: 'Dartmouth College' },
+            { name: 'Madison Moreau', role: '', school: 'University of Chicago' },
+            { name: 'Uchenna Andrew Offorjebe', role: '', school: 'University of Chicago' },
+			{ name: 'Virginia Washington', role: '', school: 'University of Chicago' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>

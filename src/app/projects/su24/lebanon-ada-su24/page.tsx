@@ -80,17 +80,16 @@ export default function SJ2() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Yana Sharifullina', role: 'Project Lead', school: 'Swarthmore College' },
-            { name: 'Naa Ameley Owusu-Amo', role: 'Fellow', school: 'Baylor University' },
-            { name: 'Nora Sun', role: 'Fellow', school: 'Harvard University' },
-            { name: 'Alicia Krasner', role: 'Fellow', school: 'Harvey Mudd College' },
-            { name: 'Fallyn Buckner', role: 'Fellow', school: 'Claremont McKenna College' },
-            { name: 'Tyfani Fennell', role: 'Fellow', school: 'Washington University in St. Louis' }
+            { name: 'Yana Sharifullina', role: '(Project Lead)', school: 'Swarthmore College' },
+            { name: 'Naa Ameley Owusu-Amo', role: '', school: 'Baylor University' },
+            { name: 'Nora Sun', role: '', school: 'Harvard University' },
+            { name: 'Alicia Krasner', role: '', school: 'Harvey Mudd College' },
+            { name: 'Fallyn Buckner', role: '', school: 'Claremont McKenna College' },
+            { name: 'Tyfani Fennell', role: '', school: 'Washington University in St. Louis' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
-              <Text className='text-center font-semibold'>{contributor.name}</Text>
-              <SmallText className='text-center'>{contributor.role}</SmallText>
-              <SmallText className='text-center'>{contributor.school}</SmallText>
+              <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
+              <SmallText className='text-center font-italic'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>
