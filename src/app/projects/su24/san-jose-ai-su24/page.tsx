@@ -76,19 +76,20 @@ export default function SJ2() {
 
       <Section>
         <Subheading>Contributors</Subheading>
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-4">
+        <div className='grid md:grid-cols-3 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Favour Nerrise', role: 'Project Lead' },
-            { name: 'Julie Heng', role: 'Fellow' },
-            { name: 'Zoe Dorado', role: 'Fellow' },
-            { name: 'Mirakle Wright', role: 'Fellow' },
-            { name: 'Julia Torres', role: 'Fellow' },
-            { name: 'Payton Alaama', role: 'Fellow' },
-            { name: 'Sabrina Nabizada', role: 'Fellow' },
+            { name: 'Favour Nerrise', role: 'Project Lead', school: 'Stanford University' },
+            { name: 'Julie Heng', role: 'Fellow', school: 'Harvard University' },
+            { name: 'Zoe Dorado', role: 'Fellow', school: 'Pomona College' },
+            { name: 'Mirakle Wright', role: 'Fellow', school: 'University of Colorado Denver' },
+            { name: 'Julia Torres', role: 'Fellow', school: 'UCLA' },
+            { name: 'Payton Alaama', role: 'Fellow', school: 'UC Irvine' },
+            { name: 'Sabrina Nabizada', role: 'Fellow', school: 'San Jose State University' }
           ].map((contributor, index) => (
-            <div key={index} className="border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center">
-              <Text className="text-center font-semibold">{contributor.name}</Text>
-              <SmallText className="text-center">{contributor.role}</SmallText>
+            <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
+              <Text className='text-center font-semibold'>{contributor.name}</Text>
+              <SmallText className='text-center'>{contributor.role}</SmallText>
+              <SmallText className='text-center'>{contributor.school}</SmallText>
             </div>
           ))}
         </div>
