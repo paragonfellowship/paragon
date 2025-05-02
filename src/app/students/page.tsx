@@ -151,7 +151,7 @@ export default function About() {
   <Subheading className='text-3xl md:text-5xl mb-4'>Important Dates</Subheading>
   <GrayDivider/>
   <Text className="text-base md:text-lg">
-    We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Fellowship runs from late January to early May, our Summer program runs from late May to early September, and the Fall Fellowship runs from early October to late December. Applications for each cohort will be expected to open 1–2 months in advance.
+    We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Fellowship runs from late January to early May, our Summer program runs from late May to early September, and the Fall Fellowship runs from early October to late December. Applications for each cohort open roughly two months before each cohort's start date.
   </Text>
   <Text className="text-base md:text-lg mt-6">
     Applications are now open for the Summer 2025 cohort. The Summer 2025 Fellowship will run from <span className="font-semibold underline">May 29th to September 5th, 2025</span>.
