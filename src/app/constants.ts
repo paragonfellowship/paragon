@@ -27,6 +27,7 @@ import yaleLogo from '@/assets/colleges/yale.svg';
 import utaLogo from '@/assets/colleges/uta.svg';
 import uillinoisucLogo from '@/assets/colleges/uillinois-uc.svg';
 import cabriniLogo from '@/assets/colleges/cabrinilogo.png';
+import fiuLogo from '@/assets/colleges/fiu.svg';
 
 //these are the files when using seals
 /*
@@ -337,6 +338,10 @@ export const colleges: {
 	cabrini: {
         name: 'Cabrini College',
         logo: cabriniLogo
+    },
+	fiu: {
+        name: 'Florida International University',
+        logo: fiuLogo
     }
 }
 
