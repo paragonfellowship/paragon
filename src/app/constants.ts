@@ -114,26 +114,39 @@ export const governments: {
     //     name: 'Maricopa',
     //     logo: maricopaLogo
     // },
-    brownsville: {
-        name: 'Brownsville, Texas',
-        logo: brownsvilleLogo
+    sanJose: {
+        name: 'San Jose, California',
+        logo: sanJoseLogo
+    },
+	MontanaSITSD: {
+        name: 'Montana State Information Technology Services Division',
+        logo: MontanaSITSDLogo
     },
     boston: {
         name: 'Boston, Massachusetts',
         logo: bostonLogo
     },
-    stLouis: {
-        name: 'St. Louis, Missouri',
-        logo: stLouisLogo
-    },
     georgia: {
         name: 'Georgia Technology Authority',
         logo: georgiaLogo
     },
+    brownsville: {
+        name: 'Brownsville, Texas',
+        logo: brownsvilleLogo
+    },
+    stLouis: {
+        name: 'St. Louis, Missouri',
+        logo: stLouisLogo
+    },
+    USStateDepartment: {
+        name: 'U.S. Department of State',
+        logo: USStateLogo
+    }
     losAngeles: {
-        name: 'Los Angeles, California',
+        name: 'Los Angeles, California (Council District 3)',
         logo: losAngelesLogo
     },
+
     // southBend: {
     //     name: 'South Bend',
     //     logo: southBendLogo
@@ -162,18 +175,10 @@ export const governments: {
         name: 'Santa Clara County, California',
         logo: santaClaraLogo
     },
-    sanJose: {
-        name: 'San Jose, California',
-        logo: sanJoseLogo
-    },
     lebanon: {
         name: 'Lebanon, New Hampshire',
         logo: lebanonLogo
     },
-    Albequerque: {
-        name: 'Albuquerque, New Mexico',
-        logo: AlbuquerqueLogo
-    }, 
     Alexandria: {
         name: 'Alexandria, Virginia',
         logo: AlexandriaLogo
@@ -194,14 +199,10 @@ export const governments: {
         name: 'Missoula, Montana',
         logo: MissoulaLogo
     },
-    MontanaSITSD: {
-        name: 'Montana State Information Technology Services Division',
-        logo: MontanaSITSDLogo
-    },
-    USStateDepartment: {
-        name: 'U.S. Department of State',
-        logo: USStateLogo
-    }
+    Albequerque: {
+        name: 'Albuquerque, New Mexico',
+        logo: AlbuquerqueLogo
+    }, 
 	//,
 	//Bismarck: {
     //    name: 'Bismarck, North Dakota',
