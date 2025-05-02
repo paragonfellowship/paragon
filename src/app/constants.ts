@@ -141,7 +141,7 @@ export const governments: {
     USStateDepartment: {
         name: 'U.S. Department of State',
         logo: USStateLogo
-    }
+    },
     losAngeles: {
         name: 'Los Angeles, California (Council District 3)',
         logo: losAngelesLogo
@@ -202,7 +202,7 @@ export const governments: {
     Albequerque: {
         name: 'Albuquerque, New Mexico',
         logo: AlbuquerqueLogo
-    }, 
+    }
 	//,
 	//Bismarck: {
     //    name: 'Bismarck, North Dakota',
