@@ -35,9 +35,9 @@ export default function SJ2() {
 <br></br><br></br><br></br>
 1) Data Consolidation: Conduct a comprehensive survey of USG supercomputers, their operational purposes, and their current capabilities.
 <br></br><br></br>
-2)Performance Comparison: Calculate the approximate amounts of compute and time required to train a large language model (LLM) similar to OpenAI’s GPT-4 on the newest supercomputers owned and operated by the U.S. Department of Energy (DOE) and compare the results to industry-funded supercomputers. This supplements CSET Georgetown’s May 2024 analysis on the National Artificial Intelligence Research Resource (NAIRR) and its compute power.
+2) Performance Comparison: Calculate the approximate amounts of compute and time required to train a large language model (LLM) similar to OpenAI’s GPT-4 on the newest supercomputers owned and operated by the U.S. Department of Energy (DOE) and compare the results to industry-funded supercomputers. This supplements CSET Georgetown’s May 2024 analysis on the National Artificial Intelligence Research Resource (NAIRR) and its compute power.
 <br></br><br></br>
-3)Resource Allocation Analysis: Analyze the changes in compute allocation data from 3 main DOE research initiatives from 2019 to 2024: Innovative and Novel Computational Impact on Theory and Experiment (INCITE), The ASCR Leadership Computing Challenge (ALCC), and The Energy Research Computing Allocations Process (ERCAP).
+3 )Resource Allocation Analysis: Analyze the changes in compute allocation data from 3 main DOE research initiatives from 2019 to 2024: Innovative and Novel Computational Impact on Theory and Experiment (INCITE), The ASCR Leadership Computing Challenge (ALCC), and The Energy Research Computing Allocations Process (ERCAP).
 <br></br><br></br><br></br>
 This project charts the capabilities and utilization of federal HPC resources in recent years in a manner that is comprehensive yet accessible to the public. At the same time, the database may serve as an impetus for more coordinated discussions on future HPC investments among federal agencies.
         </Text>

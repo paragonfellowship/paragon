@@ -80,7 +80,8 @@ export default function SJ2() {
         <Subheading>Contributors</Subheading>
         <div className='grid md:grid-cols-4 sm:grid-cols-2 gap-4'>
           {[
-            { name: 'Yana Sharifullina', role: '(Project Lead)', school: 'Swarthmore College' },
+			{ name: 'Elias Abadi', role: '(Project Lead)', school: 'University of Southern California' },
+            { name: 'Yana Sharifullina', role: '', school: 'Swarthmore College' },
             { name: 'Naa Ameley Owusu-Amo', role: '', school: 'Baylor University' },
             { name: 'Nora Sun', role: '', school: 'Harvard University' },
             { name: 'Alicia Krasner', role: '', school: 'Harvey Mudd College' },
