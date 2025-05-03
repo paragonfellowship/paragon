@@ -3,7 +3,7 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                hostname: "dummyimage.com"
+                hostname: "v5.airtableusercontent.com",
             }
         ]
     }

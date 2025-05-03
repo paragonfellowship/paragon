@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import Card from "@/components/Card"; // Adjust the path based on where your Card component file is located
+import Card from "@/components/Card";
+import Image from "next/image"
 
 const testimonials = [
     // homepage testimonials
@@ -192,12 +193,23 @@ export default function Testimonials({ list }: { list: number }) {
                         className="flex-shrink-0 w-full snap-center"
                     >
                         <div className="flex flex-col md:flex-row items-start h-full">
-                            <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6">
-                                <img
-                                    src={testimonial.imageUrl}
-                                    alt={`Headshot of ${testimonial.author}`}
-                                    className="rounded-full object-cover w-full h-full shadow-lg"
-                                />
+                            {/* This div now controls the shape and size of the image */}
+                            {/* Set height to h-32 (128px) and width to w-24 (96px) for a taller oval */}
+                            {/* Replicated the relative h-min from the team page wrapper div */}
+                            <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6 relative h-min h-32 w-24 md:h-32 md:w-24 rounded-full overflow-hidden shadow-lg">
+                                {testimonial.imageUrl && (
+                                    <Image
+                                        src={testimonial.imageUrl}
+                                        alt={`${testimonial.author}`}
+                                        // Use fill to make the image take the size of the parent div
+                                        fill
+                                        // object-cover ensures the image covers the oval container
+                                        className="object-cover"
+                                        // Add sizes prop for performance with fill
+                                        // Adjust sizes based on container widths (96px and 128px)
+                                        sizes="(max-width: 768px) 96px, 128px"
+                                    />
+                                )}
                             </div>
 
                             <div className="flex-grow flex flex-col justify-between">

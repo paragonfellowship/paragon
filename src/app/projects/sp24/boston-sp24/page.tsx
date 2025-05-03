@@ -1,9 +1,9 @@
-import CAPITOL_LINEART from '@/assets/capitol-lineart.png';
+//import CAPITOL_LINEART from '@/assets/capitol-lineart.png';
 import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
 import { SmallText, Subheading, Text } from '@/components/Typography';
-import Image from 'next/image';
+//import Image from 'next/image';
 
 export default function BOS() {
   return (
@@ -16,7 +16,7 @@ export default function BOS() {
           <Text className='md:text-5xl text-3xl uppercase font-semibold'>Boston, MA</Text>
           <Text className='md:text-2xl text-lg md:mt-4 mt-2 uppercase'>Technology Procurement<br></br>Guidelines</Text>
         </div>
-        <Image src={CAPITOL_LINEART} alt="Capitol Building" className='md:h-[650px] md:w-[650px] h-[280px] w-[280px] object-contain absolute md:-right-10 md:-top-24 right-0 -z-10' />
+        {/*<Image src={CAPITOL_LINEART} alt="Capitol Building" className='md:h-[650px] md:w-[650px] h-[280px] w-[280px] object-contain absolute md:-right-10 md:-top-24 right-0 -z-10' />*/}
       </Section>
       <br />
       <Section>

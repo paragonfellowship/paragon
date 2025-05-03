@@ -41,9 +41,7 @@ export default function Projects() {
       </div>
 
 	<Section>
-	<Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Our Projects </Text> 
-	<div></div>
-	<Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Fall 2024 </Text> 
+	<Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Fall 2024 </Text> 
 	<GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">
             <Link href="/projects/fa24/federal-fa24" passHref>
@@ -89,7 +87,8 @@ export default function Projects() {
                 />
             </Link>
         </div>
-      <Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Summer 2024 </Text> 
+		<br /><br />
+      <Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Summer 2024 </Text> 
       <GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">
 			<Link href="/projects/su24/lebanon-ada-su24" passHref>
@@ -117,7 +116,8 @@ export default function Projects() {
                 />
             </Link>
         </div>
-        <Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Spring 2024 </Text> 
+		<br /><br />
+        <Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Spring 2024 </Text> 
         <GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">
             <Link href="/projects/sp24/lebanon-sp24" passHref>
@@ -151,7 +151,7 @@ export default function Projects() {
                 />
             </Link>
         </div>
-        <SmallText className='text-xs pt-5'>We&apos;re working on adding the rest of our portfolio. Stay tuned for a complete collection!</SmallText>
+        <SmallText className='text-xs pt-5'>This page will continuously be updated over the year with new projects. Be sure to check back later for new policy memos!</SmallText>
       </Section>
 
       <Section>

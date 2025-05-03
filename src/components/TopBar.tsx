@@ -65,7 +65,7 @@ export default function TopBar() {
                  <span className="cursor-pointer">
                    <MedText className="text-white">{link.label}</MedText>
                  </span>
-                <div className="absolute hidden group-hover:block pt-2 w-48 right-0 z-20">
+                <div className="absolute hidden group-hover:block pt-2 w-48 left-0 z-20">
                   <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                     {link.subLinks.map(subLink => (
                       <Link
