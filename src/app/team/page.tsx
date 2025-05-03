@@ -1,4 +1,3 @@
-//c
 interface Image {
     id: string,
     width: number,
@@ -71,7 +70,8 @@ interface PersonRecord {
         linkedin: string,
         website: string,
         image: Image[],
-        team: string
+        team: string,
+		school_logo: Image[]
     }
 }
 import Card from "@/components/Card"
@@ -86,18 +86,15 @@ import { RiArrowDownLine } from "react-icons/ri"
 import GrayDivider from "@/components/GrayDivider"
 import {SocialIcon} from 'react-social-icons';
 //comment out if using locally
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '@/app/constants'
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } from '@/app/constants'
 
 const NO_REGION = "";
 
-function encodeTableName(tableName: string): string {
-    return encodeURIComponent(tableName); // Automatically encodes spaces to %20
-}
-
 // Updated function to retrieve people with encoded table name
 async function retrievePeople(tableName: string): Promise<PersonRecord[]> {
-    const encodedTableName = encodeTableName(tableName); // Encode the table name
-    const records = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodedTableName}?maxRecords=100&view=all_ordered`, {
+    const encodedTableName = encodeURIComponent(tableName); // Encode the table name
+	const encodedViewName = encodeURIComponent("all_ordered");
+    const records = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodedTableName}?view=${encodedViewName}&maxRecords=100`, {
         headers: {
             'Authorization': `Bearer ${AIRTABLE_API_KEY}`
         },
@@ -191,7 +188,16 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
                                 <div className='relative h-min'>
 									{person.fields.image && <img src={person.fields.image[0].thumbnails.large.url} alt={person.fields.name} className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg " />}
 									<div className="block w-24 h-20 box-border mt-3 mx-auto flex items-center justify-center overflow-hidden">
-										{colleges[person.fields.school] && <Image src={colleges[person.fields.school].logo.src} alt={colleges[person.fields.school].name} height={128} width={128} className="max-w-full max-h-full object-contain"/>}
+										{
+											// Check if school_logo exists, has a first item, and the URL path exists
+											(person.fields.school_logo?.[0]?.thumbnails?.large?.url) && (
+											<img
+											src={person.fields.school_logo[0].thumbnails.large.url} // This access is now safe because the condition above passed
+											alt={person.fields.school}
+											className="max-w-full max-h-full object-contain"
+											/>
+											)
+											}
 									</div>
                                 </div>
                                 <div className="flex flex-col h-full ml-5 w-4/6">
