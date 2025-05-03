@@ -107,136 +107,148 @@ const testimonials = [
 ];
 
 export default function Testimonials({ list }: { list: number }) {
-    const selectedTestimonials = testimonials[list];
-    const [activeIndex, setActiveIndex] = useState(0);
-    const containerRef = useRef<HTMLDivElement>(null);
+  const selectedTestimonials = testimonials[list];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-    const handleScroll = useCallback(() => {
-        if (!containerRef.current) return;
+  const handleScroll = useCallback(() => {
+    if (!containerRef.current) return;
 
-        const container = containerRef.current;
-        const scrollLeft = container.scrollLeft;
-        const clientWidth = container.clientWidth;
-        const scrollWidth = container.scrollWidth;
+    const container = containerRef.current;
+    const scrollLeft = container.scrollLeft;
+    const clientWidth = container.clientWidth;
+    const scrollWidth = container.scrollWidth;
 
-        const isAtStart = scrollLeft < 1;
-        const isAtEnd = Math.abs(scrollLeft - (scrollWidth - clientWidth)) < 1;
+    const isAtStart = scrollLeft < 1;
+    const isAtEnd = Math.abs(scrollLeft - (scrollWidth - clientWidth)) < 1;
 
-        let closestIndex = 0;
+    let closestIndex = 0;
 
-        if (isAtStart) {
-            closestIndex = 0;
-        } else if (isAtEnd) {
-            // Ensure there are testimonials before setting to last index
-            if (selectedTestimonials.length > 0) {
-                closestIndex = selectedTestimonials.length - 1;
-            } else {
-                closestIndex = 0; // Default to 0 if no testimonials
-            }
-        } else {
-            const containerCenterScroll = scrollLeft + clientWidth / 2;
-            let minDiff = Infinity;
+    if (isAtStart) {
+      closestIndex = 0;
+    } else if (isAtEnd) {
+      // Ensure there are testimonials before setting to last index
+      if (selectedTestimonials.length > 0) {
+        closestIndex = selectedTestimonials.length - 1;
+      } else {
+        closestIndex = 0; // Default to 0 if no testimonials
+      }
+    } else {
+      const containerCenterScroll = scrollLeft + clientWidth / 2;
+      let minDiff = Infinity;
 
-            Array.from(container.children).forEach((child, index) => {
-                if (child.nodeType === 1) {
-                    const cardElement = child as HTMLElement;
-                    const cardCenter = cardElement.offsetLeft + cardElement.offsetWidth / 2;
-                    const diff = Math.abs(cardCenter - containerCenterScroll);
+      Array.from(container.children).forEach((child, index) => {
+        if (child.nodeType === 1) {
+          const cardElement = child as HTMLElement;
+          const cardCenter = cardElement.offsetLeft + cardElement.offsetWidth / 2;
+          const diff = Math.abs(cardCenter - containerCenterScroll);
 
-                    if (diff < minDiff) {
-                        minDiff = diff;
-                        closestIndex = index;
-                    }
-                }
-            });
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestIndex = index;
+          }
         }
+      });
+    }
 
-        setActiveIndex(closestIndex);
+    setActiveIndex(closestIndex);
+  }, [selectedTestimonials.length]);
 
-    }, [selectedTestimonials.length]);
+  useEffect(() => {
+    const container = containerRef.current;
+    if (container) {
+      handleScroll(); // Call handleScroll initially to set the correct active index on mount
+      container.addEventListener("scroll", handleScroll);
+      // Add a resize listener as card positions/widths might change on resize
+      window.addEventListener("resize", handleScroll);
 
-    useEffect(() => {
-        const container = containerRef.current;
-        if (container) {
-            handleScroll(); // Call handleScroll initially to set the correct active index on mount
-            container.addEventListener('scroll', handleScroll);
-            // Add a resize listener as card positions/widths might change on resize
-            window.addEventListener('resize', handleScroll);
+      return () => {
+        container.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("resize", handleScroll);
+      };
+    }
+  }, [handleScroll]);
 
-            return () => {
-                container.removeEventListener('scroll', handleScroll);
-                window.removeEventListener('resize', handleScroll);
-            };
-        }
-    }, [handleScroll]);
-
-
-    return (
-        <div className="relative p-4 md:p-8">
-            {/* Add style tag to hide webkit scrollbar */}
-            <style>{`
+  return (
+    <div className="relative p-4 md:p-8">
+      {/* Add style tag to hide webkit scrollbar */}
+      <style>{`
                 .testimonial-scroll-container::-webkit-scrollbar {
                     display: none;
                 }
             `}</style>
-            <div
-                className="flex overflow-x-auto space-x-4 py-4 px-4 scroll-smooth snap-mandatory snap-x scrollbar-hide scroll-padding-x-4 testimonial-scroll-container" // Added custom class for targeting
-                ref={containerRef}
-                style={{ // Inline styles for Firefox and IE/older Edge
-                    scrollbarWidth: 'none',
-                    msOverflowStyle: 'none',
-                }}
-            >
-                {selectedTestimonials.map((testimonial, index) => (
-                    <Card
-                        key={index}
-                        className="flex-shrink-0 w-full snap-center"
-                    >
-                        <div className="flex flex-col md:flex-row items-start h-full">
-                            {/* This div now controls the shape and size of the image */}
-                            {/* Set height to h-32 (128px) and width to w-24 (96px) for a taller oval */}
-                            {/* Replicated the relative h-min from the team page wrapper div */}
-                            <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6 relative h-min h-32 w-24 md:h-32 md:w-24 rounded-full overflow-hidden shadow-lg">
-                                {testimonial.imageUrl && (
-                                    <Image
-                                        src={testimonial.imageUrl}
-                                        alt={`${testimonial.author}`}
-                                        // Use fill to make the image take the size of the parent div
-                                        fill
-                                        // object-cover ensures the image covers the oval container
-                                        className="object-cover"
-                                        // Add sizes prop for performance with fill
-                                        // Adjust sizes based on container widths (96px and 128px)
-                                        sizes="(max-width: 768px) 96px, 128px"
-                                    />
-                                )}
-                            </div>
+      <div
+        className="flex overflow-x-auto space-x-4 py-4 px-4 scroll-smooth snap-mandatory snap-x scrollbar-hide scroll-padding-x-4 testimonial-scroll-container" // Added custom class for targeting
+        ref={containerRef}
+        style={{
+          // Inline styles for Firefox and IE/older Edge
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+        }}
+      >
+        {selectedTestimonials.map((testimonial, index) => (
+          <Card key={index} className="flex-shrink-0 w-full snap-center">
+            {/* Modified the main content flex container.
+              On mobile (default), it's a column layout (flex-col).
+              On medium screens and up (md:), it becomes a row layout (md:flex-row).
+              items-start aligns items to the top in a column and to the left in a row.
+            */}
+            <div className="flex flex-col md:flex-row items-center md:items-start h-full">
+              {/* Image container div.
+                flex-shrink-0 prevents the image from shrinking.
+                mb-4 adds margin-bottom on mobile.
+                md:mb-0 md:mr-6 removes margin-bottom and adds margin-right on medium+ screens.
+                relative is needed for the Next.js Image component with fill.
+                h-32 w-24 sets the size on mobile.
+                md:h-32 md:w-24 maintains the size on medium+ screens.
+                rounded-full makes it a circle.
+                overflow-hidden clips the image to the rounded shape.
+                shadow-lg adds a shadow.
+                Added mx-auto to center the image horizontally on mobile.
+                md:mx-0 removes the auto horizontal margin on medium+ screens.
+              */}
+              <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6 relative h-32 w-24 md:h-32 md:w-24 rounded-full overflow-hidden shadow-lg mx-auto md:mx-0">
+                {testimonial.imageUrl && (
+                  <Image
+                    src={testimonial.imageUrl}
+                    alt={`${testimonial.author}`}
+                    // Use fill to make the image take the size of the parent div
+                    fill
+                    // object-cover ensures the image covers the oval container
+                    className="object-cover"
+                    // Add sizes prop for performance with fill
+                    // Adjust sizes based on container widths (96px and 128px)
+                    sizes="(max-width: 768px) 96px, 128px"
+                  />
+                )}
+              </div>
 
-                            <div className="flex-grow flex flex-col justify-between">
-                                <p className="text-lg md:text-xl italic text-black mb-4">
-                                    &ldquo;{testimonial.text}&rdquo;
-                                </p>
-                                <p className="text-base md:text-lg font-semibold text-gray-600">
-                                    {testimonial.author}
-                                </p>
-                            </div>
-                        </div>
-                    </Card>
-                ))}
+              {/* Text div */}
+              <div className="flex-grow flex flex-col justify-between">
+                <p className="text-lg md:text-xl italic text-black mb-4 text-center md:text-left">
+                  &ldquo;{testimonial.text}&rdquo;
+                </p>
+                <p className="text-base md:text-lg font-semibold text-gray-600 text-center md:text-left">
+                  {testimonial.author}
+                </p>
+              </div>
             </div>
+          </Card>
+        ))}
+      </div>
 
-            {/* Dots Pagination - now purely visual spans */}
-            <div className="flex justify-center mt-6 space-x-2">
-                {selectedTestimonials.map((_, index) => (
-                    <span
-                        key={index}
-                        className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                            index === activeIndex ? 'bg-gray-800' : 'bg-gray-300'
-                        } cursor-default`}
-                        title={`Testimonial ${index + 1}`}
-                    />
-                ))}
-            </div>
-        </div>
-    );
+      {/* Dots Pagination - now purely visual spans */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {selectedTestimonials.map((_, index) => (
+          <span
+            key={index}
+            className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+              index === activeIndex ? "bg-gray-800" : "bg-gray-300"
+            } cursor-default`}
+            title={`Testimonial ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
