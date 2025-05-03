@@ -118,6 +118,10 @@ export const governments: {
         name: 'San Jose, California',
         logo: sanJoseLogo
     },
+	lebanon: {
+        name: 'Lebanon, New Hampshire',
+        logo: lebanonLogo
+    },
 	MontanaSITSD: {
         name: 'Montana State Information Technology Services Division',
         logo: MontanaSITSDLogo
@@ -174,10 +178,6 @@ export const governments: {
     santaClara: {
         name: 'Santa Clara County, California',
         logo: santaClaraLogo
-    },
-    lebanon: {
-        name: 'Lebanon, New Hampshire',
-        logo: lebanonLogo
     },
     Alexandria: {
         name: 'Alexandria, Virginia',
