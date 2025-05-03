@@ -9,22 +9,32 @@ const testimonials = [
         {
             text: "While Georgia now has an AI policy in effect, the massive boom of generative AI has brought with it specific challenges. This Spring, Paragon Fellows worked with the GTA to recommend enforcement and education mechanisms to address generative AI's potential effect on government operations at the state level. The work produced by Paragon will help inform a GenAI policy that contains guidelines for the use of generative AI by all 40,000 state employees.",
             author: "—Nikhil Deshpande, Chief Digital and AI Officer, Georgia Technology Authority",
-            imageUrl: "/Headshots/NikhilD.png", // Replace with actual image URL
+            imageUrl: "/Headshots/NikhilD.png", 
         },
         {
             text: "Paragon is truly committed to learning and provides countless resources to help you explore different paths of interest. Most importantly, it prepares you for working in actual policy spaces and allows you to harness your own skills. I am proud to be a part of an organization that is so focused on community building and community impact—which makes the work that we do as Fellows especially rewarding.",
             author: "—Noreen Ahmed, Fall 2024 Georgia and Spring 2025 Madison Fellow",
-            imageUrl: "/Headshots/NoreenA.png", // Replace with actual image URL
+            imageUrl: "/Headshots/NoreenA.png", 
         },
         {
             text: "Paragon Fellows helped us with Language Access—specifically, in support of the Office of New Americans created in 2024 to assist immigrants in the St. Louis area. Their research laid the groundwork for developing a comprehensive language access plan for our city, and their final report included actionable recommendations that will undoubtedly improve language access services for our residents.",
             author: "—Simon Huang, Chief Technology Officer, City of St. Louis, Missouri",
-            imageUrl: "/Headshots/SimonH.png", // Replace with actual image URL
+            imageUrl: "/Headshots/SimonH.png", 
         },
         {
             text: "As a nontraditional and early career tech policy student, I know how critical it is for students to have early exposure to the tech policy sector; however, the barrier to obtain experience is not often accessible and sometimes not achievable. Paragon provides the opportunity to have hands-on experience working with a government partner on a tech policy initiative—a reality that I did not think was possible. To have the incredible privilege to conduct in-depth research on a real-world tech policy challenge, it reaffirms my passions about public service, making a difference in their community, and learning how to build leadership.",
             author: "—Yvette Vargas, Spring 2025 Albuquerque Project Lead",
-            imageUrl: "/Headshots/YvetteV.png", // Replace with actual image URL
+            imageUrl: "/Headshots/YvetteV.png", 
+        },
+        {
+            text: "Paragon Fellows helped our city create a comprehensive AI procurement framework, establishing a structured approach for evaluating AI technologies against core values such as privacy, security, equity, and transparency. This framework will directly benefit over 15,000 residents and ensure all future AI applications align with ethical standards and serve the public responsibly.",
+            author: "—Melanie McDonough, Chief Innovation Officer, City of Lebanon, New Hampshire",
+            imageUrl: "/Headshots/MelanieM.png", 
+        },
+        {
+            text: "The fellowship has given me that rare gift of seeing abstract principles materialize into community impact, all while maintaining that delicate balance between idealism and pragmatism that every effective policy professional must master.",
+            author: "—Catherine Schunk, Spring 2025 U.S. Department of State Fellow",
+            imageUrl: "/Headshots/CateS.png", 
         },
     ],
     // Gov partner page testimonials
@@ -32,27 +42,27 @@ const testimonials = [
         {
             text: "The team was highly engaged, efficient, and consistently motivated, which made the collaboration both productive and enjoyable... [The Fellows] brought the right mix of skills and competencies needed to successfully tackle nuanced and complex projects.",
             author: "—Christopher Paul, Chief Privacy Officer, County of Santa Clara, California",
-            imageUrl: "/Headshots/ChrisP.png", // Replace with actual image URL
+            imageUrl: "/Headshots/ChrisP.png", 
         },
         {
             text: "Paragon Fellows helped us with Language Access—specifically, in support of the Office of New Americans created in 2024 to assist immigrants in the St. Louis area. Their research laid the groundwork for developing a comprehensive language access plan for our city, and their final report included actionable recommendations that will undoubtedly improve language access services for our residents.",
             author: "—Simon Huang, Chief Technology Officer, City of St. Louis, Missouri",
-            imageUrl: "/Headshots/SimonH.png", // Replace with actual image URL
+            imageUrl: "/Headshots/SimonH.png", 
         },
         {
             text: "Paragon Fellows helped our city create a comprehensive AI procurement framework, establishing a structured approach for evaluating AI technologies against core values such as privacy, security, equity, and transparency. This framework will directly benefit over 15,000 residents and ensure all future AI applications align with ethical standards and serve the public responsibly.",
             author: "—Melanie McDonough, Chief Innovation Officer, City of Lebanon, New Hampshire",
-            imageUrl: "/Headshots/MelanieM.png", // Replace with actual image URL
+            imageUrl: "/Headshots/MelanieM.png", 
         },
         {
             text: "While Georgia now has an AI policy in effect, the massive boom of generative AI has brought with it specific challenges. This Spring, Paragon Fellows worked with the GTA to recommend enforcement and education mechanisms to address generative AI's potential effect on government operations at the state level. The work produced by Paragon will help inform a GenAI policy that contains guidelines for the use of generative AI by all 40,000 state employees.",
             author: "—Nikhil Deshpande, Chief Digital and AI Officer, Georgia Technology Authority",
-            imageUrl: "/Headshots/NikhilD.png", // Replace with actual image URL
+            imageUrl: "/Headshots/NikhilD.png", 
         },
         {
             text: "[Paragon's] work provides the foundation material for us to develop our AI Literacy Training. Without this work, we would be significantly delayed in moving forward with this type of training, and I am not sure when the program development would have started.",
             author: "—Stephanie Deitrick, Chief Data & Analytics Officer, City of Tempe, Arizona",
-            imageUrl: "/Headshots/StephanieD.png", // Replace with actual image URL
+            imageUrl: "/Headshots/StephanieD.png", 
         }
     ],
     // Student page testimonials
@@ -60,37 +70,37 @@ const testimonials = [
         {
             text: "Paragon has been one of the most transformative experiences of my academic journey so far. The work environment is filled with passionate, driven individuals, and the amount of growth I’ve had—whether in research skills, policy analysis, or just confidence in my abilities—has been incredible. Before this, I had never done such extensive research or extracted valuable insights in such a structured way, but this experience pushed me to develop skills I never knew I had. The exposure, mentorship, and hands-on engagement with policymakers made it clear that, even as a student, I can make an impact.",
             author: "—Bhoomika Gupta, Spring 2025 Albuquerque Fellow",
-            imageUrl: "/Headshots/BhoomikaG.jpg", // Replace with actual image URL
+            imageUrl: "/Headshots/BhoomikaG.jpg", 
         },
         {
             text: "As a nontraditional and early career tech policy student, I know how critical it is for students to have early exposure to the tech policy sector; however, the barrier to obtain experience is not often accessible and sometimes not achievable. Paragon provides the opportunity to have hands-on experience working with a government partner on a tech policy initiative—a reality that I did not think was possible. To have the incredible privilege to conduct in-depth research on a real-world tech policy challenge, it reaffirms my passions about public service, making a difference in their community, and learning how to build leadership.",
             author: "—Yvette Vargas, Spring 2025 Albuquerque Project Lead",
-            imageUrl: "/Headshots/YvetteV.png", // Replace with actual image URL
+            imageUrl: "/Headshots/YvetteV.png", 
         },
         {
             text: "Paragon is truly committed to learning and provides countless resources to help you explore different paths of interest. Most importantly, it prepares you for working in actual policy spaces and allows you to harness your own skills. I am proud to be a part of an organization that is so focused on community building and community impact—which makes the work that we do as Fellows especially rewarding.",
             author: "—Noreen Ahmed, Fall 2024 Georgia and Spring 2025 Madison Fellow",
-            imageUrl: "/Headshots/NoreenA.png", // Replace with actual image URL
+            imageUrl: "/Headshots/NoreenA.png", 
         },
         {
             text: "Local governments are heavily understaffed. Some of these offices don't have the resources to learn about future technologies, so any opportunity to get students involved is really great. These Fellows didn't just bridge this gap—they provided a creative, academic perspective that only students could bring to the table.",
             author: "—Jude Miller, Spring 2024 St. Louis Project Lead",
-            imageUrl: "/Headshots/JudeM.png", // Replace with actual image URL
+            imageUrl: "/Headshots/JudeM.png", 
         },
         {
             text: "The fellowship has given me that rare gift of seeing abstract principles materialize into community impact, all while maintaining that delicate balance between idealism and pragmatism that every effective policy professional must master.",
             author: "—Catherine Schunk, Spring 2025 U.S. Department of State Fellow",
-            imageUrl: "/Headshots/CateS.png", // Replace with actual image URL
+            imageUrl: "/Headshots/CateS.png", 
         },
         {
             text: "Paragon is truly committed to learning and provides countless resources to help you explore different paths of interest. Most importantly, it prepares you for working in actual policy spaces and allows you to harness your own skills. I am proud to be a part of an organization that is so focused on community building and community impact—which makes the work that we do as Fellows especially rewarding.",
             author: "—Noreen Ahmed, Fall 2024 Georgia and Spring 2025 Madison Fellow",
-            imageUrl: "/Headshots/NoreenA.png", // Replace with actual image URL
+            imageUrl: "/Headshots/NoreenA.png", 
         },
         {
             text: "Paragon has been immensely fulfilling and reaffirmed my commitment to responsible technological advancement. I appreciated directly working with our government partner and being some of the first in helping San José build capacity against generative AI miscommunication.",
             author: "—Isabelle Anzabi, Spring 2024 San José Fellow",
-            imageUrl: "/Headshots/IsabelleA.png", // Replace with actual image URL
+            imageUrl: "/Headshots/IsabelleA.png", 
         }
     ],
 ];
