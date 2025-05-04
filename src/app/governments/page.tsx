@@ -1,8 +1,34 @@
+interface Image {
+    id: string,
+    width: number,
+    height: number,
+    url: string,
+    filename: string,
+    size: number,
+    type: string,
+    thumbnails: {
+        small: {
+            url: string,
+            width: number,
+            height: number
+        },
+        large: {
+            url: string,
+            width: number,
+            height: number
+        },
+        full: {
+            url: string,
+            width: number,
+            height: number
+        }
+    }
+}
+
 import Button from '@/components/Button';
 import Footer from '@/components/Footer';
 import Section from "@/components/Section";
 import TopBar from '@/components/TopBar';
-import {governments} from '@/app/constants';
 import {Subheading, Text } from '@/components/Typography';
 import Image from 'next/image';
 import BgGrid from '@/components/BgGrid';
@@ -13,6 +39,32 @@ import Testimonials from '@/components/Testimonials';
 import FAQuestion from '@/components/FAQuestion';
 //import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
+
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } from '@/app/constants'
+
+interface logoRecord {
+    id: string,
+    createdTime: string,
+    fields: {
+        name: string,
+		logo: Image[]
+    }
+}
+
+async function retrieveLogos(): Promise<logoRecord[]> {
+    const encodedTableName = encodeURIComponent("Government Partner Logos"); // Encode the table name
+	const encodedViewName = encodeURIComponent("all_ordered");
+    const records = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodedTableName}?view=${encodedViewName}&maxRecords=100`, {
+        headers: {
+            'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+        },
+        next: {
+            revalidate: 60 * 60 * 1.5 // revalidate every 1.5 hours
+        }
+    });
+    const rec = await records.json();
+    return rec.records;
+}
 
 const sections = [
   { id: "impact", title: "OUR IMPACT & PREVIOUS PARTNERS" },
@@ -55,10 +107,9 @@ const sections = [
 //   },
 // ];
 
-const govLogos = Object.values(governments).map(government => government.logo);
 
-
-export default function About() {
+export default async function About() {
+	const govLogos = await retrieveLogos();
   return (
 <div className="relative w-full overflow-x-hidden">
   <TopBar />
@@ -106,7 +157,7 @@ export default function About() {
   <Subheading className='text-3xl md:text-5xl mb-4'>Our Impact & Previous Partners</Subheading>
   {/* <GrayDivider /> */}
   <Text className="text-base md:text-lg">
-    Since our founding, Paragon has partnered with 17 governments across 11 states on 28 projects. We&apos;ve worked with governments and organizations across the country to better science & tech policy processes. Our work ranges has ranged from writing GenAI policy with the State of Georgia, advising on deepfake policy for the City of San José, to writing accessibility guidelines for translation software for the City of Lebanon. For more examples, check our our <a href="/projects" style={{ color: 'blue', textDecoration: 'underline' }}>Projects</a> page to read some of our policy briefs.
+    Since our founding, Paragon has partnered with 17 governments across 11 states on 28 projects. We&apos;ve worked with governments and organizations across the country to better science & tech policy processes. Our work ranges from writing GenAI policy with the State of Georgia, to advising on deepfake policy for the City of San José, to writing accessibility guidelines for translation software for the City of Lebanon. For more examples, check out our <a href="/projects" style={{ color: 'blue', textDecoration: 'underline' }}>Projects</a> page to read some of our Fellows' policy briefs.
   </Text>
   {/* <Text>Spring (5 new / 5 total): Boston; Lebanon, NH; Georgia; St. Louis, MO; San Jose, CA</Text>
    <Text>Summer (2 new / 7 total): CalHHS, Santa Clara</Text>
@@ -118,16 +169,14 @@ export default function About() {
   <GrayDivider /> */}
   
   <a href='/projects' className='text-blue-500 block w-full overflow-hidden'>
-    <Carousel className='mt-6 md:mt-10' speed={35}>
-      {govLogos.map((logo, index) => (
-        <Image 
-          key={index} 
-          src={logo} 
-          alt="Logo" 
-          className='h-full md:mr-14 mr-6 md:w-32 w-20 object-contain' 
-        />
-      ))}
-    </Carousel>
+    <Carousel className='mt-10' speed={35}>
+          {
+            govLogos.map((logo, index) => (
+			
+				<Image key={index} src={logo.fields.logo[0].thumbnails.large.url} width={logo.fields.logo[0].thumbnails.large.width} height={logo.fields.logo[0].thumbnails.large.height} alt={logo.fields.name} className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
+            ))
+          }
+        </Carousel>
   </a>
 </Section>
 

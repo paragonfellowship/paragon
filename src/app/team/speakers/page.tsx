@@ -109,8 +109,7 @@ export default async function Team() {
     return <>
         <TopBar />
         <div
-                    className="background-container"
-                    style={{ height: '60vh' }}
+                    className="background-container relative flex flex-col md:block"
                 >
                 <BgGrid lineCount={7} />
                 <Heading className='fade-in text-white text-6xl text-center mt-60'>Guest Speakers</Heading>

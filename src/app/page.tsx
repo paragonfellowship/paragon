@@ -1,3 +1,30 @@
+interface Image {
+    id: string,
+    width: number,
+    height: number,
+    url: string,
+    filename: string,
+    size: number,
+    type: string,
+    thumbnails: {
+        small: {
+            url: string,
+            width: number,
+            height: number
+        },
+        large: {
+            url: string,
+            width: number,
+            height: number
+        },
+        full: {
+            url: string,
+            width: number,
+            height: number
+        }
+    }
+}
+
 import Section from "@/components/Section";
 import { Subheading, Text } from '@/components/Typography';
 import Image from "next/image";
@@ -5,16 +32,56 @@ import Carousel from '@/components/Carousel';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import TopBar from '@/components/TopBar';
-import {governments} from '@/app/constants';
 import DynamicGrid from '@/components/DynamicGrid';
 import GrayDivider from '@/components/GrayDivider';
 import Testimonials from '@/components/Testimonials';
 import TickText from '@/components/TickText';
 
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } from '@/app/constants'
+
+interface logoRecord {
+    id: string,
+    createdTime: string,
+    fields: {
+        name: string,
+		logo: Image[]
+    }
+}
+
+async function retrieveLogos(): Promise<logoRecord[]> {
+    const encodedTableName = encodeURIComponent("Government Partner Logos"); // Encode the table name
+	const encodedViewName = encodeURIComponent("all_ordered");
+    const records = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodedTableName}?view=${encodedViewName}&maxRecords=100`, {
+        headers: {
+            'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+        },
+        next: {
+            revalidate: 60 * 60 * 1.5 // revalidate every 1.5 hours
+        }
+    });
+    const rec = await records.json();
+    return rec.records;
+}
+/*
+
+console.log(govLogos[0]);
+const x=await retrievePeople()
+console.log(x[0].fields.logo);
+const govLogos=await retrievePeople();
 const govLogos = Object.values(governments).map(government => government.logo);
 
-export default function Home() {
+//const govLogos = await retrievePeople()
+//
+//console.log(x[0].fields.logo[0].thumbnails.large.url);
+const govLogos = Object.values(governments).map(government => government.logo);
+console.log(govLogos[0])
+const x=await retrievePeople()
+console.log(x[0].fields.logo[0].thumbnails.large);
 
+*/
+
+export default async function Home() {
+	const govLogos = await retrieveLogos()
   return (
     <>
       <TopBar />
@@ -127,7 +194,8 @@ export default function Home() {
         <Carousel className='mt-10' speed={35}>
           {
             govLogos.map((logo, index) => (
-              <Image key={index} src={logo} alt="Logo" className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
+			
+				<Image key={index} src={logo.fields.logo[0].thumbnails.large.url} width={logo.fields.logo[0].thumbnails.large.width} height={logo.fields.logo[0].thumbnails.large.height} alt={logo.fields.name} className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
             ))
           }
         </Carousel>
