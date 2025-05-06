@@ -8,7 +8,7 @@ import { RiArrowDownLine } from 'react-icons/ri';
 import GrayDivider from '@/components/GrayDivider';
 import FAQuestion from '@/components/FAQuestion';
 import Navbar from '@/components/Navbar';
-import {FA_APP_URL , INFO_SESSION_URL} from '@/app/constants';
+import {MENTOR_APP_URL, MENTEE_APP_URL} from '@/app/constants';
 import Card from '@/components/Card_Static';
 
 const sections = [
@@ -39,7 +39,7 @@ export default function About() {
                 className="fade-in"
                 style="secondary" 
                 inNewTab 
-                url={FA_APP_URL}
+                url={MENTEE_APP_URL}
               >
                 apply as a mentee
               </Button>
@@ -47,7 +47,7 @@ export default function About() {
                 className="fade-in ml-5"
                 style="secondary" 
                 inNewTab 
-                url={INFO_SESSION_URL}
+                url={MENTOR_APP_URL}
               >
                 apply as a mentor
               </Button>
@@ -70,7 +70,7 @@ export default function About() {
       <Section id="program_overview">
   <Subheading className='text-3xl md:text-5xl mb-4'>Program Overview</Subheading>
   <GrayDivider />
-  <Text className="text-base md:text-lg">Our six-month program provides a tech policy Fellowship with one-on-one mentoring and structured support from a dedicated community.</Text>
+  <Text className="text-base md:text-lg">The Paragon Policy Mentorship Program is a six-month initiative designed to support Paragon Fellows by pairing them with experienced professionals in the science, technology, and policy space. Mentors and mentees are matched based on shared interests, career goals, and availability. Once paired, mentees initiate the relationship and work with their mentor to set expectations, define goals, and schedule check-ins. The time commitment is intentionally light—just one hour per month—yet structured to create substantive conversations about career development, skills building, and navigating the tech policy landscape. In addition to one-on-one mentorship, participants benefit from being part of a broader professional community dedicated to building a more inclusive and capable public interest technology workforce.<br /> <br />Mentors are paired with mentees based on shared interests, career aspirations, and availability. Once matched, mentees will initiate introductions, and both parties will work together to define goals, meeting schedules, and discussion topics.</Text>
   <br />
   <Text className='font-italic mt-6 text-center'>&quot;Just one hour a month can launch a career&quot;</Text>
   <br /><br />
@@ -79,7 +79,23 @@ export default function About() {
     <Card style={{ flexGrow: 1 }}> {/* Apply flexGrow to the Card */}
       <h3 className="text-2xl font-bold">For Mentors:</h3>
       <br />
-      <p>Share your expertise with the tech policy leaders of the future. Mentors benefit from expanded professional networks and opportunities to develop and refine management and leadership.</p>
+      <p>Share your expertise with the tech policy leaders of the future. Mentors benefit from expanded professional networks and opportunities to develop and refine management and leadership. Mentors will: <br /><br />
+	<ul className='list-disc list-inside'>
+    <li>Commit to a minimum of one (1) hour per month for six months to support your mentee(s).</li>
+    <li>Provide guidance on career development, networking, and industry best practices.</li>
+    <li>Engage in discussions based on the mentee’s goals and challenges.</li>
+    <li>Help mentees build skills relevant to tech policy and adjacent fields.</li>
+	</ul>
+	<br /><p>In return, mentors will receive: </p><br />
+	<ul className='list-disc list-inside'>
+    <li>Opportunity to give back to the community by sharing knowledge and shaping the next generation of leaders.</li>
+    <li>Development of leadership and coaching skills through mentoring.</li>
+    <li>Networking with other professionals and building meaningful relationships within the community.</li>
+    <li>A chance to reflect on their own career path and gain fresh insights from emerging professionals.</li>
+	<li>Recognition for their contribution to the program.</li>
+    <li className="font-semibold">Opportunity to collaborate on top tech policy publications through the Fellowship, with their name featured on impactful research.</li>
+	</ul>
+	</p>
 	</Card>
   </div>
 
@@ -87,31 +103,37 @@ export default function About() {
     <Card style={{ flexGrow: 1 }}> {/* Apply flexGrow to the Card */}
       <h3 className="text-2xl font-bold">For Mentees:</h3>
       <br />
-      <p>Develop your career through curated events and deep one-on-one relationships. Fellows expand tech policy expertise with the personalized support of a seasoned mentor.</p>
+      <p>Develop your career through curated events and deep one-on-one relationships. Fellows expand tech policy expertise with the personalized support of a seasoned mentor. Mentees will:<br /><br />
+	<ul className='list-disc list-inside'>
+    <li>Commit to a minimum of one (1) hour per month for six months.</li>
+    <li>Actively participate in discussions focused on your career goals, challenges, and professional growth.</li>
+    <li>Take initiative in setting goals, asking questions, and applying advice from mentorship sessions.</li>
+    <li>Be open to feedback and willing to develop skills relevant to tech policy and adjacent fields.</li>
+  </ul>
+	<br /><br /><span className="font-semibold">Currently, this opportunity is only open to current Paragon Fellows or Paragon alumni.</span></p>
     </Card>
   </div>
   
 </div>
 <br />
-        <div className='flex justify-center'>
-          <Button url={FA_APP_URL} inNewTab className='mt-4 justify-center'>Become a Mentor</Button>
-          <Button url={INFO_SESSION_URL} inNewTab className='mt-4 ml-5 justify-center'>Become a Mentee</Button>
-        </div>
-</Section>
-
-<Section id="dates">
-  <Subheading className='text-3xl md:text-5xl mb-4'>Important Dates</Subheading>
-  <GrayDivider/>
-  <Text className="text-base md:text-lg">
-   Our mentorship program operates bi-annually. Our innaugural cohort applications (for both mentor and mentee) close July 1st. The program will last from mid July to late December.
+<Text className="text-base md:text-lg">
+   Our mentorship program operates bi-annually. <span className="font-semibold">Our innaugural cohort applications (for both mentor and mentee) close July 1st </span>. The program will last from mid July to late December.
   </Text>
-  {/* <Text className="text-base md:text-lg mt-6">
-    Apps for the Fall 2025 cohort will be expected to open at a later date. Join our <a href={NEWSLETTER_URL} className="underline">mailing list</a> to be notified when apps open.
-  </Text> */}
+  <br />
+        <div className='flex justify-center'>
+          <Button url={MENTOR_APP_URL} inNewTab className='mt-4 justify-center'>Become a Mentor</Button>
+          <Button url={MENTEE_APP_URL} inNewTab className='mt-4 ml-5 justify-center'>Become a Mentee</Button>
+
+        </div>
+		
 </Section>
       <Section id="mentor_faq">
         <Subheading>Mentor FAQ</Subheading>
         <GrayDivider/>
+       <FAQuestion
+          question = "What is Paragon?"
+          answer = "The Paragon Policy Fellowship is a national student-led organization connecting diverse university students and recent graduates with state and local governments to work on science and technology policy projects. Operated under the Federation of American Scientists, Paragon creates inclusive pathways into public interest technology careers. Since January 2024, we’ve placed over 200 Fellows from 82 universities with 17 governments across 11 states. Fellows—85% students of color and 70% underrepresented gender minorities—have tackled projects impacting 11.9 million people, including generative AI policy for the State of Georgia and language access tools for the City of St. Louis."
+          />
         <FAQuestion
           question = "What is expected of me as a mentor?"
           answer = "As a mentor, you'll guide a Paragon Fellow through their career journey, providing career advice, sharing your professional experiences, and helping them set and achieve goals. You'll meet with your mentee 1-2 times a month and offer constructive feedback."
@@ -137,40 +159,37 @@ export default function About() {
           answer = "Mentors in the Paragon Policy Mentorship Program will have the opportunity to inspire and guide emerging tech policy professionals while expanding their own networks by connecting with fellow mentors. They will also receive a LinkedIn endorsement and invitations to our exclusive speaker events and LinkedIn group, where we share job opportunities. Paragon is also happy to write a letter of recommendation for mentors who are previous Paragon Fellows themselves, and spotlight outstanding mentors and mentees on our newsletter and social media. Mentees can look forward to career guidance, peer support, and expert advice on tackling complex challenges within the Responsible Tech landscape. They will also gain access to our network of speaker events and LinkedIn group to support their professional growth."
         />
         <FAQuestion
+          question = "Who is eligible to be a mentor?"
+          answer = "Mentors should have at least 1 year of professional experience in tech policy or a closely related field. This includes areas such as ethical AI, data privacy, cybersecurity, algorithmic accountability, platform governance, digital rights, public interest technology, and more. We welcome individuals from government, academia, industry, or nonprofit sectors who are passionate about guiding emerging leaders."
+        />
+        <FAQuestion
+          question = "What are the benefits of being a mentor?"
+          answer = "Mentors gain the opportunity to give back, develop leadership and coaching skills, expand their network, and reflect on their own career paths. They also receive recognition for their contributions and may have the chance to collaborate on high-impact tech policy publications with their names featured on the work."
+        />
+        <FAQuestion
           question = "Can I continue mentoring after the program ends?"
           answer = "Yes! We encourage long-term connections and will provide opportunities for you to stay engaged with the Paragon Fellowship community after the program concludes."
         />
+
         <FAQuestion
-          question = "What kind of student would be best suited for this Fellowship? How much government experience is required?"
-          answer = "We encourage all students located in the US who are interested in making real-world impact via policy or government work to apply. This Fellowship is geared towards training those without much formal policy experience, as well as more experienced students who want to exercise their analytical, writing, and policy abilities. We encourage experienced candidates to apply to be Project Leads."
-        />
-        <FAQuestion
-          question = "I am an international student. Can I still be a Fellow?"
-          answer = "All students who will reside in the United States during the Fellowship and have work authorization are eligible to apply. We will work with international students to attempt to provide them a stipend, though we cannot guarantee this depending on the type of visa you possess."
-        />
-		<FAQuestion
-          question = "I am a high school student excited to enter the world of tech policy. Can I apply?"
-          answer = "Unfortunately, we do not accept high school applicants at this time. All Fellows must have, at minimum, started the first semester of their undergraduate degree."
-        />
-		<FAQuestion
           question = "Are admissions rolling?"
           answer = "No, they aren't! We only begin reviewing applications once the application deadline has passed. Feel free to take the necessary time to refine your application before submitting it."
-        />
-        <FAQuestion
-          question = "How can I learn more about the Fellowship?"
-          answer = "Paragon will be hosting <a href='https://forms.gle/6219w6s3B8r4gD3m7' target='_blank' style='color: darkgray; text-decoration: underline;'>two info sessions</a> to give applicants the opportunity to learn more about our mission, understand what the Organizing Team looks for in competitive applications, and hear from our current members on their experiences in the Fellowship. Furthermore, we will be holding office hours a couple of days before the application closes to give you the opportunity to ask last-minute questions."
         />
       </Section> 
 <Section id="mentee_faq">
         <Subheading>Mentee FAQ</Subheading>
         <GrayDivider/>
         <FAQuestion
+          question = "Who is eligible to be a mentee?"
+          answer = "Only current Paragon Fellows and Paragon Fellowship alumni who have successfully completed the program are eligible to apply. You can find the application link in your email inbox or in the Paragon Alumni LinkedIn Group."
+          />
+        <FAQuestion
           question = "What can I expect from my mentor?"
           answer = "As a mentor, you'll guide a Paragon Fellow through their career journey, providing career advice, sharing your professional experiences, and helping them set and achieve goals. You'll meet with your mentee 1-2 times a month and offer constructive feedback."
           />
         <FAQuestion
           question = "How often will I meet with my mentor?"
-          answer = "You will need to commit to monthly meetings with your mentee for about 30-60 minutes per meeting, along with occasional follow-up communication. This will span six months."
+          answer = "You'll meet with your mentor at least once a month for about 30-60 minutes each session. These meetings will be a mix of virtual and/or in-person depending on availability."
         />
         <FAQuestion
           question = "How will I be paired with a mentor?"

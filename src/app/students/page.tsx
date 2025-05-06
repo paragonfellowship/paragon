@@ -9,7 +9,7 @@ import GrayDivider from '@/components/GrayDivider';
 import FAQuestion from '@/components/FAQuestion';
 import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
-import {FA_APP_URL , INFO_SESSION_URL} from '@/app/constants';
+import {FELLOW_APP_URL , INFO_SESSION_URL} from '@/app/constants';
 import Testimonials from '@/components/Testimonials';
 
 
@@ -74,7 +74,7 @@ export default function About() {
                 className="fade-in"
                 style="secondary" 
                 inNewTab 
-                url={FA_APP_URL}
+                url={FELLOW_APP_URL}
               >
                 apply now
               </Button>
@@ -222,7 +222,7 @@ export default function About() {
       <Section>
         <Subheading className='flex justify-center text-center'>What impact will you<br />make with Paragon?</Subheading>
         <div className='flex justify-center'>
-          <Button url={FA_APP_URL} inNewTab className='mt-4 justify-center'>Apply Now</Button>
+          <Button url={FELLOW_APP_URL} inNewTab className='mt-4 justify-center'>Apply Now</Button>
           <Button url={INFO_SESSION_URL} inNewTab className='mt-4 ml-5 justify-center'>RSVP for an Info Session</Button>
         </div>
 
