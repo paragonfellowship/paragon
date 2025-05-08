@@ -172,8 +172,8 @@ export default async function About() {
     <Carousel className='mt-10' speed={35}>
           {
             govLogos.map((logo, index) => (
-			
-				<Image key={index} src={logo.fields.logo[0].thumbnails.large.url} width={logo.fields.logo[0].thumbnails.large.width} height={logo.fields.logo[0].thumbnails.large.height} alt={logo.fields.name} className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
+			<img key={index} src={logo.fields.logo[0].thumbnails.large.url} alt={logo.fields.name} className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
+				//<Image key={index} src={logo.fields.logo[0].thumbnails.large.url} width={logo.fields.logo[0].thumbnails.large.width} height={logo.fields.logo[0].thumbnails.large.height} alt={logo.fields.name} className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
             ))
           }
         </Carousel>

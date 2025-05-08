@@ -142,11 +142,19 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
                                     {person.fields.image && (
   // Applying the original <img> tag classes directly to the Image component
   // Using width and height props corresponding to the h-32 and w-32 Tailwind classes (128px)
-  <Image
+  /*<Image
     src={person.fields.image[0].thumbnails.large.url}
     alt={person.fields.name}
     width={128} // Corresponds to w-32 (32 * 4 = 128)
     height={128} // Corresponds to h-32 (32 * 4 = 128)
+    // Applying the original classes: aspect-square h-32 w-32 object-cover rounded-full shadow-lg
+    // Note: h-32 and w-32 are now also controlled by the width/height props, but keeping them here for clarity
+    // and in case there's any subtle interaction with other styles.
+    className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg"
+  />*/
+  <img
+    src={person.fields.image[0].thumbnails.large.url}
+    alt={person.fields.name}
     // Applying the original classes: aspect-square h-32 w-32 object-cover rounded-full shadow-lg
     // Note: h-32 and w-32 are now also controlled by the width/height props, but keeping them here for clarity
     // and in case there's any subtle interaction with other styles.
