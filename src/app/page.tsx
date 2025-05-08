@@ -47,7 +47,7 @@ interface logoRecord {
 		logo: Image[]
     }
 }
-
+/*
 async function retrieveLogos(): Promise<logoRecord[]> {
     const encodedTableName = encodeURIComponent("Government Partner Logos"); // Encode the table name
 	const encodedViewName = encodeURIComponent("all_ordered");
@@ -61,6 +61,82 @@ async function retrieveLogos(): Promise<logoRecord[]> {
     });
     const rec = await records.json();
     return rec.records;
+}
+
+*/
+
+async function retrieveLogos(): Promise<logoRecord[]> {
+    // --- VERCEL DEBUG LOGS ---
+    console.log(`[Vercel Runtime] Attempting to retrieve logos. Timestamp: ${new Date().toISOString()}`);
+    const VERCEL_AIRTABLE_BASE_ID = AIRTABLE_BASE_ID;
+    const VERCEL_AIRTABLE_API_KEY_IS_SET = !!AIRTABLE_API_KEY; // Don't log the key itself
+
+    console.log(`[Vercel Runtime] AIRTABLE_BASE_ID: ${VERCEL_AIRTABLE_BASE_ID || 'NOT SET OR EMPTY'}`);
+    console.log(`[Vercel Runtime] AIRTABLE_API_KEY is set: ${VERCEL_AIRTABLE_API_KEY_IS_SET}`);
+
+    if (!VERCEL_AIRTABLE_BASE_ID || !VERCEL_AIRTABLE_API_KEY_IS_SET) {
+        console.error("[Vercel Runtime] Critical: Airtable Base ID or API Key is missing in environment variables on Vercel.");
+        return []; // Stop if critical env vars are missing
+    }
+    // --- END VERCEL DEBUG LOGS ---
+
+    const encodedTableName = encodeURIComponent("Government Partner Logos");
+    const encodedViewName = encodeURIComponent("all_ordered");
+    const fetchUrl = `https://api.airtable.com/v0/${VERCEL_AIRTABLE_BASE_ID}/${encodedTableName}?view=${encodedViewName}&maxRecords=100`;
+
+    console.log(`[Vercel Runtime] Fetching URL: ${fetchUrl}`);
+
+    try {
+        const response = await fetch(fetchUrl, {
+            headers: {
+                'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+            },
+            next: {
+                revalidate: 60 * 60 * 1.5
+            }
+        });
+
+        console.log(`[Vercel Runtime] Airtable API Response Status: ${response.status} ${response.statusText}`);
+
+        if (!response.ok) {
+            const errorBody = await response.text();
+            console.error(`[Vercel Runtime] Airtable API request FAILED. Error Body: ${errorBody}`);
+            return [];
+        }
+
+        const rec = await response.json();
+
+        if (!rec.records || rec.records.length === 0) {
+            console.warn("[Vercel Runtime] Airtable API call successful, but no records returned or 'records' array is empty.");
+            console.log("[Vercel Runtime] Raw response (if no records):", JSON.stringify(rec, null, 2));
+            return [];
+        }
+
+        console.log(`[Vercel Runtime] Successfully fetched ${rec.records.length} records from Airtable.`);
+
+        // Log critical details of the first image object to verify path and hostname
+        if (rec.records[0]?.fields?.logo?.[0]?.thumbnails?.large?.url) {
+            const firstImageUrl = rec.records[0].fields.logo[0].thumbnails.large.url;
+            console.log(`[Vercel Runtime] First image URL from Airtable: ${firstImageUrl}`);
+            try {
+                const urlObj = new URL(firstImageUrl);
+                console.log(`[Vercel Runtime] Hostname of first image URL: ${urlObj.hostname}`);
+                if (urlObj.hostname !== 'v5.airtableusercontent.com') {
+                    console.warn(`[Vercel Runtime] WARNING: Hostname '${urlObj.hostname}' is NOT 'v5.airtableusercontent.com'. Ensure it's whitelisted in next.config.js!`);
+                }
+            } catch (e) {
+                console.error(`[Vercel Runtime] Error parsing first image URL: ${firstImageUrl}`, e);
+            }
+        } else {
+            console.warn("[Vercel Runtime] Path to first image URL (fields.logo[0].thumbnails.large.url) is invalid or data is missing in the first record fetched by Vercel.");
+            console.log("[Vercel Runtime] Structure of first record's 'fields.logo' (if it exists):", JSON.stringify(rec.records[0]?.fields?.logo, null, 2));
+        }
+        return rec.records;
+
+    } catch (error) {
+        console.error("[Vercel Runtime] FATAL ERROR in retrieveLogos function on Vercel:", error);
+        return [];
+    }
 }
 /*
 
@@ -76,12 +152,12 @@ const govLogos = Object.values(governments).map(government => government.logo);
 const govLogos = Object.values(governments).map(government => government.logo);
 console.log(govLogos[0])
 const x=await retrievePeople()
-console.log(x[0].fields.logo[0].thumbnails.large);
-
 */
+
 
 export default async function Home() {
 	const govLogos = await retrieveLogos()
+	console.log(govLogos[0].fields.logo[0].thumbnails.large);
   return (
     <>
       <TopBar />
