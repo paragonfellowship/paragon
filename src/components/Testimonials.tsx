@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import Card from "@/components/Card";
-import Image from "next/image"
+//import Image from "next/image"
 
 const testimonials = [
     // homepage testimonials
@@ -241,13 +241,15 @@ export default function Testimonials({ list }: { list: number }) {
                             {/* Image Container */}
                             <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6 relative h-24 w-24 md:h-32 md:w-32 rounded-full overflow-hidden shadow-lg mx-auto md:mx-0">
                                 {testimonial.imageUrl && (
-                                    <Image
+									
+                                    //<Image 
+									<img
                                         src={testimonial.imageUrl}
                                         alt={`Headshot of ${testimonial.author.split(',')[0]}`} // Better alt text
-                                        fill
+                                        //fill
                                         className="object-cover"
                                         sizes="(max-width: 768px) 96px, 128px" // Corrected sizes based on h/w
-                                        priority={index < 2} // Prioritize loading first images
+                                        //priority={index < 2} // Prioritize loading first images
                                     />
                                 )}
                             </div>

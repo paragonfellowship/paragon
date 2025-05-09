@@ -9,7 +9,7 @@ import GrayDivider from '@/components/GrayDivider';
 import FAQuestion from '@/components/FAQuestion';
 import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
-import {FELLOW_APP_URL , INFO_SESSION_URL} from '@/app/constants';
+//import {FELLOW_APP_URL , INFO_SESSION_URL} from '@/app/constants';
 import Testimonials from '@/components/Testimonials';
 
 
@@ -66,10 +66,11 @@ export default function About() {
             </Text>
 
             <Text className="fade-in text-xl md:text-3xl mt-16 md:mt-[5%] mb-12 md:mb-5 text-center md:text-right md:ml-auto md:mr-20">
-              Applications for the Summer 2025 cohort are now open.
+              Applications for the Summer 2025 cohort are now closed. <br />Check back later for the Fall 2025 cohort apps.
             </Text>
 
             <div className="flex justify-center md:justify-end md:pr-[6%] mb-20 md:mb-0">
+			{/*
               <Button 
                 className="fade-in"
                 style="secondary" 
@@ -86,6 +87,7 @@ export default function About() {
               >
                 Sign up for an info session
               </Button>
+			*/}
             </div>
           </div>
         </div>
@@ -154,7 +156,7 @@ export default function About() {
     We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Fellowship runs from late January to early May, our Summer program runs from late May to early September, and the Fall Fellowship runs from early October to late December. Applications for each cohort open roughly two months before each cohort&apos;s start date.
   </Text>
   <Text className="text-base md:text-lg mt-6">
-    Applications are now open for the Summer 2025 cohort. The Summer 2025 Fellowship will run from <span className="font-semibold underline">May 29th to September 5th, 2025</span>.
+    Applications are now <span className="font-semibold underline">closed for the Summer 2025 cohort</span>. All applicants will hear back by May 16th whether they advanced to the second round.
   </Text>
   {/* <Text className="text-base md:text-lg mt-6">
     Apps for the Fall 2025 cohort will be expected to open at a later date. Join our <a href={NEWSLETTER_URL} className="underline">mailing list</a> to be notified when apps open.
@@ -222,8 +224,11 @@ export default function About() {
       <Section>
         <Subheading className='flex justify-center text-center'>What impact will you<br />make with Paragon?</Subheading>
         <div className='flex justify-center'>
+		{/*
           <Button url={FELLOW_APP_URL} inNewTab className='mt-4 justify-center'>Apply Now</Button>
           <Button url={INFO_SESSION_URL} inNewTab className='mt-4 ml-5 justify-center'>RSVP for an Info Session</Button>
+		*/}
+		<Button url={"mailto:paragonfellowship@gmail.com"} className='mt-4 justify-center'>Contact Us</Button>
         </div>
 
       </Section>

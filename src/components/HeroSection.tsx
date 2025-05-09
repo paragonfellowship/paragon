@@ -1,9 +1,9 @@
 import { RiArrowDownLine } from "react-icons/ri";
 import { Text } from "./Typography";
-import Button from "./Button";
-import { FELLOW_APP_URL, NEWSLETTER_URL } from "@/app/constants";
+//import Button from "./Button";
+//import { FELLOW_APP_URL, NEWSLETTER_URL } from "@/app/constants";
 
-const currentlyApplying = true;
+//const currentlyApplying = true;
 
 export default function HeroSection() {
   return (
@@ -28,6 +28,7 @@ export default function HeroSection() {
         </div>
         
         <div className="flex space-x-4 mt-4 justify-center">
+		{/*
           {currentlyApplying && (
             <Button style="secondary" inNewTab url={FELLOW_APP_URL}>
               APPLY FOR SUMMER 2025
@@ -36,8 +37,9 @@ export default function HeroSection() {
           <Button style="secondary" inNewTab url={NEWSLETTER_URL}>
             SUBSCRIBE TO OUR NEWSLETTER
           </Button>
+		  */}
         </div>
-
+		
         <div className="animate-bounce absolute md:bottom-[8vh] bottom-[7vh] left-0 z-10 w-full flex justify-center text-4xl">
           <RiArrowDownLine />
         </div>
