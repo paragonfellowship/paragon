@@ -79,7 +79,7 @@ async function retrieveFacts(): Promise<factRecord[]> {
 				'Authorization': `Bearer ${AIRTABLE_API_KEY}`
 			},
 			next: {
-				revalidate: 60 * 60 * 1.5 // revalidate every 1.5 hours
+				revalidate: 60 * 60 * 24 // revalidate every day
 			}
 		});
 	const rec = await records.json();
@@ -113,7 +113,7 @@ export default async function Home() {
 	facts[2]=# of Projects
 	facts[3]=# of Gov Partners
 	facts[4]=# of States
-	facts[5]=# of Hours Worked
+	facts[5]=% of diverse students
 	*/
   return (
     <>
@@ -161,14 +161,14 @@ export default async function Home() {
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
-          <TickText text={60} suffix="%" className="text-5xl md:text-7xl font-bold text-black" />
+          <TickText text={facts[5].fields.Number} suffix="%" className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             identify as <span className="font-bold">underrepresented</span> in
             technology and policy
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
-          <TickText text={facts[5].fields.Number} className="text-5xl md:text-7xl font-bold text-black" />
+          <TickText text={facts[2].fields.Number*500} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             hours <span className="font-bold">volunteered</span> towards tech policy research
           </p>
