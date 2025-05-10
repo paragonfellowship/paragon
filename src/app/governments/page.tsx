@@ -35,7 +35,7 @@ import BgGrid from '@/components/BgGrid';
 import { RiArrowDownLine } from 'react-icons/ri';
 import GrayDivider from '@/components/GrayDivider';
 import Carousel from '@/components/Carousel';
-import Testimonials from '@/components/Testimonials';
+import TestimonialsServer from '@/components/Testimonials';
 import FAQuestion from '@/components/FAQuestion';
 //import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
@@ -183,7 +183,7 @@ export default async function About() {
 <Section id="partner testimonials">
   <Subheading className='text-3xl md:text-5xl mb-4'>Partner Testimonials</Subheading>
   <GrayDivider/>
-  <Testimonials list={1}/>
+  <TestimonialsServer view="government" />
 </Section>
 
 {/* <Section id="timeline">

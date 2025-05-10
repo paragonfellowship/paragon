@@ -10,7 +10,7 @@ import FAQuestion from '@/components/FAQuestion';
 import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
 //import {FELLOW_APP_URL , INFO_SESSION_URL} from '@/app/constants';
-import Testimonials from '@/components/Testimonials';
+import TestimonialsServer from '@/components/Testimonials';
 
 
 const sections = [
@@ -165,7 +165,7 @@ export default function About() {
 <Section id="student testimonials">
   <Subheading className='text-3xl md:text-5xl mb-4'>Student Testimonials</Subheading>
   <GrayDivider/>
-  <Testimonials list={2}/>
+  <TestimonialsServer view="students" />
 </Section>
       <Section id="faq">
         <Subheading>FAQ</Subheading>

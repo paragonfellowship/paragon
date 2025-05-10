@@ -34,7 +34,7 @@ import HeroSection from '@/components/HeroSection';
 import TopBar from '@/components/TopBar';
 import DynamicGrid from '@/components/DynamicGrid';
 import GrayDivider from '@/components/GrayDivider';
-import Testimonials from '@/components/Testimonials';
+import TestimonialsServer from '@/components/Testimonials';
 import TickText from '@/components/TickText';
 
 import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } from '@/app/constants'
@@ -184,7 +184,7 @@ export default async function Home() {
       <Section className='overflow-y-hidden'>
         <Subheading>Testimonials</Subheading>
         <GrayDivider/>
-        <Testimonials list={0}/>
+        <TestimonialsServer view="homepage" />
       </Section>
 
       <Section className='overflow-y-hidden'>
