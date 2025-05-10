@@ -8,6 +8,17 @@ import { useState, useEffect } from "react";
 
 export default function TopBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [topBarHeight, setTopBarHeight] = useState(0);
+
+  // Measure the height of the top bar after rendering
+  useEffect(() => {
+    const topBarElement = document.querySelector('.top-bar');
+    // Check if the element exists and is an HTMLElement before accessing offsetHeight
+    if (topBarElement instanceof HTMLElement) {
+      setTopBarHeight(topBarElement.offsetHeight);
+    }
+  }, [isMenuOpen]); // Re-measure if menu open state changes (though height shouldn't change, good practice)
+
 
   // Add effect to prevent body scrolling when the menu is open
   useEffect(() => {
@@ -29,7 +40,10 @@ export default function TopBar() {
         { href: "/team", label: "Organizing Team" }, // Mobile will flatten these
         { href: "/team/speakers", label: "Guest Speakers" },
     ]},
-    { href: "/students", label: "For Students" },
+    { href: "/students", label: "For Students", subLinks: [
+        { href: "/students", label: "Fellowship Information" }, // Mobile will flatten these
+        { href: "/students/mentorship", label: "Mentorship Information" },
+    ]},
     { href: "/governments", label: "For Governments" },
     { href: "/projects", label: "Projects" },
     { href: "mailto:paragonfellowship@gmail.com", label: "Contact" },
@@ -43,7 +57,8 @@ export default function TopBar() {
   return (
     <>
       {/* --- Top Bar Container --- */}
-      <div className="fixed top-0 left-0 p-4 md:p-8 flex w-screen z-50 justify-between items-center">
+      {/* Added 'top-bar' class to measure its height */}
+      <div className="top-bar fixed top-0 left-0 p-4 md:p-8 flex w-screen z-50 justify-between items-center">
         {/* Background Gradient - Made Lighter */}
         <div className="absolute bottom-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-dark to-transparent" />
 
@@ -104,14 +119,17 @@ export default function TopBar() {
       <div
         className={`
           fixed inset-0 z-40 bg-dark/95
-          flex flex-col items-center justify-center
+          flex flex-col items-center
           transition-opacity duration-300 ease-in-out
           md:hidden
           ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
         `}
+        // Add padding top dynamically based on topBarHeight
+        style={{ paddingTop: `${topBarHeight}px` }}
       >
         {/* Mobile Navigation - Flattened Structure for Even Spacing */}
-        <nav className="flex flex-col items-center space-y-8 text-center">
+        {/* Removed justify-center to align items from the top with padding */}
+        <nav className="flex flex-col items-center space-y-8 text-center w-full py-8 overflow-y-auto"> {/* Added py-8 and overflow-y-auto */}
            {/* Use flatMap to render sublinks directly for 'Team' */}
            {menuLinks.flatMap((link) => {
                 // If the link has subLinks (like 'Team'), map over subLinks and return Link components for each
@@ -132,8 +150,8 @@ export default function TopBar() {
                 }
            })}
            {/* ↑↑↑ Changed map to flatMap. Sublinks (like 'Organizing Team', 'Guest Speakers')
-                   are now rendered as direct children of <nav>, just like 'Home', 'For Students', etc.
-                   The 'space-y-8' class on <nav> will now apply equal spacing between all items. */}
+                  are now rendered as direct children of <nav>, just like 'Home', 'For Students', etc.
+                  The 'space-y-8' class on <nav> will now apply equal spacing between all items. */}
         </nav>
       </div>
     </>

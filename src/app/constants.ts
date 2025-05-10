@@ -24,3 +24,4 @@ export const defaultMenuOptions: MenuOption[] = [
     { name: 'Advisors & Speakers', url: '/advisors', topBar: true },
     { name: 'Contact us', url: 'mailto:paragonfellowship@gmail.com' }
 ]
+
