@@ -47,6 +47,15 @@ interface logoRecord {
 		logo: Image[]
     }
 }
+interface factRecord {
+    id: string,
+    createdTime: string,
+    fields: {
+        Item: string,
+		Number: number,
+		Notes: string
+    }
+}
 
 async function retrieveLogos(): Promise<logoRecord[]> {
     const encodedTableName = encodeURIComponent("Government Partner Logos"); // Encode the table name
@@ -62,6 +71,21 @@ async function retrieveLogos(): Promise<logoRecord[]> {
     const rec = await records.json();
     return rec.records;
 }
+async function retrieveFacts(): Promise<factRecord[]> {
+	const encodedTableName = encodeURIComponent("Facts"); // Encode the table name
+	const encodedViewName = encodeURIComponent("all_ordered");
+	const records = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodedTableName}?view=${encodedViewName}&maxRecords=100`, {
+			headers: {
+				'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+			},
+			next: {
+				revalidate: 60 * 60 * 1.5 // revalidate every 1.5 hours
+			}
+		});
+	const rec = await records.json();
+	return rec.records
+}
+
 /*
 
 console.log(govLogos[0]);
@@ -81,7 +105,16 @@ console.log(x[0].fields.logo[0].thumbnails.large);
 */
 
 export default async function Home() {
-	const govLogos = await retrieveLogos()
+	const govLogos = await retrieveLogos();
+	const facts = await retrieveFacts();
+	/*
+	facts[0]=# of Fellows
+	facts[1]=# of Universities
+	facts[2]=# of Projects
+	facts[3]=# of Gov Partners
+	facts[4]=# of States
+	facts[5]=# of Hours Worked
+	*/
   return (
     <>
       <TopBar />
@@ -120,11 +153,11 @@ export default async function Home() {
       <GrayDivider />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 w-full py-8 md:py-16 px-4">
         <div className="flex flex-col items-center text-center">
-          <TickText text={202} className="text-5xl md:text-7xl font-bold text-black" />
+          <TickText text={facts[0].fields.Number} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             <span className="font-bold">fellows</span> placed on{" "}
-            <span className="font-bold">28 projects</span> from{" "}
-            <span className="font-bold">80+</span> colleges and universities nationally
+            <span className="font-bold">{facts[2].fields.Number} projects</span> from{" "}
+            <span className="font-bold">{Math.round(facts[1].fields.Number / 10) * 10}+</span> colleges and universities nationally
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
@@ -135,16 +168,16 @@ export default async function Home() {
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
-          <TickText text={14000} className="text-5xl md:text-7xl font-bold text-black" />
+          <TickText text={facts[5].fields.Number} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             hours <span className="font-bold">volunteered</span> towards tech policy research
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
-          <TickText text={17} className="text-5xl md:text-7xl font-bold text-black" />
+          <TickText text={facts[3].fields.Number} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             established partnerships with state and local governments across{" "}
-            <span className="font-bold">11 U.S. states</span>
+            <span className="font-bold">{facts[4].fields.Number} U.S. states</span>
           </p>
         </div>
       </div>
