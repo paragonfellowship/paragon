@@ -1,0 +1,422 @@
+[
+  {
+    "id": "recaECpEXNR7Pmfzz",
+    "createdTime": "2024-06-14T15:30:10.000Z",
+    "fields": {
+      "name": "Sofia Rodriguez",
+      "title": "Executive Director",
+      "image": "/Headshots/SofiaR.png",
+      "linkedin": "bitly/sofiareneerodr",
+      "email": "sofiareneerodr@gmail.com",
+      "website": "https://linktr.ee/srrodriguez",
+      "school": "hunter",
+      "team": "Executive Director",
+      "region": ""
+    }
+  },
+  {
+    "id": "recEO6fhdbzciIYiq",
+    "createdTime": "2024-07-15T19:24:28.000Z",
+    "fields": {
+      "name": "Kaitlyn Cui",
+      "title": "Executive Director",
+      "image": "/Headshots/KaitlynC.png",
+      "linkedin": "https://www.linkedin.com/in/kaitlyn-cui/",
+      "email": "cuikaitlyn@gmail.com",
+      "website": "",
+      "school": "ucla",
+      "team": "Executive Director",
+      "region": ""
+    }
+  },
+  {
+    "id": "reclVTYnoSIXSiK2N",
+    "createdTime": "2024-09-21T17:26:50.000Z",
+    "fields": {
+      "name": "Christopher Asma",
+      "title": "Executive Director",
+      "image": "/Headshots/ChristopherA.jpg",
+      "linkedin": "https://www.linkedin.com/in/chrisasma103/",
+      "email": "chrisasma103@gmail.com",
+      "website": "",
+      "school": "hunter",
+      "team": "Executive Director",
+      "region": ""
+    }
+  },
+  {
+    "id": "rec2pnHAUGmtTBhP7",
+    "createdTime": "2024-03-05T23:15:20.000Z",
+    "fields": {
+      "name": "Kayla Huang",
+      "title": "Founder",
+      "image": "/Headshots/KaylaH.jpg",
+      "linkedin": "https://www.linkedin.com/in/klhuang3/",
+      "email": "kaylahuang@college.harvard.edu",
+      "website": "http://kaylahuang.com/",
+      "school": "harvard",
+      "team": "Founder",
+      "region": ""
+    }
+  },
+  {
+    "id": "recN3X1veNOtfPUFu",
+    "createdTime": "2024-03-05T23:42:20.000Z",
+    "fields": {
+      "name": "Jennifer Wang",
+      "title": "Founder",
+      "image": "/Headshots/JenniferW.jpg",
+      "linkedin": "",
+      "email": "jennifer_wang2@brown.edu",
+      "website": "",
+      "school": "brown",
+      "team": "Founder",
+      "region": ""
+    }
+  },
+  {
+    "id": "recitGtynq2c5mEuo",
+    "createdTime": "2024-03-05T23:48:39.000Z",
+    "fields": {
+      "name": "Rithwik Sudharsan",
+      "title": "Founding Member",
+      "image": "/Headshots/RithwikS.png",
+      "linkedin": "https://www.linkedin.com/in/rithwik-sudharsan/",
+      "email": "rithwik@berkeley.edu",
+      "website": "https://bit.ly/rithwiks",
+      "school": "ucb",
+      "team": "Founding Member",
+      "region": ""
+    }
+  },
+  {
+    "id": "recYZEaIY0O31imnv",
+    "createdTime": "2024-09-25T23:22:36.000Z",
+    "fields": {
+      "name": "Chloe Lau",
+      "title": "Partnerships Director ",
+      "image": "/Headshots/ChloeL.JPG",
+      "linkedin": "https://www.linkedin.com/in/chloe-hc-lau/",
+      "email": "chloelau@princeton.edu",
+      "website": "",
+      "school": "princeton",
+      "team": "Partnerships",
+      "region": ""
+    }
+  },
+  {
+    "id": "recO1p1Y1hm7CeeEk",
+    "createdTime": "2025-03-11T02:18:35.000Z",
+    "fields": {
+      "name": "Ahmed Diongue",
+      "title": "Partnerships Coordinator",
+      "image": "/Headshots/AhmedD.jpeg",
+      "linkedin": "www.linkedin.com/in/ahmed-diongue",
+      "email": "ahmeddiongue@alum.mit.edu",
+      "website": "",
+      "school": "mit",
+      "team": "Partnerships",
+      "region": ""
+    }
+  },
+  {
+    "id": "recmqPS4UTVCV1CDt",
+    "createdTime": "2025-03-10T22:23:03.000Z",
+    "fields": {
+      "name": "Desiree B",
+      "title": "Partnerships Coordinator",
+      "image": "/Headshots/DesireeB.JPG",
+      "linkedin": "https://www.linkedin.com/in/desireejunfijiah/",
+      "email": "desjunfijiah1@gmail.com",
+      "website": "",
+      "school": "cabrini",
+      "team": "Partnerships",
+      "region": ""
+    }
+  },
+  {
+    "id": "rec2hVk4PGSXt4jiF",
+    "createdTime": "2025-03-10T22:23:04.000Z",
+    "fields": {
+      "name": "Eric Gong",
+      "title": "Parternships Coordinator",
+      "image": "/Headshots/EricG.JPG",
+      "linkedin": "https://www.linkedin.com/in/ericgong2005/",
+      "email": "ericgong@college.harvard.edu",
+      "website": "https://ericgong2005.github.io/",
+      "school": "harvard",
+      "team": "Partnerships",
+      "region": ""
+    }
+  },
+  {
+    "id": "recFcPsRVIcR9XqM6",
+    "createdTime": "2024-09-25T23:22:33.000Z",
+    "fields": {
+      "name": "Quinn Wilson",
+      "title": "Policy Director",
+      "image": "/Headshots/QuinnW.JPG",
+      "linkedin": "https://www.linkedin.com/in/quinn-wilson-71ab4b114/",
+      "email": "quinn_wilson@berkeley.edu",
+      "website": "",
+      "school": "ucb",
+      "team": "Education",
+      "region": ""
+    }
+  },
+  {
+    "id": "rectHj7vm7qbEqlNz",
+    "createdTime": "2024-10-01T08:53:18.000Z",
+    "fields": {
+      "name": "Blaire Bosley",
+      "title": "Policy Coordinator",
+      "image": "/Headshots/BlaireB.png",
+      "linkedin": "www.linkedin.com/in/blaire-bosley",
+      "email": "Blairebosley@gmail.com",
+      "website": "https://www.blairebosley.com/",
+      "school": "gt",
+      "team": "Education",
+      "region": ""
+    }
+  },
+  {
+    "id": "recqVw0ZqHFwHmLox",
+    "createdTime": "2024-09-26T02:06:51.000Z",
+    "fields": {
+      "name": "Favour Nerrise",
+      "title": "Policy Coordinator",
+      "image": "/Headshots/FavourN.png",
+      "linkedin": "https://www.linkedin.com/in/favournerrise/",
+      "email": "fnerrise@stanford.edu",
+      "website": "https://www.favournerrise.com",
+      "school": "stanford",
+      "team": "Education",
+      "region": ""
+    }
+  },
+  {
+    "id": "rec7woyGIqYh2neA3",
+    "createdTime": "2025-03-10T00:29:13.000Z",
+    "fields": {
+      "name": "Jae Wan Ahn",
+      "title": "Policy Coordinator",
+      "image": "/Headshots/JaeWA.jpg",
+      "linkedin": "www.linkedin.com/in/jae-wan-ahn",
+      "email": "ahnfirst@gmail.com",
+      "website": "",
+      "school": "uchicago",
+      "team": "Education",
+      "region": ""
+    }
+  },
+  {
+    "id": "recPLPJU9XdPNpjV5",
+    "createdTime": "2024-09-26T02:06:53.000Z",
+    "fields": {
+      "name": "Julie Heng",
+      "title": "Policy Coordinator",
+      "image": "/Headshots/JulieH.jpg",
+      "linkedin": "https://www.linkedin.com/in/hengj/",
+      "email": "hengj@stanford.edu",
+      "website": "https://livingthequestions.substack.com/",
+      "school": "stanford",
+      "team": "Education",
+      "region": ""
+    }
+  },
+  {
+    "id": "recMsoKg5Ykj1isQ5",
+    "createdTime": "2025-03-10T00:29:15.000Z",
+    "fields": {
+      "name": "Caroline Bouisse",
+      "title": "Communication Engagement Coordinator / Professional Development Coordinator",
+      "image": "/Headshots/CarolineB.png",
+      "linkedin": "https://www.linkedin.com/in/caroline-bouisse-2a24131b3/",
+      "email": "caroline.bouisse123@gmail.com",
+      "website": "",
+      "school": "uchicago",
+      "team": "Advancement",
+      "region": ""
+    }
+  },
+  {
+    "id": "recI6dQqig4To9mix",
+    "createdTime": "2025-03-10T22:23:50.000Z",
+    "fields": {
+      "name": "Garv Jain",
+      "title": "Media Coordinator",
+      "image": "/Headshots/GarvJ.jpeg",
+      "linkedin": "https://bit.ly/GarvJainLinkedin",
+      "email": "garvjain2006@gmail.com",
+      "website": "",
+      "school": "georgemason",
+      "team": "Advancement",
+      "region": ""
+    }
+  },
+  {
+    "id": "recSGUBJG4W15RtQR",
+    "createdTime": "2025-03-10T00:29:15.000Z",
+    "fields": {
+      "name": "Divya Sharma",
+      "title": "Outreach Coordinator",
+      "image": "/Headshots/DivyaS.JPG",
+      "linkedin": "https://www.linkedin.com/in/divyaasharmaa/",
+      "email": "divs078@gmail.com",
+      "website": "",
+      "school": "gt",
+      "team": "Outreach",
+      "region": ""
+    }
+  },
+  {
+    "id": "recin0ySWrUIlxXcR",
+    "createdTime": "2025-03-10T22:18:20.000Z",
+    "fields": {
+      "name": "Junsuh Kim",
+      "title": "Outreach Coordinator",
+      "image": "/Headshots/JunsuhK.jpeg",
+      "linkedin": "www.linkedin.com/in/bjunsuhk/",
+      "email": "bjunsuhk@mit.edu",
+      "website": "",
+      "school": "mit",
+      "team": "Outreach",
+      "region": ""
+    }
+  },
+  {
+    "id": "recUTQGQjMXDJQS6Z",
+    "createdTime": "2025-03-10T00:29:15.000Z",
+    "fields": {
+      "name": "Sharanya Maddukuri",
+      "title": "Operations Director",
+      "image": "/Headshots/SharanyaM.JPG",
+      "linkedin": "http://www.linkedin.com/in/sharanya-maddukuri-6022b0211",
+      "email": "sharranyam@yahoo.com",
+      "website": "",
+      "school": "georgemason",
+      "team": "Operations",
+      "region": ""
+    }
+  },
+  {
+    "id": "recERxCPKSUGS5JJB",
+    "createdTime": "2025-04-10T19:06:15.000Z",
+    "fields": {
+      "name": "Marvin Howell",
+      "title": "Operations Coordinator",
+      "image": "/Headshots/MarvinH.jpg",
+      "linkedin": "https://www.linkedin.com/in/marvingp/",
+      "email": "mhowe1@illinois.edu",
+      "website": "",
+      "school": "uillinoisuc",
+      "team": "Operations",
+      "region": ""
+    }
+  },
+  {
+    "id": "recA41dJKehCJcT9h",
+    "createdTime": "2024-09-26T19:17:38.000Z",
+    "fields": {
+      "name": "Ridhwanlai Badmos",
+      "title": "Operations Coordinator",
+      "image": "/Headshots/RidhwanB.jpg",
+      "linkedin": "https://www.linkedin.com/in/ridhwanlai-badmos-05739a26b/",
+      "email": "ridhwanlai.badmos@gmail.com",
+      "website": "",
+      "school": "ubc",
+      "team": "Operations",
+      "region": ""
+    }
+  },
+  {
+    "id": "recDp019yVe1iV0HO",
+    "createdTime": "2025-03-10T22:23:06.000Z",
+    "fields": {
+      "name": "Zev van Zanten",
+      "title": "Grant Writer",
+      "image": "/Headshots/ZevZ.jpeg",
+      "linkedin": "https://www.linkedin.com/in/zevvanzanten",
+      "email": "Zev.vanzanten@gmail.com",
+      "website": "",
+      "school": "duke",
+      "team": "Finance",
+      "region": ""
+    }
+  },
+  {
+    "id": "recBclJamhKDaPjV2",
+    "createdTime": "2024-09-24T23:13:03.000Z",
+    "fields": {
+      "name": "Esther Suh",
+      "title": "Director of Design",
+      "image": "/Headshots/EstherS.jpg",
+	  "linkedin": "",
+      "email": "esthersuh@berkeley.edu",
+      "website": "",
+      "school": "ucb",
+      "team": "Design",
+      "region": ""
+    }
+  },
+  {
+    "id": "recNxx8t3KnFXhMf8",
+    "createdTime": "2024-09-24T23:13:07.000Z",
+    "fields": {
+      "name": "Sara Kuchimpos",
+      "title": "Director of Design",
+      "image": "/Headshots/SaraK.jpeg",
+	  "linkedin": "",
+      "email": "saraekuchimpos@gmail.com",
+      "website": "",
+      "school": "uci",
+      "team": "Design",
+      "region": ""
+    }
+  },
+  {
+    "id": "recjU2p6Vmt6AJqV1",
+    "createdTime": "2024-10-01T08:53:20.000Z",
+    "fields": {
+      "name": "Aileen Niu",
+      "title": "Technology Development Director",
+      "image": "/Headshots/AileenN.jpg",
+      "linkedin": "https://www.linkedin.com/in/aileen-niu-97ab24212/",
+      "email": "aileen.niu.77@gmail.com",
+      "website": "",
+      "school": "duke",
+      "team": "Tech Dev",
+      "region": ""
+    }
+  },
+  {
+    "id": "rec0Mhf7WdslTYPkZ",
+    "createdTime": "2025-03-11T02:18:58.000Z",
+    "fields": {
+      "name": "Noah Mattingly ",
+      "title": "Web Developer ",
+      "image": "/Headshots/NoahM.jpg",
+      "linkedin": "https://www.linkedin.com/in/noah-mattingly",
+      "email": "noahmattingly45@gmail.com",
+      "website": "",
+      "school": "",
+      "team": "Tech Dev",
+      "region": ""
+    }
+  },
+  {
+    "id": "rec4jPakjUaD0gdZk",
+    "createdTime": "2024-09-24T23:13:07.000Z",
+    "fields": {
+      "name": "Will Varner",
+      "title": "Director of Technology and Development",
+      "image": "/Headshots/WillV.jpg",
+      "linkedin": "https://www.linkedin.com/in/will-varner/",
+      "email": "will.varner@uga.edu",
+      "website": "https://willvarner.me",
+      "school": "uga",
+      "team": "Tech Dev",
+      "region": ""
+    }
+  }
+]

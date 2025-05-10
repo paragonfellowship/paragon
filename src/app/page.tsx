@@ -1,3 +1,30 @@
+interface Image {
+    id: string,
+    width: number,
+    height: number,
+    url: string,
+    filename: string,
+    size: number,
+    type: string,
+    thumbnails: {
+        small: {
+            url: string,
+            width: number,
+            height: number
+        },
+        large: {
+            url: string,
+            width: number,
+            height: number
+        },
+        full: {
+            url: string,
+            width: number,
+            height: number
+        }
+    }
+}
+
 import Section from "@/components/Section";
 import { Subheading, Text } from '@/components/Typography';
 import Image from "next/image";
@@ -5,16 +32,89 @@ import Carousel from '@/components/Carousel';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import TopBar from '@/components/TopBar';
-import {governments} from '@/app/constants';
 import DynamicGrid from '@/components/DynamicGrid';
 import GrayDivider from '@/components/GrayDivider';
-import Testimonials from '@/components/Testimonials';
+import TestimonialsServer from '@/components/Testimonials';
 import TickText from '@/components/TickText';
 
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } from '@/app/constants'
+
+interface logoRecord {
+    id: string,
+    createdTime: string,
+    fields: {
+        name: string,
+		logo: Image[]
+    }
+}
+interface factRecord {
+    id: string,
+    createdTime: string,
+    fields: {
+        Item: string,
+		Number: number,
+		Notes: string
+    }
+}
+
+async function retrieveLogos(): Promise<logoRecord[]> {
+    const encodedTableName = encodeURIComponent("Government Partner Logos"); // Encode the table name
+	const encodedViewName = encodeURIComponent("all_ordered");
+    const records = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodedTableName}?view=${encodedViewName}&maxRecords=100`, {
+        headers: {
+            'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+        },
+        next: {
+            revalidate: 60 * 60 * 1.5 // revalidate every 1.5 hours
+        }
+    });
+    const rec = await records.json();
+    return rec.records;
+}
+async function retrieveFacts(): Promise<factRecord[]> {
+	const encodedTableName = encodeURIComponent("Facts"); // Encode the table name
+	const encodedViewName = encodeURIComponent("all_ordered");
+	const records = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodedTableName}?view=${encodedViewName}&maxRecords=100`, {
+			headers: {
+				'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+			},
+			next: {
+				revalidate: 60 * 60 * 24 // revalidate every day
+			}
+		});
+	const rec = await records.json();
+	return rec.records
+}
+
+/*
+
+console.log(govLogos[0]);
+const x=await retrievePeople()
+console.log(x[0].fields.logo);
+const govLogos=await retrievePeople();
 const govLogos = Object.values(governments).map(government => government.logo);
 
-export default function Home() {
+//const govLogos = await retrievePeople()
+//
+//console.log(x[0].fields.logo[0].thumbnails.large.url);
+const govLogos = Object.values(governments).map(government => government.logo);
+console.log(govLogos[0])
+const x=await retrievePeople()
+console.log(x[0].fields.logo[0].thumbnails.large);
 
+*/
+
+export default async function Home() {
+	const govLogos = await retrieveLogos();
+	const facts = await retrieveFacts();
+	/*
+	facts[0]=# of Fellows
+	facts[1]=# of Universities
+	facts[2]=# of Projects
+	facts[3]=# of Gov Partners
+	facts[4]=# of States
+	facts[5]=% of diverse students
+	*/
   return (
     <>
       <TopBar />
@@ -53,31 +153,31 @@ export default function Home() {
       <GrayDivider />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 w-full py-8 md:py-16 px-4">
         <div className="flex flex-col items-center text-center">
-          <TickText text={202} className="text-5xl md:text-7xl font-bold text-black" />
+          <TickText text={facts[0].fields.Number} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             <span className="font-bold">fellows</span> placed on{" "}
-            <span className="font-bold">28 projects</span> from{" "}
-            <span className="font-bold">80+</span> colleges and universities nationally
+            <span className="font-bold">{facts[2].fields.Number} projects</span> from{" "}
+            <span className="font-bold">{Math.round(facts[1].fields.Number / 10) * 10}+</span> colleges and universities nationally
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
-          <TickText text={60} suffix="%" className="text-5xl md:text-7xl font-bold text-black" />
+          <TickText text={facts[5].fields.Number} suffix="%" className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             identify as <span className="font-bold">underrepresented</span> in
             technology and policy
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
-          <TickText text={14000} className="text-5xl md:text-7xl font-bold text-black" />
+          <TickText text={facts[2].fields.Number*500} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             hours <span className="font-bold">volunteered</span> towards tech policy research
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
-          <TickText text={17} className="text-5xl md:text-7xl font-bold text-black" />
+          <TickText text={facts[3].fields.Number} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             established partnerships with state and local governments across{" "}
-            <span className="font-bold">11 U.S. states</span>
+            <span className="font-bold">{facts[4].fields.Number} U.S. states</span>
           </p>
         </div>
       </div>
@@ -117,17 +217,18 @@ export default function Home() {
       <Section className='overflow-y-hidden'>
         <Subheading>Testimonials</Subheading>
         <GrayDivider/>
-        <Testimonials/>
+        <TestimonialsServer view="homepage" />
       </Section>
 
       <Section className='overflow-y-hidden'>
         <Subheading>Our Partners</Subheading>
         <GrayDivider/>
         <a href='/projects' className='text-blue-500 block w-full overflow-hidden'>
-        <Carousel className='mt-10' speed={0.5}>
+        <Carousel className='mt-10' speed={35}>
           {
             govLogos.map((logo, index) => (
-              <Image key={index} src={logo} alt="Logo" className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
+				//<Image key={index} src={logo.fields.logo[0].thumbnails.large.url} width={logo.fields.logo[0].thumbnails.large.width} height={logo.fields.logo[0].thumbnails.large.height} alt={logo.fields.name} className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
+				<img key={index} src={logo.fields.logo[0].thumbnails.large.url} alt={logo.fields.name} className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
             ))
           }
         </Carousel>

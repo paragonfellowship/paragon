@@ -17,11 +17,17 @@ const FAQuestion = ({ question, answer }: { question: string; answer: string }) 
         role="button"
         aria-expanded={expanded}
         aria-controls="answer"
-      > 
+      >
         <div className={`font-light text-2xl mb-5 mr-10 ${expanded ? 'text-white-300' : 'text-black'} transition`}>{question}</div>
         <div className={`mr-2 font-light ml-auto mb-4 ${expanded ? 'ml-auto' : ''} transition`}>{expanded ? '▼' : '▶'}</div>
       </div>
-      {expanded && <div className="mt-2 ml-6 mb-6 text-white-800 text-lg mr-10" id="answer">{answer}</div>}
+      {expanded && (
+        <div
+          className="mt-2 ml-6 mb-6 text-white-800 text-lg mr-10"
+          id="answer"
+          dangerouslySetInnerHTML={{ __html: answer }}
+        />
+      )}
     </div>
   );
 };
