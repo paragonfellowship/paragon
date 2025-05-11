@@ -65,14 +65,17 @@ export default function About() {
                         apply as a mentor
                     </Button>
                     <Button
-                        className="fade-in w-full sm:w-auto sm:ml-5 mt-4 sm:mt-0 bg-gray-400 text-gray-700 cursor-not-allowed border-gray-400"
-                        style="secondary"
-                        inNewTab
-                        url={MENTEE_APP_URL}
-						disabled={true}
-                    >
-                        mentee apps are invite only
-                    </Button>
+    // Replicating secondary style classes + adding gray disabled classes
+    // Using disabled: prefix for background color
+    className="fade-in w-full sm:w-auto sm:ml-5 mt-4 sm:mt-0 uppercase md:text-md text-sm md:px-5 px-2 md:py-3 py-1 border-[.2rem] text-gray-700 cursor-not-allowed border-gray-400 disabled:bg-gray-400" // Added disabled:bg-gray-400
+    style="custom" // Use custom style since we are providing all classes in className
+    inNewTab
+    url={MENTEE_APP_URL}
+    disabled={true} // Ensure the disabled attribute is present
+    // Removed inline style as it was not effective
+>
+    mentee apps are invite only
+</Button>
                 </div>
             </div> {/* End of Inner Content Container */}
         </div> {/* End of Main Content Wrapper */}
