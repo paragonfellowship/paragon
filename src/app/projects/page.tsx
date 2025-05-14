@@ -21,7 +21,7 @@ export default function Projects() {
         
         <div className="flex-1 flex flex-col justify-center md:block">
           <Text className='text-white text-4xl pl-4 md:text-7xl md:pl-20 md:mt-60 pb-10 md:pb-0 font-semibold text-center md:text-left'>
-            Project Portfolio
+            PROJECT PORTFOLIO
           </Text>
           
           <Text className="text-xl md:text-3xl md:text-right pt-0 md:pt-40 max-w-full px-4 md:ml-auto md:pr-20 font-semibold text-center">

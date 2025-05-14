@@ -99,7 +99,7 @@ async function retrievePeople(tableName: string): Promise<PersonRecord[]> {
             'Authorization': `Bearer ${AIRTABLE_API_KEY}`
         },
         next: {
-            revalidate: 60 * 60 * 1.5 // revalidate every 1.5 hours
+            revalidate: 60 * 60 * 24 // revalidate every day
         }
     });
     const rec = await records.json();
@@ -201,7 +201,7 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
   />
   */
   <img
-    src={person.fields.image[0].thumbnails.large.url}
+    src={`/api/cached-image?url=${encodeURIComponent(person.fields.image[0].thumbnails.large.url)}`}
     alt={person.fields.name}
     // Applying the original classes: aspect-square h-32 w-32 object-cover rounded-full shadow-lg
     // Note: h-32 and w-32 are now also controlled by the width/height props, but keeping them here for clarity

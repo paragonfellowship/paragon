@@ -41,7 +41,7 @@ export default function About() {
             <div className="flex flex-col items-center w-full max-w-3xl text-center
                             flex-1 justify-center"> {/* <-- Added flex-1 and justify-center here */}
                 <Text className='text-white text-5xl md:text-7xl font-semibold px-4 pb-3 md:pb-6'>
-                    Paragon Policy Mentorship
+                    PARAGON POLICY MENTORSHIP
                 </Text>
 
                 {/* Animated elements still have the fade-in class directly */}

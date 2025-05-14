@@ -45,7 +45,7 @@ async function retrieveTestimonial(viewName: string): Promise<FormattedTestimoni
                 'Authorization': `Bearer ${AIRTABLE_API_KEY}`
             },
             next: {
-                revalidate: 60 * 60 * 1.5 // revalidate every 1.5 hours
+                revalidate: 60 * 60 * 24 // revalidate every day
             }
         });
 
