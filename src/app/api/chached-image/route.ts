@@ -1,4 +1,5 @@
 // app/api/cached-image/route.ts
+
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
@@ -9,7 +10,6 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    // Fetch the image data, applying Vercel data cache to this fetch
     const imageResponse = await fetch(imageUrl, {
       next: {
         revalidate: 60 * 60 * 24 // Cache the image data for 24 hours
@@ -17,25 +17,34 @@ export async function GET(request: NextRequest) {
     });
 
     if (!imageResponse.ok) {
-      // Handle non-200 responses from the original image source
-      console.error(`Failed to fetch original image: ${imageResponse.status} ${imageResponse.statusText}`);
+      console.error(`Failed to fetch original image: ${imageResponse.status} ${imageResponse.statusText} from ${imageUrl}`);
       return new NextResponse(`Failed to fetch image: ${imageResponse.statusText}`, { status: imageResponse.status });
     }
 
-    // Get the content type from the original response headers
-    const contentType = imageResponse.headers.get('Content-Type') || 'image/*'; // Fallback if header is missing
+    const contentType = imageResponse.headers.get('Content-Type') || 'image/*';
 
-    // Return the image data with the correct content type
     return new NextResponse(imageResponse.body, {
       headers: {
         'Content-Type': contentType,
-        // Optionally add browser caching headers as well
-         'Cache-Control': `public, max-age=${60 * 60 * 24}, must-revalidate`
+        'Cache-Control': `public, max-age=${60 * 60 * 24}, must-revalidate`
       }
     });
 
-  } catch (error: any) {
+  } catch (error: unknown) { // Change 'any' to 'unknown'
+    // Handle any errors during the fetch process
+    // 'unknown' is safer than 'any'. You'll need to check its type if you need to access properties.
+
     console.error('Error fetching and caching image:', error);
+
+    // You could potentially log more details if it's a standard Error object
+    if (error instanceof Error) {
+        console.error('Error message:', error.message);
+        // You could even include error.message in the response body for debugging,
+        // but for production APIs, returning a generic error is usually better.
+        // return new NextResponse(`Internal Server Error: ${error.message}`, { status: 500 });
+    }
+
+
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
