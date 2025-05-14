@@ -1,0 +1,32 @@
+[
+  {
+    "id": "recj0jucR8w9plPri",
+    "createdTime": "2024-09-12T03:06:54.000Z",
+    "fields": {
+      "name": "Ann Cleaveland",
+      "title": "",
+      "image": "/Headshots/AnnC.jpg",
+      "linkedin": "https://www.linkedin.com/in/anncleaveland/",
+      "email": "cltc@berkeley.edu",
+      "website": "https://cltc.berkeley.edu/ann-cleaveland/",
+      "school": "ucb",
+      "team": "Executive Director, UC Berkeley Center for Long-Term Cybersecurity",
+      "region": ""
+    }
+  },
+  {
+    "id": "recZAFFX8kErRkVV5",
+    "createdTime": "2025-02-10T08:39:38.000Z",
+    "fields": {
+      "name": "Andrew Reddie",
+      "title": "",
+      "image": "/Headshots/AndrewR.jpg",
+      "linkedin": "https://www.linkedin.com/in/andrewreddie/",
+      "email": "areddie@berkeley.edu",
+      "website": "https://reddie.berkeley.edu/",
+      "school": "ucb",
+      "team": "Professor and Founder, Berkeley Risk and Security Lab",
+      "region": ""
+    }
+  }
+]
