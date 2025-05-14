@@ -99,7 +99,7 @@ async function retrievePeople(tableName: string): Promise<PersonRecord[]> {
             'Authorization': `Bearer ${AIRTABLE_API_KEY}`
         },
         next: {
-            revalidate: 60 * 60 * 24 // revalidate every day
+            revalidate: 60 * 60 * 168 // revalidate every week
         }
     });
     const rec = await records.json();
@@ -148,7 +148,6 @@ export default async function Team() {
     const organizingTeam = await retrievePeople("Team Members");
     const formerOrganizingTeam = await retrievePeople("Former Team Members");
     const strategicAdvisors = await retrievePeople("Strategic Advisors");
-
     const organizingByRegion = groupPeopleByRegion(organizingTeam);
     const advisorsByRegion = groupPeopleByRegion(strategicAdvisors);
     const formerByRegion = groupPeopleByRegion(formerOrganizingTeam);
@@ -188,7 +187,6 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
 									{person.fields.image && (
   // Applying the original <img> tag classes directly to the Image component
   // Using width and height props corresponding to the h-32 and w-32 Tailwind classes (128px)
-  /*
   <Image
     src={person.fields.image[0].thumbnails.large.url}
     alt={person.fields.name}
@@ -199,34 +197,36 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
     // and in case there's any subtle interaction with other styles.
     className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg"
   />
-  */
+  
+  /*
   <img
-    src={`/api/cached-image?url=${encodeURIComponent(person.fields.image[0].thumbnails.large.url)}`}
+    src={person.fields.image[0].thumbnails.large.url}
     alt={person.fields.name}
     // Applying the original classes: aspect-square h-32 w-32 object-cover rounded-full shadow-lg
     // Note: h-32 and w-32 are now also controlled by the width/height props, but keeping them here for clarity
     // and in case there's any subtle interaction with other styles.
     className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg"
-  />
+  />*/
 )}
 									<div className="block w-24 h-20 box-border mt-3 mx-auto flex items-center justify-center overflow-hidden">
 										{
 											// Check if school_logo exists, has a first item, and the URL path exists
 											(person.fields.school_logo?.[0]?.thumbnails?.large?.url) && (
-    /*<Image
+    <Image
       src={person.fields.school_logo[0].thumbnails.large.url}
       alt={person.fields.school}
       // Assuming the thumbnail object has width and height properties
       width={person.fields.school_logo[0].thumbnails.large.width}
       height={person.fields.school_logo[0].thumbnails.large.height}
       className="max-w-full max-h-full object-contain" // Keep the original classes
-    />*/
+    />
+	/*
 	<img
       src={person.fields.school_logo[0].thumbnails.large.url}
       alt={person.fields.school}
       // Assuming the thumbnail object has width and height properties
       className="max-w-full max-h-full object-contain" // Keep the original classes
-    />
+    />*/
   )
 											}
 									</div>

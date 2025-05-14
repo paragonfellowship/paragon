@@ -80,7 +80,7 @@ async function retrievePeople(tableName: string): Promise<PersonRecord[]> {
             'Authorization': `Bearer ${AIRTABLE_API_KEY}`
         },
         next: {
-            revalidate: 60 * 60 * 24 // revalidate every day
+            revalidate: 60 * 60 * 168 // revalidate every week
         }
     });
     const rec = await records.json();
@@ -142,7 +142,7 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
                                     {person.fields.image && (
   // Applying the original <img> tag classes directly to the Image component
   // Using width and height props corresponding to the h-32 and w-32 Tailwind classes (128px)
-  /*<Image
+  <Image
     src={person.fields.image[0].thumbnails.large.url}
     alt={person.fields.name}
     width={128} // Corresponds to w-32 (32 * 4 = 128)
@@ -151,7 +151,8 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
     // Note: h-32 and w-32 are now also controlled by the width/height props, but keeping them here for clarity
     // and in case there's any subtle interaction with other styles.
     className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg"
-  />*/
+  />
+  /*
   <img
     src={person.fields.image[0].thumbnails.large.url}
     alt={person.fields.name}
@@ -159,7 +160,7 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
     // Note: h-32 and w-32 are now also controlled by the width/height props, but keeping them here for clarity
     // and in case there's any subtle interaction with other styles.
     className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg"
-  />
+  />*/
 )}
                                 </div>
                                 <div className="flex flex-col h-full ml-5 w-4/6">

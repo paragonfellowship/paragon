@@ -1,8 +1,36 @@
 // components/TestimonialsClient.tsx (This will be your Client Component)
 "use client"; // This directive is necessary here
 
+interface Image {
+    id: string,
+    width: number,
+    height: number,
+    url: string,
+    filename: string,
+    size: number,
+    type: string,
+    thumbnails: {
+        small: {
+            url: string,
+            width: number,
+            height: number
+        },
+        large: {
+            url: string,
+            width: number,
+            height: number
+        },
+        full: {
+            url: string,
+            width: number,
+            height: number
+        }
+    }
+}
+
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import Card from "@/components/Card";
+import Image from "next/image"
 // import Image from "next/image"; // If you prefer Next.js Image component
 
 // Define interface for the testimonial data structure expected by this component
@@ -182,8 +210,17 @@ export default function TestimonialsClient({ testimonials }: TestimonialsClientP
                                 <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6 relative h-24 w-24 md:h-32 md:w-32 rounded-full overflow-hidden shadow-lg mx-auto md:mx-0">
                                     {testimonial.imageUrl && (
                                         // Using simple <img> tag as per your original code, but consider Next.js <Image> for optimization
-                                        <img
+                                        /*<img
                                             src={testimonial.imageUrl}
+                                            alt={`Headshot of ${testimonial.author.split(',')[0].slice(1)}`} // Better alt text
+                                            className="object-cover w-full h-full" // Use w-full h-full with object-cover in the relative container
+                                            // If using Next.js <Image>: fill={true}, sizes="(max-width: 768px) 96px, 128px", priority={index < 2}
+                                        />*/
+										<Image
+                                            src={testimonial.imageUrl}
+											fill={true}
+											sizes="(max-width: 768px) 96px, 128px"
+											priority={index < 2}
                                             alt={`Headshot of ${testimonial.author.split(',')[0].slice(1)}`} // Better alt text
                                             className="object-cover w-full h-full" // Use w-full h-full with object-cover in the relative container
                                             // If using Next.js <Image>: fill={true}, sizes="(max-width: 768px) 96px, 128px", priority={index < 2}
