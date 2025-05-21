@@ -1,8 +1,0 @@
-{
-  "crons": [
-    {
-      "path": "/api/process-images",
-      "schedule": "0 10 * * 1,4"
-    }
-  ]
-}
