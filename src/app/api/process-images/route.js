@@ -180,6 +180,9 @@ async function processAirtableRecord(record, config) {
 export async function GET(request) {
   const authHeader = request.headers.get('authorization');
   if (NODE_ENV === 'production' && (!CRON_SECRET || authHeader !== `Bearer ${CRON_SECRET}`)) {
+	  console.log(NODE_ENV);
+	  console.log(CRON_SECRET);
+	  console.log(authHeader);
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
