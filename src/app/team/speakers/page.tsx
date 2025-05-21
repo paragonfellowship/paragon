@@ -53,40 +53,55 @@ interface PersonRecord {
         linkedin: string,
         website: string,
         image: Image[],
-        team: string
+        team: string,
+		school_logo: Image[],
+		headshot_blob: string,
+		logo_blob: string
     }
 }
 
-import Card from "@/components/Card"
+import Card from "@/components/Card_Static"
 import Footer from '@/components/Footer'
 import Image from "next/image"
-import { ElementType } from "react"
+//import { ElementType } from "react"
 import BgGrid from "@/components/BgGrid"
 import { RiArrowDownLine } from "react-icons/ri"
 import { Heading } from "@/components/Typography"
-import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, colleges } from '@/app/constants'
+//import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, REVALIDATE_NUM } from '@/app/constants'
 import TopBar from '@/components/TopBar'
+import {SocialIcon} from 'react-social-icons';
 
 const NO_REGION = "";
 
-function encodeTableName(tableName: string): string {
-    return encodeURIComponent(tableName); // Automatically encodes spaces to %20
-}
-
 // Updated function to retrieve people with encoded table name
 async function retrievePeople(tableName: string): Promise<PersonRecord[]> {
-    const encodedTableName = encodeTableName(tableName); // Encode the table name
-    const records = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodedTableName}?maxRecords=100&view=all_ordered`, {
+    const encodedTableName = encodeURIComponent(tableName); // Encode the table name
+	const encodedViewName = encodeURIComponent("all_ordered");
+    const records = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodedTableName}?view=${encodedViewName}&maxRecords=100`, {
         headers: {
             'Authorization': `Bearer ${AIRTABLE_API_KEY}`
         },
         next: {
-            revalidate: 60 * 60 * 1.5 // revalidate every 1.5 hours
+            revalidate: REVALIDATE_NUM
         }
     });
-    const rec = await records.json();
-    return rec.records;
+const reco = await records.json();// ... (after fetching and parsing 'reco') ...
+
+if (!Array.isArray(reco.records)) {
+    console.error("reco.records is not an array! Cannot filter.");
+    return [];
+}
+	const rec = reco.records
+	
+for (let i = rec.length - 1; i >= 0; i--) {
+	//removes entries that do not have a blobbed image. This is to protect if the airtable data is revalidated before a new entry gets its image blobbed
+  if (!rec[i].fields.headshot_blob) {
+    // If no blobbed image, then remove from the array
+    rec.splice(i, 1);
+  }
+}
+return rec
 }
 
 // Helper function to group people by region
@@ -111,8 +126,7 @@ export default async function Team() {
     return <>
         <TopBar />
         <div
-                    className="background-container"
-                    style={{ height: '60vh' }}
+                    className="background-container relative flex flex-col md:block"
                 >
                 <BgGrid lineCount={7} />
                 <Heading className='fade-in text-white text-6xl text-center mt-60'>Guest Speakers</Heading>
@@ -122,7 +136,7 @@ export default async function Team() {
         </div>
 
         <main className="m-8">
-            <TeamSection title="Invited Speakers" peopleByRegion={speakersByRegion} />  {/* New Section */}
+            <TeamSection title=""peopleByRegion={speakersByRegion} />  {/* New Section */}
         </main>
 
         <Footer/>
@@ -140,20 +154,37 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
                     <p className="text-2xl font-bold">{region}</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-5">
                         {people.map((person, i) => (
-                            <Card key={i} className="flex flex-row w-full">
+                            <Card key={i} className="flex flex-row w-full items-start">
                                 <div className='relative h-min'>
-                                    {person.fields.image && <img src={person.fields.image[0].thumbnails.large.url} alt={person.fields.name} className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg " />}
-                                    {colleges[person.fields.school] && <img src={colleges[person.fields.school].logo.src} alt={colleges[person.fields.school].name} className="h-12 aspect-square object-contain mt-2 absolute -bottom-1 -right-1" />}
+                                    {person.fields.image && (
+  // Applying the original <img> tag classes directly to the Image component
+  // Using width and height props corresponding to the h-32 and w-32 Tailwind classes (128px)
+  <Image
+    src={person.fields.headshot_blob}
+    alt={person.fields.name}
+    width={128} // Corresponds to w-32 (32 * 4 = 128)
+    height={128} // Corresponds to h-32 (32 * 4 = 128)
+    // Applying the original classes: aspect-square h-32 w-32 object-cover rounded-full shadow-lg
+    // Note: h-32 and w-32 are now also controlled by the width/height props, but keeping them here for clarity
+    // and in case there's any subtle interaction with other styles.
+    className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg"
+  />
+  /*
+  <img
+    src={person.fields.image[0].thumbnails.large.url}
+    alt={person.fields.name}
+    // Applying the original classes: aspect-square h-32 w-32 object-cover rounded-full shadow-lg
+    // Note: h-32 and w-32 are now also controlled by the width/height props, but keeping them here for clarity
+    // and in case there's any subtle interaction with other styles.
+    className="aspect-square h-32 w-32 object-cover rounded-full shadow-lg"
+  />*/
+)}
                                 </div>
-                                <div className="flex flex-col h-full justify-center ml-5 w-4/6">
+                                <div className="flex flex-col h-full ml-5 w-4/6">
                                     <p className="text-3xl font-semibold">{person.fields.name}</p>
                                     <p className="text-xl">{person.fields.team}</p>
                                     <div className="flex flex-row mt-2 gap-2">
-                                        {person.fields.email && person.fields.email.trim() !== "" && (
-                                            <IconButton url={`mailto:${person.fields.email}`} icon={RiMailLine} />
-                                        )}
-                                        {person.fields.linkedin && <IconButton url={person.fields.linkedin} icon={RiLinkedinLine} />}
-                                        {person.fields.website && <IconButton url={person.fields.website} icon={RiLinksLine} />}
+                                        {person.fields.linkedin && <SocialIcon network="linkedin" url={person.fields.linkedin}  target='_blank' bgColor="#1e2d5a" className="transition transform hover:scale-110"/>}
                                     </div>
                                 </div>
                             </Card>
@@ -166,7 +197,7 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
 }
 
 
-// IconButton component
+/* IconButton component
 function IconButton({ icon: Icon, url }: { icon: ElementType, url: string }) {
     return (
         <a href={url} target="_blank" rel="noopener noreferrer">
@@ -176,3 +207,4 @@ function IconButton({ icon: Icon, url }: { icon: ElementType, url: string }) {
         </a>
     );
 }
+*/

@@ -21,7 +21,7 @@ export default function Projects() {
         
         <div className="flex-1 flex flex-col justify-center md:block">
           <Text className='text-white text-4xl pl-4 md:text-7xl md:pl-20 md:mt-60 pb-10 md:pb-0 font-semibold text-center md:text-left'>
-            Project Portfolio
+            PROJECT PORTFOLIO
           </Text>
           
           <Text className="text-xl md:text-3xl md:text-right pt-0 md:pt-40 max-w-full px-4 md:ml-auto md:pr-20 font-semibold text-center">
@@ -41,99 +41,172 @@ export default function Projects() {
       </div>
 
 	<Section>
-	<Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Our Projects </Text> 
-	<div></div>
-	<Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Fall 2024 </Text> 
+	{/*
+	<Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Spring 2025 </Text> 
 	<GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">
-            <Link href="" passHref>
+            <Link href="/projects/sp25/missoula-sp25" passHref>
                 <ProjectCard 
-                  timeline='2024 Fall cohort'
-                  projectTitle="(Coming Soon) Federal Supercomputer Analysis" 
+                  timeline='2025 Spring cohort'
+                  projectTitle="Missoula students advance the City closer to WWC Certification" 
+                />
+            </Link>
+			<Link href="/projects/sp25/state-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="Students evaluate AI weapon transfers for the State Department" 
+                />
+            </Link>
+			<Link href="/projects/sp25/albuquerque-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="Albuquerque students create foundational AI policy" 
+                />
+            </Link>
+			<Link href="/projects/sp25/montana-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="Montana students propose new IT funding structure" 
+                />
+            </Link>
+			<Link href="/projects/sp25/tempe-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="" 
+                />
+            </Link>
+			<Link href="/projects/sp25/madison-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="" 
+                />
+            </Link>
+			<Link href="/projects/sp25/alexandria-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="" 
+                />
+            </Link>
+			<Link href="/projects/sp25/santa-clara-county-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="Santa Clara County, CA students launch an AI dictionary" 
                 />
             </Link> 
-            <Link href="" passHref>
+            
+        </div>
+	<br /><br />*/}
+	<Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Fall 2024 </Text> 
+	<GrayDivider />
+        <div className="grid md:grid-cols-3 gap-6 text-center">
+            <Link href="/projects/fa24/federal-fa24" passHref>
                 <ProjectCard 
                   timeline='2024 Fall cohort'
-                  projectTitle="(Coming Soon) Tempe AI Curriculum" 
+                  projectTitle="Students work with the Federal government to analyze supercomputers" 
+                />
+            </Link> 
+            <Link href="/projects/fa24/georgia-state-fa24" passHref>
+                <ProjectCard 
+                  timeline='2024 Fall cohort'
+                  projectTitle="Georgia Students draft AI Usage rules for State employees" 
                 />
             </Link>
-			<Link href="" passHref>
+			<Link href="/projects/fa24/la-cd3-lail-fa24" passHref>
                 <ProjectCard 
                   timeline='2024 Fall cohort'
-                  projectTitle="(Coming Soon) Los Angeles CD3 Digital Accessibility" 
+                  projectTitle="Los Angeles, CA Students spotlight language access needs" 
                 />
             </Link>
-			<Link href="" passHref>
+			<Link href="/projects/fa24/la-cd3-ada-fa24" passHref>
                 <ProjectCard 
                   timeline='2024 Fall cohort'
-                  projectTitle="(Coming Soon) Santa Clara County AI Use Case Guidelines" 
+                  projectTitle="Los Angeles, CA Students make the City more accessible online" 
+                />
+            </Link>
+			<Link href="/projects/fa24/santa-clara-county-fa24" passHref>
+                <ProjectCard 
+                  timeline='2024 Fall cohort'
+                  projectTitle="Santa Clara County, CA Students develop AI Use Case Guidelines" 
+                />
+            </Link>
+			<Link href="/projects/fa24/brownsville-fa24" passHref>
+                <ProjectCard 
+                  timeline='2024 Fall cohort'
+                  projectTitle="Brownsville, TX students fight the digital divide" 
+                />
+            </Link>
+			<Link href="/projects/fa24/tempe-fa24" passHref>
+                <ProjectCard 
+                  timeline='2024 Fall cohort'
+                  projectTitle="Tempe, AZ students draft an innovative AI curriculum" 
                 />
             </Link>
         </div>
-      <Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Summer 2024 </Text> 
+		<br /><br />
+      <Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Summer 2024 </Text> 
       <GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">
-            <Link href="" passHref>
+			<Link href="/projects/su24/lebanon-ada-su24" passHref>
                 <ProjectCard 
                   timeline='2024 Summer cohort'
-                  projectTitle="(Coming Soon) San José AI Risk Assessment Project" 
+                  projectTitle="Students improve digital accessibility for Lebanon, NH" 
                 />
             </Link> 
-			<Link href="" passHref>
+			<Link href="/projects/su24/st-louis-su24" passHref>
                 <ProjectCard 
                   timeline='2024 Summer cohort'
-                  projectTitle="(COMING SOON) Lebanon Accessibility Project" 
+                  projectTitle="ST. LOUIS, MO STUDENTS EXAMINE TECH-POWERED Cultural DIVERSITY" 
                 />
             </Link> 
-			<Link href="/projects/summer24/stl" passHref>
+            <Link href="/projects/su24/santa-clara-county-su24" passHref>
                 <ProjectCard 
                   timeline='2024 Summer cohort'
-                  projectTitle="ST. LOUIS STUDENTS EXAMINE TECH-POWERED Cultural DIVERSITY" 
+                  projectTitle="Cybersecurity Risk Prioritization in Santa Clara County, CA" 
                 />
-            </Link> 
-            <Link href="/projects/summer24/stcl" passHref>
+            </Link>
+			<Link href="/projects/su24/san-jose-ai-su24" passHref>
                 <ProjectCard 
                   timeline='2024 Summer cohort'
-                  projectTitle="Cybersecurity Risk Prioritization in Santa Clara County" 
+                  projectTitle="SAN JOSé, CA STUDENTS DEVELOP AI Procurement Risk assessment" 
                 />
             </Link>
         </div>
-        <Text className='md:text-2xl text-1xl uppercase font-semibold pt-20'>Spring 2024 </Text> 
+		<br /><br />
+        <Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Spring 2024 </Text> 
         <GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">
-            <Link href="/projects/sp24/leb" passHref>
+            <Link href="/projects/sp24/lebanon-sp24" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="STUDENTS IN LEBANON CREATE AI AUDITING FRAMEWORK"
+                  projectTitle="STUDENTS IN LEBANON, NH CREATE AI AUDITING FRAMEWORK"
                 />
             </Link>
-			<Link href="/projects/sp24/bos" passHref>
+			<Link href="/projects/sp24/boston-sp24" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="BOSTON STUDENTS WORK ON TECH PROCUREMENT GUIDELINES" 
+                  projectTitle="BOSTON, MA STUDENTS WORK ON TECH PROCUREMENT GUIDELINES" 
                 />
             </Link>
-            <Link href="/projects/sp24/sj" passHref>
+            <Link href="/projects/sp24/san-jose-pi-sp24" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="SAN JOSé STUDENTS TACKLE PUBLIC INTEGRITY AND AI" 
+                  projectTitle="SAN JOSé, CA STUDENTS TACKLE PUBLIC INTEGRITY AND AI" 
                 />
             </Link>
-            <Link href="/projects/sp24/sjg" passHref>
+			<Link href="/projects/sp24/san-jose-ai-sp24" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="SAN JOSé STUDENTS PROTECT GOVERNMENT COMMUNICATION FROM AI" 
+                  projectTitle="SAN JOSé, CA STUDENTS CONFRONT AI-GENERATED MISINFORMATION" 
                 />
             </Link>
-            <Link href="/projects/sp24/stl" passHref>
+            <Link href="/projects/sp24/st-louis-sp24" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="AI-Driven Language Access for St. Louis" 
+                  projectTitle="AI-Driven Language Access for St. Louis, MO" 
                 />
             </Link>
         </div>
-        <SmallText className='text-xs pt-5'>We&apos;re working on adding the rest of our portfolio, stay tuned for a complete collection!</SmallText>
+        <SmallText className='text-xs pt-5'>This page will continuously be updated over the year with new projects. Be sure to check back later for new policy memos!</SmallText>
       </Section>
 
       <Section>
