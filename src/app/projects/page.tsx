@@ -41,6 +41,61 @@ export default function Projects() {
       </div>
 
 	<Section>
+	{/*
+	<Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Spring 2025 </Text> 
+	<GrayDivider />
+        <div className="grid md:grid-cols-3 gap-6 text-center">
+            <Link href="/projects/sp25/missoula-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="Missoula students advance the City closer to WWC Certification" 
+                />
+            </Link>
+			<Link href="/projects/sp25/state-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="Students evaluate AI weapon transfers for the State Department" 
+                />
+            </Link>
+			<Link href="/projects/sp25/albuquerque-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="Albuquerque students create foundational AI policy" 
+                />
+            </Link>
+			<Link href="/projects/sp25/montana-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="Montana students propose new IT funding structure" 
+                />
+            </Link>
+			<Link href="/projects/sp25/tempe-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="" 
+                />
+            </Link>
+			<Link href="/projects/sp25/madison-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="" 
+                />
+            </Link>
+			<Link href="/projects/sp25/alexandria-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="" 
+                />
+            </Link>
+			<Link href="/projects/sp25/santa-clara-county-sp25" passHref>
+                <ProjectCard 
+                  timeline='2025 Spring cohort'
+                  projectTitle="Santa Clara County, CA students launch an AI dictionary" 
+                />
+            </Link> 
+            
+        </div>
+	<br /><br />*/}
 	<Text className='md:text-4xl text-2xl uppercase font-semibold pb-3'>Fall 2024 </Text> 
 	<GrayDivider />
         <div className="grid md:grid-cols-3 gap-6 text-center">

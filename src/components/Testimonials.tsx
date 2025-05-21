@@ -1,5 +1,5 @@
 // components/Testimonials.tsx (Server Component)
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } from '@/app/constants'
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, REVALIDATE_NUM } from '@/app/constants'
 import TestimonialsClient from './TestimonialsClient'; // Import the Client Component
 
 // Define interface for the data structure expected from Airtable
@@ -13,6 +13,7 @@ interface AirtableRecord {
         testimonial?: string; // Use 'Author' as per original assumption, or adjust if your field is 'name'
         headshot?: Array<{ url: string }>; // Assuming ImageUrl is an attachment field
         // Add other fields if necessary and make them optional
+		headshot_blob?: string;
     };
 }
 
@@ -45,7 +46,7 @@ async function retrieveTestimonial(viewName: string): Promise<FormattedTestimoni
                 'Authorization': `Bearer ${AIRTABLE_API_KEY}`
             },
             next: {
-                revalidate: 60 * 60 * 168 // revalidate every week
+                revalidate: REVALIDATE_NUM
             }
         });
 
@@ -60,18 +61,24 @@ async function retrieveTestimonial(viewName: string): Promise<FormattedTestimoni
          // --- End Check ---
 
 
-        const data = await response.json();
+        const reco = await response.json();
+		const data = reco.records
 
-        // --- IMPORTANT: Check if data and data.records exist and are an array ---
-        // If the API was successful but the structure is unexpected
-        if (!data || !Array.isArray(data.records)) {
-             console.error("Airtable response did not contain a 'records' array:", data);
-             return []; // Return empty array if the expected structure is missing
-        }
-        // --- End Check ---
+if (!Array.isArray(reco.records)) {
+    console.error("reco.records is not an array! Cannot filter.");
+    return [];
+}
+
+for (let i = data.length - 1; i >= 0; i--) {
+	//removes entries that do not have a blobbed image. This is to protect if the airtable data is revalidated before a new entry gets its image blobbed
+  if (!data[i].fields.headshot_blob) {
+    // If no blobbed image, then remove from the array
+    data.splice(i, 1);
+  }
+}
 
 
-        const records: AirtableRecord[] = data.records;
+        const records: AirtableRecord[] = data;
         //console.log("Fetched records:", records); // Log the actual array
 
         // Map the Airtable data structure to your desired format
@@ -81,8 +88,9 @@ async function retrieveTestimonial(viewName: string): Promise<FormattedTestimoni
             author: "—"+record.fields?.Name + ", " + record.fields?.title || "", // Assuming your Airtable column is 'Author'
             // Check if ImageUrl field exists, is an array, and has at least one item
             imageUrl: record.fields?.headshot && Array.isArray(record.fields.headshot) && record.fields.headshot.length > 0
-                      ? record.fields.headshot[0].url // Use the url from the first attachment logo.fields.logo[0].thumbnails.large.url
-                      : undefined // Or provide a default image URL or leave undefined
+                      ? record.fields.headshot_blob // Use the url from the first attachment logo.fields.logo[0].thumbnails.large.url
+                      : undefined, // Or provide a default image URL or leave undefined
+			
         }));
 
         return formattedTestimonials;

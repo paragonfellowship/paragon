@@ -40,6 +40,7 @@ enum SchoolEnum {
     UCB = 'ucb',
     UCI = 'uci',
 }
+
 interface PersonRecord {
     id: string,
     createdTime: string,
@@ -53,7 +54,9 @@ interface PersonRecord {
         website: string,
         image: Image[],
         team: string,
-		school_logo: Image[]
+		school_logo: Image[],
+		headshot_blob: string,
+		logo_blob: string
     }
 }
 
@@ -65,7 +68,7 @@ import BgGrid from "@/components/BgGrid"
 import { RiArrowDownLine } from "react-icons/ri"
 import { Heading } from "@/components/Typography"
 //import { RiLinkedinLine, RiLinksLine, RiMailLine } from "react-icons/ri"
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } from '@/app/constants'
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, REVALIDATE_NUM } from '@/app/constants'
 import TopBar from '@/components/TopBar'
 import {SocialIcon} from 'react-social-icons';
 
@@ -80,11 +83,25 @@ async function retrievePeople(tableName: string): Promise<PersonRecord[]> {
             'Authorization': `Bearer ${AIRTABLE_API_KEY}`
         },
         next: {
-            revalidate: 60 * 60 * 168 // revalidate every week
+            revalidate: REVALIDATE_NUM
         }
     });
-    const rec = await records.json();
-    return rec.records;
+const reco = await records.json();// ... (after fetching and parsing 'reco') ...
+
+if (!Array.isArray(reco.records)) {
+    console.error("reco.records is not an array! Cannot filter.");
+    return [];
+}
+	const rec = reco.records
+	
+for (let i = rec.length - 1; i >= 0; i--) {
+	//removes entries that do not have a blobbed image. This is to protect if the airtable data is revalidated before a new entry gets its image blobbed
+  if (!rec[i].fields.headshot_blob) {
+    // If no blobbed image, then remove from the array
+    rec.splice(i, 1);
+  }
+}
+return rec
 }
 
 // Helper function to group people by region
@@ -143,7 +160,7 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
   // Applying the original <img> tag classes directly to the Image component
   // Using width and height props corresponding to the h-32 and w-32 Tailwind classes (128px)
   <Image
-    src={person.fields.image[0].thumbnails.large.url}
+    src={person.fields.headshot_blob}
     alt={person.fields.name}
     width={128} // Corresponds to w-32 (32 * 4 = 128)
     height={128} // Corresponds to h-32 (32 * 4 = 128)

@@ -40,14 +40,15 @@ import FAQuestion from '@/components/FAQuestion';
 //import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
 
-import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } from '@/app/constants'
+import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, REVALIDATE_NUM} from '@/app/constants'
 
 interface logoRecord {
     id: string,
     createdTime: string,
     fields: {
         name: string,
-		logo: Image[]
+		logo: Image[],
+		image_blob: string
     }
 }
 
@@ -59,11 +60,27 @@ async function retrieveLogos(): Promise<logoRecord[]> {
             'Authorization': `Bearer ${AIRTABLE_API_KEY}`
         },
         next: {
-            revalidate: 60 * 60 * 168 // revalidate every week
+            revalidate: REVALIDATE_NUM
         }
     });
-    const rec = await records.json();
-    return rec.records;
+    const reco = await records.json();// ... (after fetching and parsing 'reco') ...
+	
+
+if (!Array.isArray(reco.records)) {
+    console.error("reco.records is not an array! Cannot filter.");
+    return [];
+}
+
+const rec = reco.records
+	
+for (let i = rec.length - 1; i >= 0; i--) {
+	//removes entries that do not have a blobbed image. This is to protect if the airtable data is revalidated before a new entry gets its image blobbed
+  if (!rec[i].fields.image_blob) {
+    // If no blobbed image, then remove from the array
+    rec.splice(i, 1);
+  }
+}
+return rec
 }
 
 const sections = [
@@ -118,7 +135,7 @@ export default async function About() {
   <div className="w-full px-4 md:px-0 flex-1 flex flex-row md:block">
     <div className="flex-1 flex flex-col justify-center md:block">
       <Text className='fade-in md:pt-[20%] px-4 md:pl-[12%] text-xl md:text-3xl text-center md:text-left'>
-        Paragon works with state and local governments, <span className='font-semibold'>big and small</span>, from every jurisdiction across the country to provide <span className='font-semibold'>pro-bono tech policy research</span> to inform evidence-based policymaking.
+        Paragon works with state and local governments <span className='font-semibold'>big and small</span> from every jurisdiction across the country to provide <span className='font-semibold'>pro-bono tech policy research</span> to inform evidence-based policymaking.
       </Text>
 
       <Text className='fade-in text-xl md:text-3xl mt-16 md:mt-[5%] mb-12 md:mb-5 text-center md:text-right md:ml-auto md:mr-20'>
@@ -173,7 +190,7 @@ export default async function About() {
           {
             govLogos.map((logo, index) => (
 			//<img key={index} src={logo.fields.logo[0].thumbnails.large.url} alt={logo.fields.name} className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
-				<Image key={index} src={logo.fields.logo[0].thumbnails.large.url} width={logo.fields.logo[0].thumbnails.large.width} height={logo.fields.logo[0].thumbnails.large.height} alt={logo.fields.name} className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
+				<Image key={index} src={logo.fields.image_blob} width={logo.fields.logo[0].thumbnails.large.width} height={logo.fields.logo[0].thumbnails.large.height} alt={logo.fields.name} className='h-full md:mr-14 mr-10 md:w-32 w-24 object-contain' />
             ))
           }
         </Carousel>

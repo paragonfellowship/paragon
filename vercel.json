@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/process-images", // Path to your API route
+      "schedule": "0 10 * * 1,4"   // 10:00 AM on Mondays and Thursdays
+    }
+  ]
+}
