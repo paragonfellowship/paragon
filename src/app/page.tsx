@@ -277,14 +277,14 @@ export default async function Home() {
         <div className="flex flex-col items-center text-center">
           <TickText text={facts[2].fields.Number*500} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
-            hours <span className="font-bold">volunteered</span> towards tech policy research
+            hours <span className="font-bold">dedicated</span> to tech policy research
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
           <TickText text={facts[3].fields.Number} className="text-5xl md:text-7xl font-bold text-black" />
           <p className="text-base md:text-xl text-black mt-2">
             established partnerships with state and local governments across{" "}
-            <span className="font-bold">{facts[4].fields.Number} U.S. states</span>
+            <span className="font-bold">{facts[4].fields.Number} U.S. states and territories</span>
           </p>
         </div>
       </div>
