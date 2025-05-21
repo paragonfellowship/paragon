@@ -183,7 +183,8 @@ export async function GET(request) {
 	console.log(NODE_ENV);
 	console.log(CRON_SECRET);
 	console.log(authHeader);
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    //return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+	return NextResponse.json({ "NODE_ENV": NODE_ENV }, { "CRON_SECRET": CRON_SECRET },{ "authHeader": authHeader },{ status: 401 });
   }
 
   console.log('Starting multi-table image processing via Vercel Cron Job...');
