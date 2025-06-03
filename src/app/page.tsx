@@ -264,7 +264,7 @@ export default async function Home() {
           <p className="text-base md:text-xl text-black mt-2">
             <span className="font-bold">Fellows</span> placed on{" "}
             <span className="font-bold">{facts[2].fields.Number} projects</span> from{" "}
-            <span className="font-bold">{Math.round(facts[1].fields.Number / 10) * 10}+</span> colleges and universities nationally
+            <span className="font-bold">{Math.floor(facts[1].fields.Number / 10) * 10}+</span> colleges and universities nationally
           </p>
         </div>
         <div className="flex flex-col items-center text-center">
