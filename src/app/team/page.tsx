@@ -229,11 +229,11 @@ function TeamSection({ title, peopleByRegion }: { title: string, peopleByRegion:
 											// Check if school_logo exists, has a first item, and the URL path exists
 											(person.fields.school_logo?.[0]?.thumbnails?.large?.url) && (
     <Image
-      src={person.fields.school_logo[0].thumbnails.large.url}
+      src={person.fields.logo_blob}
       alt={person.fields.school}
       // Assuming the thumbnail object has width and height properties
-      width={person.fields.school_logo[0].thumbnails.large.width}
-      height={person.fields.school_logo[0].thumbnails.large.height}
+      width={128}
+      height={128}
       className="max-w-full max-h-full object-contain" // Keep the original classes
     />
 	/*

@@ -156,7 +156,7 @@ export default function About() {
     We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Fellowship runs from late January to early May, our Summer program runs from late May to early September, and the Fall Fellowship runs from early October to late December. Applications for each cohort open roughly two months before each cohort&apos;s start date.
   </Text>
   <Text className="text-base md:text-lg mt-6">
-    Applications are now <span className="font-semibold underline">closed for the Summer 2025 cohort</span>. All applicants will hear back by May 16th whether they advanced to the second round.
+    Applications are now <span className="font-semibold underline">closed for the Summer 2025 cohort</span>. Check back in early/mid August to apply to our Fall 2025 cohort.
   </Text>
   {/* <Text className="text-base md:text-lg mt-6">
     Apps for the Fall 2025 cohort will be expected to open at a later date. Join our <a href={NEWSLETTER_URL} className="underline">mailing list</a> to be notified when apps open.
@@ -189,7 +189,7 @@ export default function About() {
         />
         <FAQuestion
           question = "How long do the projects run?"
-          answer = "Projects run for about 3 months each. Fellows will also have the opportunity to remain in the Fellowship for a second cohort."
+          answer = "Projects run for about 3 months each. However, near the end of each project, Fellows will have the opportunity to apply to remain as a Fellow for a second cohort, apply to promote to become a Project Lead for future semesters, or apply to join our organizing team."
         />
         <FAQuestion
           question = "How will Fellows be matched with government partners?"
@@ -214,11 +214,11 @@ export default function About() {
         />
 		<FAQuestion
           question = "Are admissions rolling?"
-          answer = "No, they aren't! We only begin reviewing applications once the application deadline has passed. Feel free to take the necessary time to refine your application before submitting it."
+          answer = "No, they are not. Feel free to take the necessary time to refine your application before submitting it."
         />
         <FAQuestion
           question = "How can I learn more about the Fellowship?"
-          answer = "Paragon will be hosting <a href='https://forms.gle/6219w6s3B8r4gD3m7' target='_blank' style='color: darkgray; text-decoration: underline;'>two info sessions</a> to give applicants the opportunity to learn more about our mission, understand what the Organizing Team looks for in competitive applications, and hear from our current members on their experiences in the Fellowship. Furthermore, we will be holding office hours a couple of days before the application closes to give you the opportunity to ask last-minute questions."
+          answer = "During each application season, we host two info sessions in addition to a last minute office hours Zoom room. These are the perfect place for you to come and ask any questions you may have. Furthermore, feel free to email us at Paragonfellowship@gmail.com"
         />
       </Section>
       <Section>

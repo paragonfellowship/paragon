@@ -3,6 +3,7 @@
 const nextConfig = {
   images: {
     minimumCacheTTL: 2678400, // This is 31 days, just noting
+	dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: 'https',
