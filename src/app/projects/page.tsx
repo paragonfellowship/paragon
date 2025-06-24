@@ -59,25 +59,25 @@ export default function Projects() {
 	<Link href="/projects/st-louis-sp24" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="AI-Driven Language Access for St. Louis, MO" 
+                  projectTitle="Fellows create AI-Driven Language Access for St. Louis, MO" 
                 />
             </Link>
 	<Link href="/projects/st-louis-su24" passHref>
                 <ProjectCard 
                   timeline='2024 Summer cohort'
-                  projectTitle="ST. LOUIS, MO STUDENTS EXAMINE TECH-POWERED Cultural DIVERSITY" 
+                  projectTitle="ST. LOUIS, MO Fellows EXAMINE TECH-POWERED Cultural DIVERSITY" 
                 />
             </Link>
 	<Link href="/projects/la-cd3-lail-fa24" passHref>
                 <ProjectCard 
                   timeline='2024 Fall cohort'
-                  projectTitle="Los Angeles, CA Students spotlight language access needs" 
+                  projectTitle="Los Angeles, CA Fellows spotlight language access needs" 
                 />
             </Link>
 				<Link href="/projects/state-sp25" passHref>
                 <ProjectCard 
                   timeline='2025 Spring cohort'
-                  projectTitle="Students evaluate AI weapon transfers for the State Department" 
+                  projectTitle="Fellows evaluate AI weapon transfers for the State Department" 
                 />
             </Link>
 	</div>
@@ -89,43 +89,43 @@ export default function Projects() {
 		<Link href="/projects/san-jose-pi-sp24" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="SAN JOSé, CA STUDENTS TACKLE PUBLIC INTEGRITY AND AI" 
+                  projectTitle="SAN JOSé, CA Fellows TACKLE PUBLIC INTEGRITY AND AI" 
                 />
             </Link>
 			<Link href="/projects/san-jose-ai-sp24" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="SAN JOSé, CA STUDENTS CONFRONT AI-GENERATED MISINFORMATION" 
+                  projectTitle="SAN JOSé, CA Fellows CONFRONT AI-GENERATED MISINFORMATION" 
                 />
             </Link>
             <Link href="/projects/lebanon-sp24" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="STUDENTS IN LEBANON, NH CREATE AI AUDITING FRAMEWORK"
+                  projectTitle="Fellows IN LEBANON, NH CREATE AI AUDITING FRAMEWORK"
                 />
 			</Link>
 			<Link href="/projects/tempe-fa24" passHref>
                 <ProjectCard 
                   timeline='2024 Fall cohort'
-                  projectTitle="Tempe, AZ students draft an innovative AI curriculum" 
+                  projectTitle="Tempe, AZ Fellows draft an innovative AI curriculum" 
                 />
             </Link>
             <Link href="/projects/georgia-state-fa24" passHref>
                 <ProjectCard 
                   timeline='2024 Fall cohort'
-                  projectTitle="Georgia Students draft AI Usage rules for State employees" 
+                  projectTitle="Georgia Fellows draft AI Usage rules for State employees" 
                 />
             </Link>
 			<Link href="/projects/santa-clara-county-fa24" passHref>
                 <ProjectCard 
                   timeline='2024 Fall cohort'
-                  projectTitle="Santa Clara County, CA Students develop AI Use Case Guidelines" 
+                  projectTitle="Santa Clara County, CA Fellows develop AI Use Case Guidelines" 
                 />
             </Link>
 			{/*<Link href="/projects/santa-clara-county-sp25" passHref>
                 <ProjectCard 
                   timeline='2025 Spring cohort'
-                  projectTitle="Santa Clara County, CA students launch an AI dictionary" 
+                  projectTitle="Santa Clara County, CA Fellows launch an AI dictionary" 
                 />
             </Link> */}
         </div>
@@ -137,27 +137,28 @@ export default function Projects() {
 			<Link href="/projects/lebanon-ada-su24" passHref>
                 <ProjectCard 
                   timeline='2024 Summer cohort'
-                  projectTitle="Students improve digital accessibility for Lebanon, NH" 
+                  projectTitle="Fellows improve digital accessibility for Lebanon, NH" 
                 />
             </Link>
 			<Link href="/projects/la-cd3-ada-fa24" passHref>
                 <ProjectCard 
                   timeline='2024 Fall cohort'
-                  projectTitle="Los Angeles, CA Students make the City more accessible online" 
+                  projectTitle="Los Angeles, CA Fellows make the City more accessible online" 
                 />
             </Link>
 			<Link href="/projects/brownsville-fa24" passHref>
                 <ProjectCard 
                   timeline='2024 Fall cohort'
-                  projectTitle="Brownsville, TX students fight the digital divide" 
+                  projectTitle="Brownsville, TX Fellows fight the digital divide" 
                 />
             </Link>
-		{/*<Link href="/projects/madison-sp25" passHref>
+		<Link href="/projects/madison-sp25" passHref>
                 <ProjectCard 
                   timeline='2025 Spring cohort'
-                  projectTitle="" 
+                  projectTitle="Madison, WI Fellows develop an accessibility action plan" 
                 />
             </Link>
+			{/*
 			<Link href="/projects/alexandria-sp25" passHref>
                 <ProjectCard 
                   timeline='2025 Spring cohort'
@@ -173,13 +174,13 @@ export default function Projects() {
 		<Link href="/projects/missoula-sp25" passHref>
                 <ProjectCard 
                   timeline='2025 Spring cohort'
-                  projectTitle="Missoula, MN students advance the City closer to WWC Certification" 
+                  projectTitle="Missoula, MT Fellows advance the City closer to WWC Certification" 
                 />
             </Link>
 			<Link href="/projects/tempe-sp25" passHref>
                 <ProjectCard 
                   timeline='2025 Spring cohort'
-                  projectTitle="Tempe, AZ students draft an innovative Data curriculum" 
+                  projectTitle="Tempe, AZ Fellows draft an innovative Data curriculum" 
                 />
             </Link>
         </div>
@@ -191,7 +192,7 @@ export default function Projects() {
             <Link href="/projects/santa-clara-county-su24" passHref>
                 <ProjectCard 
                   timeline='2024 Summer cohort'
-                  projectTitle="Santa Clara County, CA students help prioritize Cybersecurity Risk" 
+                  projectTitle="Santa Clara County, CA Fellows help prioritize Cybersecurity Risk" 
                 />
             </Link>
         </div>
@@ -203,25 +204,25 @@ export default function Projects() {
 			<Link href="/projects/boston-sp24" passHref>
                 <ProjectCard 
                   timeline='2024 Spring cohort'
-                  projectTitle="BOSTON, MA STUDENTS WORK ON TECH PROCUREMENT GUIDELINES" 
+                  projectTitle="BOSTON, MA Fellows WORK ON TECH PROCUREMENT GUIDELINES" 
                 />
             </Link>
 			<Link href="/projects/san-jose-ai-su24" passHref>
                 <ProjectCard 
                   timeline='2024 Summer cohort'
-                  projectTitle="SAN JOSé, CA STUDENTS DEVELOP AI Procurement Risk assessment" 
+                  projectTitle="SAN JOSé, CA Fellows DEVELOP AI Procurement Risk assessment" 
                 />
             </Link>
             <Link href="/projects/federal-fa24" passHref>
                 <ProjectCard 
                   timeline='2024 Fall cohort'
-                  projectTitle="Students work with the Federal government to analyze supercomputers" 
+                  projectTitle="Fellows work with the Federal government to analyze supercomputers" 
                 />
             </Link> 
 			{/*<Link href="/projects/montana-sp25" passHref>
                 <ProjectCard 
                   timeline='2025 Spring cohort'
-                  projectTitle="Montana students propose new IT funding structure" 
+                  projectTitle="Montana Fellows propose new IT funding structure" 
                 />
             </Link>*/}
         </div>
