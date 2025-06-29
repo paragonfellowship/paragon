@@ -235,7 +235,7 @@ export default async function Home() {
           <Card style={{ flexGrow: 1 }} className="h-full">
             <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">Field Exposure</p>
             <p className="text-base md:text-lg font-light text-black">
-              Introduce Fellows to a diverse cohort of leaders in the technology policy
+              We introduce Fellows to a diverse cohort of leaders in the technology policy
               space from both public and private sectors and at all levels of
               government.
             </p>
@@ -248,8 +248,9 @@ export default async function Home() {
             <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">Hands-On Training</p>
             <p className="text-base md:text-lg font-light text-black">
               We offer policy workshops and bootcamps instructed by experienced policy
-              researchers, along with mentorship, professional development sessions,
-              and career advice.
+              researchers. Current and former Fellows also can take advantage of our <a href="/students/mentorship" style={{color: 'blue', textDecoration: 'underline'}}>
+  exclusive mentorship program
+</a>.
             </p>
           </Card>
         </div>

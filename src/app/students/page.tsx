@@ -109,7 +109,7 @@ export default function About() {
   <Subheading className='text-3xl md:text-5xl mb-4'>Project Expectations</Subheading>
   <GrayDivider />
   <Text className="text-base md:text-lg">The Paragon Policy Fellowship connects students and recent graduates with opportunities in the science and tech policy space. Fellows typically spend 5–10 hours a week researching and writing a policy brief on key issues for their state or local governments. Our Fellows work on pressing tech policy issues such as broadband infrastructure, renewable energy, and AI procurement. The Fellowship is meant to create a community of future tech policy leaders, and our project-based experiences are designed to introduce students to the tech policy landscape and grow their network and impact through local community engagement.</Text>
-  <Text className='font-semibold mt-6'>Fellows in good standing will be compensated with a $500 stipend.</Text>
+  <Text className='font-semibold mt-6'>Fellows in good standing at the end of the cohort will be compensated with a $500 stipend.</Text>
 </Section>
 
 <Section id="eligibility">
@@ -119,9 +119,9 @@ export default function About() {
   
   <Text className='text-gray font-normal text-2xl md:text-3xl mt-8 mb-4'>Minimum Qualifications</Text>
   <ul className='list-disc list-inside text-base md:text-xl space-y-2 ml-4'>
-    <li>Currently enrolled (including undergraduate and graduate students) or recent graduate (graduated from a degree program within the last year).</li>
-    <li>Ability to consistently commit 5–10 hours of honest, focused work per week.</li>
+    <li>Ability to consistently commit 5-10 hours of honest, focused work per week. Depending on your schedule, you may need to work on evenings or during the weekend to meet the requirements of the program.</li>
     <li>Ability to consistently e-meet with teammates 1–2 times per week and complete work asynchronously.</li>
+    <li>Currently enrolled in (including undergraduate, graduate, or PhD students) or recent graduate (within the past year) of a degree program.</li>
     <li>Reside primarily in the United States and have work authorization during the Fellowship.</li>
   </ul>
 

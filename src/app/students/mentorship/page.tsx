@@ -8,7 +8,7 @@ import { RiArrowDownLine } from 'react-icons/ri';
 import GrayDivider from '@/components/GrayDivider';
 import FAQuestion from '@/components/FAQuestion';
 import Navbar from '@/components/Navbar';
-import {MENTOR_APP_URL, MENTEE_APP_URL} from '@/app/constants';
+//import {MENTOR_APP_URL, MENTEE_APP_URL} from '@/app/constants';
 import Card from '@/components/Card_Static';
 
 const sections = [
@@ -25,73 +25,63 @@ export default function About() {
     {/* Main container, flex column */}
     {/* Added pb- to ensure space at the bottom for the absolutely positioned arrow */}
     {/* Adjusted pb- values if needed */}
-    <div className="background-container min-h-[100svh] flex flex-col pb-16 md:pb-24"> {/* <-- Added pb- here */}
+    <div className="background-container min-h-[100svh] flex flex-col pb-16 md:pb-24">
+    <BgGrid />
 
-        <BgGrid /> {/* Overlay */}
+    <div className="w-full px-4 md:px-0 flex flex-col items-center
+                    pt-28 sm:pt-32 md:pt-32 lg:pt-40
+                    flex-1">
 
-        {/* Main Content Wrapper - Structured similar to the working snippet's main content container */}
-        {/* Uses flex-1 to take up available space, and handles horizontal padding/centering */}
-        <div className="w-full px-4 md:px-0 flex flex-col items-center
-                        pt-28 sm:pt-32 md:pt-32 lg:pt-40
-                        flex-1"> {/* <-- Added flex-1 here */}
+        <div className="flex flex-col items-center w-full max-w-3xl text-center
+                        flex-1 justify-center">
 
-            {/* Inner Content Container - Structured similar to the working snippet's inner container */}
-            {/* Uses flex-1 and justify-center to handle vertical positioning within the wrapper */}
-            {/* This container holds the actual text and button elements */}
-            <div className="flex flex-col items-center w-full max-w-3xl text-center
-                            flex-1 justify-center"> {/* <-- Added flex-1 and justify-center here */}
-                <Text className='text-white text-5xl md:text-7xl font-semibold px-4 pb-3 md:pb-6'>
-                    PARAGON POLICY MENTORSHIP
-                </Text>
+            <Text className='text-white text-5xl md:text-7xl font-semibold px-4 pb-3 md:pb-6'>
+                PARAGON POLICY MENTORSHIP
+            </Text>
 
-                {/* Animated elements still have the fade-in class directly */}
-                {/* These are nested within the new inner container */}
-                <Text className="fade-in text-2xl md:text-3xl
-                                 mt-4 sm:mt-5 md:mt-6
-                                 mb-8 sm:mb-10 md:mb-10 px-4">
-                    Empowering Fellows through one-on-one mentorship and community support.
-                </Text>
+            <Text className="fade-in text-2xl md:text-3xl
+                             mt-4 sm:mt-5 md:mt-6
+                             mb-8 sm:mb-10 md:mb-10 px-4">
+                Empowering Fellows through one-on-one mentorship and community support.
+            </Text>
 
-                <div className="flex flex-col sm:flex-row justify-center items-center w-full px-4
-                                 mb-6 md:mb-0">
-                    {/* Animated buttons still have the fade-in class directly */}
-                    {/* These are nested within the new inner container */}
-                    <Button
-                        className="fade-in w-full sm:w-auto mb-4 sm:mb-0"
-                        style="secondary"
-                        inNewTab
-                        url={MENTOR_APP_URL}
-                    >
-                        apply as a mentor
-                    </Button>
-                    <Button
-    // Replicating secondary style classes + adding gray disabled classes
-    // Using disabled: prefix for background color
-    className="fade-in w-full sm:w-auto sm:ml-5 mt-4 sm:mt-0 uppercase md:text-md text-sm md:px-5 px-2 md:py-3 py-1 border-[.2rem] text-gray-700 cursor-not-allowed border-gray-400 disabled:bg-gray-400" // Added disabled:bg-gray-400
-    style="custom" // Use custom style since we are providing all classes in className
-    inNewTab
-    url={MENTEE_APP_URL}
-    disabled={true} // Ensure the disabled attribute is present
-    // Removed inline style as it was not effective
->
-    mentee apps are invite only
-</Button>
-                </div>
-            </div> {/* End of Inner Content Container */}
-        </div> {/* End of Main Content Wrapper */}
+            {/* --- BUTTON CONTAINER --- */}
+            <div className="flex flex-col sm:flex-row justify-center items-center w-full px-4">
+                <Button
+                    className="fade-in w-full sm:w-auto uppercase md:text-md text-sm md:px-5 px-2 md:py-3 py-1 border-[.2rem] text-gray-700 cursor-not-allowed border-gray-400 disabled:bg-gray-400"
+                    style="custom"
+                    inNewTab
+                    disabled={true}
+                >
+                    mentor apps are now closed
+                </Button>
 
-        {/* REMOVED: <div className="flex-grow" /> spacer */}
+                {/* --- INVISIBLE PLACEHOLDER --- */}
+                {/* This creates the gap between buttons on wider screens */}
+                <div className="w-20 hidden sm:block" aria-hidden="true"></div>
 
-        {/* Arrow Container - Now ABSOLUTELY positioned at the bottom, consistent with working snippet */}
-        {/* This takes it out of the normal flex flow */}
-        {/* Kept original bottom values for consistency with visual intent */}
-        <div className="animate-bounce absolute bottom-5 md:bottom-[6vh] left-0 z-10 w-full flex justify-center text-4xl"> {/* <-- Absolute positioning */}
-            <RiArrowDownLine />
+                <Button
+                    className="fade-in w-full sm:w-auto mt-4 sm:mt-0 uppercase md:text-md text-sm md:px-5 px-2 md:py-3 py-1 border-[.2rem] text-gray-700 cursor-not-allowed border-gray-400 disabled:bg-gray-400"
+                    style="custom"
+                    inNewTab
+                    disabled={true}
+                >
+                    mentee apps are invite only
+                </Button>
+            </div>
+
+            {/* --- VISIBLE ARROW CONTAINER --- */}
+            {/* The arrow remains below, centered independently */}
+            <div className="animate-bounce w-full flex justify-center text-4xl text-white mt-12">
+                <RiArrowDownLine />
+            </div>
+            
         </div>
+    </div>
 
-        {/* Background Overlay - Absolute */}
-        <div className="absolute top-0 left-0 w-full h-full bg-[#050022] md:bg-opacity-65 bg-opacity-40 -z-10" />
-    </div> {/* End of background-container */}
+    {/* Background Overlay */}
+    <div className="absolute top-0 left-0 w-full h-full bg-[#050022] md:bg-opacity-65 bg-opacity-40 -z-10" />
+</div>
 
       
       <Section>
@@ -172,7 +162,7 @@ export default function About() {
         <GrayDivider/>
        <FAQuestion
           question = "What is Paragon?"
-          answer = "The Paragon Policy Fellowship is a national student-led organization connecting diverse university students and recent graduates with state and local governments to work on science and technology policy projects. Operated under the <a href='https://fas.org/' target='_blank' style='color: darkgray; text-decoration: underline;'>Federation of American Scientists</a>, Paragon creates inclusive pathways into public interest technology careers. Since January 2024, we’ve placed over 200 Fellows from 82 universities with 17 governments across 11 states. Fellows—85% students of color and 70% underrepresented gender minorities—have tackled projects impacting 11.9 million people, including generative AI policy for the State of Georgia and language access tools for the City of St. Louis. You can find information about our previous projects on our <a href='/projects' target='_blank' style='color: darkgray; text-decoration: underline;'>Projects page</a>."
+          answer = "The Paragon Policy Fellowship is a national student-led organization connecting diverse university students and recent graduates with state and local governments to work on science and technology policy projects. Operated under the <a href='https://fas.org/' target='_blank' style='color: darkgray; text-decoration: underline;'>Federation of American Scientists</a>, Paragon creates inclusive pathways into public interest technology careers. Since January 2024, we’ve placed over 255 Fellows from over 100 universities with 21 governments across 15 states. Fellows—85% students of color and 70% underrepresented gender minorities—have tackled projects impacting 11.9 million people, including generative AI policy for the State of Georgia and language access tools for the City of St. Louis. You can find information about our previous projects on our <a href='/projects' target='_blank' style='color: darkgray; text-decoration: underline;'>Projects page</a>."
           />
         <FAQuestion
           question = "What is expected of me as a mentor?"
@@ -252,15 +242,16 @@ export default function About() {
           answer = "Yes! You’ll receive a certificate of completion, and you’ll be invited to a networking event or graduation ceremony. You will also receive a LinkedIn endorsement and invitations to our exclusive speaker events and LinkedIn group, where we share job opportunities. Plus, the relationships you build with mentors can help you with future opportunities."
         />
       </Section>
+	{/*
 	<Section>
         <Subheading className='flex justify-center text-center'>Inspire the next generation<br />of tech policy leaders</Subheading>
         <div className='flex justify-center'>
           <Button url={MENTOR_APP_URL} inNewTab className='mt-4 justify-center'>Become a Mentor</Button>
-		{/*<Button url={MENTEE_APP_URL} inNewTab className='mt-4 ml-5 justify-center'>Become a Mentee</Button>*/}
 
         </div>
 
       </Section>
+	  */}
 
 
       <Footer/>
