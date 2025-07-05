@@ -6,12 +6,14 @@ export const NODE_ENV= process.env.NODE_ENV;
 export const AIRTABLE_URL = process.env.AIRTABLE_URL;
 //export const MAIL_LIST_URL = "https://forms.gle/hAVRwpTkid44jAZY8"
 export const NEWSLETTER_URL = "https://paragonpolicyfellowship.substack.com/"
-export const FELLOW_APP_URL = "https://airtable.com/appDqtLGrF88LO8wI/pag6HK7ZRduVx50bk/form"
-export const INFO_SESSION_URL = "https://forms.gle/6219w6s3B8r4gD3m7"
+export const FELLOW_APP_URL = "https://airtable.com/appmkvSiORszz5i5k/pagItVzXaicgbWZwJ/form"
+export const INFO_SESSION_URL = "https://example.com"
 export const MENTOR_APP_URL = "https://forms.gle/765xgqcBfxAjpEKR7"
 export const MENTEE_APP_URL = "https://forms.gle/765xgqcBfxAjpEKR7"
 
 export const REVALIDATE_NUM = 60*60*168 //1 week
+
+export const CURRENTLY_APPLYING=true
 
 
 export type MenuOption = {

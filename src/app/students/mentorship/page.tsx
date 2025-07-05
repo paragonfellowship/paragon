@@ -152,7 +152,7 @@ export default function About() {
   <br />
         <div className='flex justify-center'>
           <Text className="text-base md:text-lg">
-   Our mentorship program operates bi-annually. <span className="font-semibold">Our innaugural cohort applications (for both mentor and mentee) close July 1st </span>. The program will last from mid July to late December.
+   Our mentorship program operates bi-annually. <span className="font-semibold">Our innaugural cohort applications (for both mentor and mentee) have closed</span>. The program will last from mid July to late December. Check back later to see when applications for our next cohort open.
   </Text>
 
 </div>

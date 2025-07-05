@@ -12,7 +12,7 @@ import GrayDivider from '@/components/GrayDivider';
 import Navbar from '@/components/Navbar';
 
 const sections = [
-  { id: "AI Usage", title: "AI USAGE" },
+  { id: "AI Innovation", title: "AI INNOVATION" },
   { id: "AI Governance", title: "AI GOVERNANCE" },
   { id: "Accessibility", title: "ACCESSIBILITY" },
   { id: "Data Management", title: "DATA MANAGEMENT" },
@@ -52,8 +52,8 @@ export default function Projects() {
 	<Section>
         <Navbar sections={sections} />
       </Section>
-  <Section id="AI Usage">
-  <Subheading className='text-3xl md:text-5xl mb-4'>AI Usage</Subheading>
+  <Section id="AI Innovation">
+  <Subheading className='text-3xl md:text-5xl mb-4'>AI Innovation</Subheading>
 	<GrayDivider />
 	<div className="grid md:grid-cols-3 gap-6 text-center">
 	<Link href="/projects/st-louis-sp24" passHref>
