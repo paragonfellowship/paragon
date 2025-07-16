@@ -242,16 +242,17 @@ export default function About() {
           answer = "Yes! You’ll receive a certificate of completion, and you’ll be invited to a networking event or graduation ceremony. You will also receive a LinkedIn endorsement and invitations to our exclusive speaker events and LinkedIn group, where we share job opportunities. Plus, the relationships you build with mentors can help you with future opportunities."
         />
       </Section>
-	{/*
 	<Section>
-        <Subheading className='flex justify-center text-center'>Inspire the next generation<br />of tech policy leaders</Subheading>
+        <Subheading className='flex justify-center text-center'>What impact will you<br />make with Paragon?</Subheading>
         <div className='flex justify-center'>
-          <Button url={MENTOR_APP_URL} inNewTab className='mt-4 justify-center'>Become a Mentor</Button>
-
+		{/*
+          <Button url={FELLOW_APP_URL} inNewTab className='mt-4 justify-center'>Apply Now</Button>
+          <Button url={INFO_SESSION_URL} inNewTab className='mt-4 ml-5 justify-center'>RSVP for an Info Session</Button>
+		*/}
+		<Button url={"mailto:mentorship@paragonfellowship.org"} className='mt-4 justify-center'>Contact Us</Button>
         </div>
 
       </Section>
-	  */}
 
 
       <Footer/>

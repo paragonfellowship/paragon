@@ -46,7 +46,7 @@ export default function TopBar() {
     ]},
     { href: "/governments", label: "For Governments" },
     { href: "/projects", label: "Projects" },
-    { href: "mailto:paragonfellowship@gmail.com", label: "Contact" },
+    { href: "mailto:hello@paragonfellowship.org", label: "Contact" },
   ];
 
   // Function to close menu when a link is clicked

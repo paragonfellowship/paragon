@@ -234,7 +234,7 @@ export default function About() {
           <Button url={FELLOW_APP_URL} inNewTab className='mt-4 justify-center'>Apply Now</Button>
           <Button url={INFO_SESSION_URL} inNewTab className='mt-4 ml-5 justify-center'>RSVP for an Info Session</Button>
 		*/}
-		<Button url={"mailto:paragonfellowship@gmail.com"} className='mt-4 justify-center'>Contact Us</Button>
+		<Button url={"mailto:apply@paragonfellowship.org"} className='mt-4 justify-center'>Contact Us</Button>
         </div>
 
       </Section>

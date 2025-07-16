@@ -17,7 +17,7 @@ export default function Footer() {
           <div className='mb-1 md:mr-8 text-center md:text-left'>
             <p className='text-gray-400 font-bold text-sm mb-2'>Our Organization</p>
             <a href='/team' className='text-gray-300 text-base underline block hover:text-white transition-colors'>Team Directory</a>
-            <a href='mailto:paragonfellowship@gmail.com' className='text-gray-300 text-base underline block hover:text-white transition-colors'>Contact Us</a>
+            <a href='mailto:hello@paragonfellowship.org' className='text-gray-300 text-base underline block hover:text-white transition-colors'>Contact Us</a>
           </div>
         </div>
       </div>
