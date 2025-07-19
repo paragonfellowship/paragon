@@ -16,7 +16,7 @@ const sections = [
   { id: "overview", title: "OVERVIEW" },
   { id: "eligibility", title: "ELIGIBILITY" },
   { id: "process", title: "APP PROCESS" },
-  { id: "timeline", title: "TIMELINE" },
+  { id: "timeline", title: "APPLICATION TIMELINE" },
   { id: "dates", title: "IMPORTANT DATES" },
   { id: "student testimonials", title: "STUDENT TESTIMONIALS" },
   { id: "faq", title: "FAQ" },
@@ -111,7 +111,7 @@ export default function About() {
   <Subheading className='text-3xl md:text-5xl mb-4'>Overview</Subheading>
   <GrayDivider />
   <Text className="text-base md:text-lg">The Paragon Policy Fellowship connects students and recent graduates with opportunities in the science and tech policy space. Fellows typically spend 5–10 hours a week researching and writing a policy brief on key issues for their state or local governments. Our Fellows work on pressing tech policy issues such as broadband infrastructure, digital accessibility, and AI procurement. The Fellowship is meant to create a community of future tech policy leaders, and our project-based experiences are designed to introduce students to the tech policy landscape and grow their network and impact through local community engagement. In addition, all current and former Fellows are eligible to apply to our <a href="/students/mentorship" style={{color: 'blue', textDecoration: 'underline'}}>exclusive mentorship program</a>.</Text>
-  <Text className='font-semibold mt-6'>Fellows in good standing at the end of the cohort will be compensated with a $500 stipend.</Text>
+  <Text className='font-semibold mt-6'>Fellows (including Project Leads) in good standing at the end of the cohort will be compensated with a $500 stipend.</Text>
 </Section>
 
 <Section id="eligibility">
@@ -147,7 +147,7 @@ export default function About() {
 <Section id="timeline">
   <Subheading className='text-3xl md:text-5xl mb-4'>TIMELINE</Subheading>
   <GrayDivider/>
-  <Text className="text-base md:text-lg mb-6">Below is the timeline for the Summer 2025 cohort.</Text>
+  <Text className="text-base md:text-lg mb-6">Below is the timeline for the Fall 2025 Cohort application cycle.</Text>
   <Timeline/>
 </Section>
 
@@ -155,10 +155,10 @@ export default function About() {
   <Subheading className='text-3xl md:text-5xl mb-4'>Important Dates</Subheading>
   <GrayDivider/>
   <Text className="text-base md:text-lg">
-    We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Fellowship runs from late January to early May, our Summer program runs from late May to early September, and the Fall Fellowship runs from late September to late December. Applications for each cohort open roughly two months before each cohort&apos;s start date.
+    We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Cohort runs from late January to early May, the Summer Cohort runs from late May to early September, and the Fall Cohort runs from late September to late December. Applications for each cohort open roughly two months before each cohort&apos;s start date.
   </Text>
   <Text className="text-base md:text-lg mt-6">
-    Applications are now <span className="font-semibold underline">open for the Fall 2025 cohort</span>. Applications will close on September 5th at 11:59 PM EST.
+    Applications are now <span className="font-semibold underline">open for the Fall 2025 cohort</span> and will close on September 5th at 11:59 PM EST. <span className="font-semibold underline">The Fall Cohort will run from September 26th to December 19th</span>.
   </Text>
   {/* <Text className="text-base md:text-lg mt-6">
     Apps for the Fall 2025 cohort will be expected to open at a later date. Join our <a href={NEWSLETTER_URL} className="underline">mailing list</a> to be notified when apps open.
@@ -175,15 +175,15 @@ export default function About() {
         <div>
         <FAQuestion
           question = "What is the Fellowship timeline?"
-          answer = "We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Fellowship runs from late January to early May, our Summer program runs from late May to early September, and the Fall Fellowship runs from early October to late December. Applications for each cohort will be expected to open 1–2 months in advance."
+          answer = "We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Cohort runs from late January to early May, the Summer Cohort runs from late May to early September, and the Fall Cohort runs from late September to late December. Applications for each cohort open roughly two months before each cohort&apos;s start date."
           />
         <FAQuestion
           question = "Is there a stipend given to Fellows?"
-          answer = "Yes! Fellows in good standing will receive a $500 stipend. Paragon will coordinate the stipend payments."
+          answer = "Yes! All Fellows (including Project Leads) in good standing will receive a $500 stipend. Paragon will coordinate the stipend payments."
         />
         <FAQuestion
           question = "Can I apply to both the Fellow and Project Lead positions? What happens if I'm not accepted as a Project Lead?"
-          answer = "You can only apply to be a Fellow or a Project Lead. However, if you are not accepted as a Project Lead, you will still be considered as a Fellow! The Project Lead application is largely the same as the Fellow application, just with a few more questions."
+          answer = "All Project Lead candidates are considered both for the Fellow and Project Lead position. If you are not accepted as a Project Lead, you will still be considered for the Fellow position. The Project Lead application is largely the same as the Fellow application, just with a few more questions in the written application and a brief interview during the group interview stage."
         />
         <FAQuestion
           question = "What are some past project examples?"
@@ -208,11 +208,11 @@ export default function About() {
         />
         <FAQuestion
           question = "I am an international student. Can I still be a Fellow?"
-          answer = "All students who will reside in the United States during the Fellowship and have work authorization are eligible to apply. We will work with international students to attempt to provide them a stipend, though we cannot guarantee this depending on the type of visa you possess."
+          answer = "All students who will reside in the United States during the Fellowship and have work authorization are eligible to apply. We will work with international students to attempt to provide them a stipend, though we cannot guarantee this depending on the type of visa you possess. We encourage all international students to communicate what they require from us in terms of their visa as soon as possible."
         />
 		<FAQuestion
           question = "I am a high school student excited to enter the world of tech policy. Can I apply?"
-          answer = "Unfortunately, we do not accept high school applicants at this time. All Fellows must have, at minimum, started the first semester of their undergraduate degree."
+          answer = "Unfortunately, we do not accept high school applicants at this time. All Fellows must have, at minimum, started their first semester of a degree program by the time the upcoming semester begins."
         />
 		<FAQuestion
           question = "Are admissions rolling?"
@@ -224,7 +224,7 @@ export default function About() {
         />
         <FAQuestion
           question = "How can I learn more about the Fellowship?"
-          answer = "During each application season, we host two info sessions in addition to a last minute office hours Zoom room. These are the perfect place for you to come and ask any questions you may have. Furthermore, feel free to email us at Paragonfellowship@gmail.com"
+          answer = "During each application season, we host two info sessions in addition to a last minute office hours Zoom room. These are the perfect place for you to come and ask any questions you may have. Furthermore, feel free to email us at hello@paragonfellowship.org for general inquiries and apply@paragonfellowship.org for application-specific questions."
         />
       </Section>
       <Section>
