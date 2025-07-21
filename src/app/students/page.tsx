@@ -9,7 +9,7 @@ import GrayDivider from '@/components/GrayDivider';
 import FAQuestion from '@/components/FAQuestion';
 import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
-import {FELLOW_APP_URL , INFO_SESSION_URL, CURRENTLY_APPLYING} from '@/app/constants';
+import {FELLOW_APP_URL , CURRENTLY_APPLYING} from '@/app/constants';
 import TestimonialsServer from '@/components/Testimonials';
 
 const sections = [
@@ -78,7 +78,7 @@ export default function About() {
               >
                 apply now
               </Button>
-			)}
+			)}{/*
 			{CURRENTLY_APPLYING && (
               <Button 
                 className="fade-in ml-5"
@@ -88,7 +88,7 @@ export default function About() {
               >
                 Sign up for an info session
               </Button>
-			)}
+			)}*/}
 
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function About() {
 <Section id="process">
   <Subheading className='text-3xl md:text-5xl mb-4'>APPLICATION PROCESS</Subheading>
   <GrayDivider/>
-  <Text className="text-base md:text-lg">Following the initial application round, we select a group of finalists to interview in a group setting. At this stage, students will be organized into teams of 7–8 and tasked to complete a mock policy assignment over the course of one week. From there, we will select Fellows based on their demonstrated effort, engagement with the rest of the team, and ability to collaborate asynchronously. We will select Project Leads based on their leadership qualities, problem-solving ability, and effectiveness in organizing and managing projects.</Text>
+  <Text className="text-base md:text-lg">Following the initial application round, we select a group of finalists to interview in a group setting. At this stage, students will be organized into teams of 7–8 and tasked to complete a mock policy assignment over the course of a work week. From there, we will select Fellows based on their demonstrated effort, engagement with the rest of the team, and ability to collaborate asynchronously. We will select Project Leads based on their leadership qualities, problem-solving ability, and effectiveness in organizing and managing projects.</Text>
   <Text className="text-base md:text-lg mt-6">If you are only applying to a Fellow position, we do not expect any previous policy expertise and will not evaluate your fit based solely on the deliverable. Instead, we will focus on how you approach this assignment and work as a team. If you are applying to be a Project Lead, we will be particularly interested in how you navigate challenges and motivate team members to complete the project.</Text>
 </Section>
 
@@ -191,7 +191,7 @@ export default function About() {
         />
         <FAQuestion
           question = "How long do the projects run?"
-          answer = "Projects run for about 3 months each. However, near the end of each project, Fellows will have the opportunity to apply to remain as a Fellow for a second cohort, apply to promote to become a Project Lead for future semesters, or apply to join our organizing team."
+          answer = "Projects run for about 3 months each."
         />
         <FAQuestion
           question = "How will Fellows be matched with government partners?"
@@ -220,11 +220,11 @@ export default function About() {
         />
 		<FAQuestion
           question = "How are Fellows supported after the program?"
-          answer = "All Fellows are given the opportunity at the end of the program to apply to return for an additional semester, return as a Project Lead, or join our organizing team, where they gain valuable experience in running an organization. Regardless of if Fellows apply to remain with Paragon or not, they join our Alumni network where they may continue to gain access to our guest speaker events, regional meet-ups, and our <a href='/students/mentorship' target='_blank' style='color: darkgray; text-decoration: underline;'>mentorship program</a>."
+          answer = "All Fellows are given the opportunity at the end of the program to apply to either return for an additional semester (either as a Fellow or Project Lead) or join our organizing team, where they gain valuable experience in running an organization. Regardless of if Fellows apply to remain with Paragon or not, they join our Alumni network where they may continue to gain access to our guest speaker events, regional meet-ups, and our <a href='/students/mentorship' target='_blank' style='color: darkgray; text-decoration: underline;'>mentorship program</a>."
         />
         <FAQuestion
           question = "How can I learn more about the Fellowship?"
-          answer = "During each application season, we host two info sessions in addition to a last minute office hours Zoom room. These are the perfect place for you to come and ask any questions you may have. Furthermore, feel free to email us at hello@paragonfellowship.org for general inquiries and apply@paragonfellowship.org for application-specific questions."
+          answer = "During each application season, we host two info sessions in addition to a last minute office hours Zoom room. These are the perfect place for you to come and ask any questions you may have. The link to these info sessions will be located in the application form itself. Furthermore, feel free to email us at <a href='mailto:hello@paragonfellowship.org' target='_blank' style='color: darkgray; text-decoration: underline;'>hello@paragonfellowship.org</a> for general inquiries and <a href='mailto:apply@paragonfellowship.org' target='_blank' style='color: darkgray; text-decoration: underline;'>apply@paragonfellowship.org</a> for application-specific questions."
         />
       </Section>
       <Section>

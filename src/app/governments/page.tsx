@@ -215,7 +215,7 @@ export default async function About() {
         <div>
 		<FAQuestion
           question="How much does this Fellowship cost? What do I have to do to qualify?"
-          answer="Our work is entirely pro bono! To participate, all government partners must do is agree to virtually meet once every two weeks with the Fellows and provide feedback on their work. Partners are generally responsible for guiding the overall direction of the research."
+          answer="Our work is entirely pro bono! To participate, all government partners must do is agree to virtually meet once every two weeks with the Fellows and provide feedback on their work. Partners are generally responsible for guiding the overall direction of the research, though the Paragon organizing team is responsible for managing the project and ensuring its success."
         />
         <FAQuestion
           question="What can you expect to receive at the end?"
