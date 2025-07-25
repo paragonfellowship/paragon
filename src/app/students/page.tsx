@@ -65,7 +65,7 @@ export default function About() {
             </Text>
 
             <Text className="fade-in text-xl md:text-3xl mt-16 md:mt-[5%] mb-12 md:mb-5 text-center md:text-right md:ml-auto md:mr-20">
-              Applications for the Fall 2025 cohort are now open. <br />
+              Applications for the 2025 Fall Cohort are now open. <br />
             </Text>
 
             <div className="flex justify-center md:justify-end md:pr-[6%] mb-20 md:mb-0">
@@ -110,8 +110,15 @@ export default function About() {
       <Section id="Overview">
   <Subheading className='text-3xl md:text-5xl mb-4'>Overview</Subheading>
   <GrayDivider />
-  <Text className="text-base md:text-lg">The Paragon Policy Fellowship connects students and recent graduates with opportunities in the science and tech policy space. Fellows typically spend 5–10 hours a week researching and writing a policy brief on key issues for their state or local governments. Our Fellows work on pressing tech policy issues such as broadband infrastructure, digital accessibility, and AI procurement. The Fellowship is meant to create a community of future tech policy leaders, and our project-based experiences are designed to introduce students to the tech policy landscape and grow their network and impact through local community engagement. In addition, all current and former Fellows are eligible to apply to our <a href="/students/mentorship" style={{color: 'blue', textDecoration: 'underline'}}>exclusive mentorship program</a>.</Text>
-  <Text className='font-semibold mt-6'>Fellows (including Project Leads) in good standing at the end of the cohort will be compensated with a $500 stipend.</Text>
+  <Text className="text-base md:text-lg">The Paragon Policy Fellowship connects students and recent graduates with opportunities in the science and tech policy space. Fellows typically spend 5–10 hours a week researching and writing a policy brief on key issues for their state or local governments. Our Fellows work on pressing tech policy issues such as broadband infrastructure, digital accessibility, and AI procurement. The Fellowship is meant to create a community of future tech policy leaders, and our project-based experiences are designed to introduce students to the tech policy landscape and grow their network and impact through local community engagement. In addition, all current and former Fellows are eligible to apply to our <a href="/students/mentorship" style={{color: 'blue', textDecoration: 'underline'}}>exclusive mentorship program</a>. <span className="font-semibold">Fellows (including Project Leads) in good standing at the end of the cohort will be compensated with a $500 stipend.</span>
+  
+  <br/><br/>Paragon will be hosting two info sessions to give applicants the opportunity to learn more about our mission, understand what the organizing team looks for in competitive applications, and hear from our current members on their experiences in the Fellowship. Furthermore, we will be holding office hours a couple of days before the application closes to give you the opportunity to ask last-minute questions. You can RSVP using the links below:</Text>
+  <ul className='list-disc list-inside text-base space-y-2 ml-4'>
+    <li><a href="https://calendar.app.google/ft7ZrPdkYqjPwFhK8" style={{color: 'blue', textDecoration: 'underline'}}>East Coast Info Session: August 16th 8:00-9:00 PM EST (5:00-6:00 PM PST)</a></li>
+  <li><a href="https://calendar.app.google/Lg1Apy6q9Wxp2Kvz7" style={{color: 'blue', textDecoration: 'underline'}}>West Coast Info Session: August 30th 8:00-9:00 PM PST (11:00 PM-12:00 AM EST)</a></li>
+  <li><a href="https://calendar.app.google/o74k1CxomxSVySBLA" style={{color: 'blue', textDecoration: 'underline'}}>Office Hours: September 3rd 5:00-6:00 PM PST (8:00-9:00 PM EST)</a></li>
+  </ul>
+  
 </Section>
 
 <Section id="eligibility">
@@ -123,7 +130,7 @@ export default function About() {
   <ul className='list-disc list-inside text-base md:text-xl space-y-2 ml-4'>
     <li>Ability to consistently commit 5-10 hours of honest, focused work per week. Depending on your schedule, you may need to work on evenings or during the weekend to meet the requirements of the program.</li>
     <li>Ability to consistently e-meet with teammates 1–2 times per week and complete work asynchronously.</li>
-    <li>Currently enrolled in a degree program (including undergraduate, graduate, or PhD students) or recently graduated from one (within the past year).</li>
+    <li>Currently enrolled in a degree program (including undergraduate, graduate, or PhD) or recently graduated from one (within the past year).</li>
     <li>Reside primarily in the United States and have work authorization during the Fellowship.</li>
   </ul>
 
@@ -140,7 +147,7 @@ export default function About() {
 <Section id="process">
   <Subheading className='text-3xl md:text-5xl mb-4'>APPLICATION PROCESS</Subheading>
   <GrayDivider/>
-  <Text className="text-base md:text-lg">Following the initial application round, we select a group of finalists to interview in a group setting. At this stage, students will be organized into teams of 7–8 and tasked to complete a mock policy assignment over the course of a work week. From there, we will select Fellows based on their demonstrated effort, engagement with the rest of the team, and ability to collaborate asynchronously. We will select Project Leads based on their leadership qualities, problem-solving ability, and effectiveness in organizing and managing projects.</Text>
+  <Text className="text-base md:text-lg">Following the initial application round, we select a group of finalists to interview in a group setting. At this stage, applicants will be organized into teams of 7–8 and tasked to complete a mock policy assignment over the course of a work week. From there, we will select Fellows based on their demonstrated effort, engagement with the rest of the team, and ability to collaborate asynchronously. We will select Project Leads based on their leadership qualities, problem-solving ability, and effectiveness in organizing and managing projects.</Text>
   <Text className="text-base md:text-lg mt-6">If you are only applying to a Fellow position, we do not expect any previous policy expertise and will not evaluate your fit based solely on the deliverable. Instead, we will focus on how you approach this assignment and work as a team. If you are applying to be a Project Lead, we will be particularly interested in how you navigate challenges and motivate team members to complete the project.</Text>
 </Section>
 
@@ -155,10 +162,10 @@ export default function About() {
   <Subheading className='text-3xl md:text-5xl mb-4'>Important Dates</Subheading>
   <GrayDivider/>
   <Text className="text-base md:text-lg">
-    We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Cohort runs from late January to early May, the Summer Cohort runs from late May to early September, and the Fall Cohort runs from late September to late December. Applications for each cohort open roughly two months before each cohort&apos;s start date.
+    We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Cohort runs from late January to early May, the Summer Cohort runs from late May to early September, and the Fall Cohort runs from late September to late December. Applications for each cohort open roughly two months before each cohort&apos;s start date. Specific dates are revealed for each cohort once applications open.
   </Text>
   <Text className="text-base md:text-lg mt-6">
-    Applications are now <span className="font-semibold underline">open for the Fall 2025 cohort</span> and will close on September 5th at 11:59 PM EST. <span className="font-semibold underline">The Fall Cohort will run from September 26th to December 19th</span>.
+    Applications are now <span className="font-semibold underline">open for the 2025 Fall Cohort</span> and will close on September 5th at 11:59 PM EST. <span className="font-semibold underline">The 2025 Fall Cohort will run from September 26th to December 19th</span>.
   </Text>
   {/* <Text className="text-base md:text-lg mt-6">
     Apps for the Fall 2025 cohort will be expected to open at a later date. Join our <a href={NEWSLETTER_URL} className="underline">mailing list</a> to be notified when apps open.
@@ -183,7 +190,7 @@ export default function About() {
         />
         <FAQuestion
           question = "Can I apply to both the Fellow and Project Lead positions? What happens if I'm not accepted as a Project Lead?"
-          answer = "All Project Lead candidates are considered both for the Fellow and Project Lead position. If you are not accepted as a Project Lead, you will still be considered for the Fellow position. The Project Lead application is largely the same as the Fellow application, just with a few more questions in the written application and a brief interview during the group interview stage."
+          answer = "All Project Lead candidates are considered both for the Fellow and Project Lead position. If you are not accepted as a Project Lead, you will still be considered for the Fellow position. The Project Lead application is largely the same as the Fellow application, just with a few more questions in the written application and an additional individual interview during the group interview stage."
         />
         <FAQuestion
           question = "What are some past project examples?"
@@ -208,11 +215,11 @@ export default function About() {
         />
         <FAQuestion
           question = "I am an international student. Can I still be a Fellow?"
-          answer = "All students who will reside in the United States during the Fellowship and have work authorization are eligible to apply. We will work with international students to attempt to provide them a stipend, though we cannot guarantee this depending on the type of visa you possess. We encourage all international students to communicate what they require from us in terms of their visa as soon as possible."
+          answer = "All students who will reside in the United States during the Fellowship and have work authorization are eligible to apply. We will work with international students to attempt to provide them a stipend, though we cannot guarantee this depending on the type of visa you possess. In their application, all international students must communicate what they would require from Paragon in order to be accepted and to receive a stipend if accepted into the program."
         />
 		<FAQuestion
           question = "I am a high school student excited to enter the world of tech policy. Can I apply?"
-          answer = "Unfortunately, we do not accept high school applicants at this time. All Fellows must have, at minimum, started their first semester of a degree program by the time the upcoming semester begins."
+          answer = "Unfortunately, we do not accept high school applicants at this time. All Fellows must have, at minimum, started their first semester of a degree program by the time of the opening ceremony for the cohort they are applying to."
         />
 		<FAQuestion
           question = "Are admissions rolling?"
@@ -220,11 +227,11 @@ export default function About() {
         />
 		<FAQuestion
           question = "How are Fellows supported after the program?"
-          answer = "All Fellows are given the opportunity at the end of the program to apply to either return for an additional semester (either as a Fellow or Project Lead) or join our organizing team, where they gain valuable experience in running an organization. Regardless of if Fellows apply to remain with Paragon or not, they join our Alumni network where they may continue to gain access to our guest speaker events, regional meet-ups, and our <a href='/students/mentorship' target='_blank' style='color: darkgray; text-decoration: underline;'>mentorship program</a>."
+          answer = "All Fellows are given the opportunity at the end of the program to apply to either return for an additional semester (either as a Fellow or Project Lead) or join our organizing team, where they gain valuable experience in running an organization. Regardless of whether Fellows apply to remain with Paragon or not, they join our alumni network where they continue to gain access to our guest speaker events, regional meet-ups, and our <a href='/students/mentorship' target='_blank' style='color: darkgray; text-decoration: underline;'>exclusive mentorship program</a>."
         />
         <FAQuestion
           question = "How can I learn more about the Fellowship?"
-          answer = "During each application season, we host two info sessions in addition to a last minute office hours Zoom room. These are the perfect place for you to come and ask any questions you may have. The link to these info sessions will be located in the application form itself. Furthermore, feel free to email us at <a href='mailto:hello@paragonfellowship.org' target='_blank' style='color: darkgray; text-decoration: underline;'>hello@paragonfellowship.org</a> for general inquiries and <a href='mailto:apply@paragonfellowship.org' target='_blank' style='color: darkgray; text-decoration: underline;'>apply@paragonfellowship.org</a> for application-specific questions."
+          answer = "During each application season, we host two info sessions in addition to a last minute office hours. These are the perfect place for you to come and ask any questions you may have. When applications are open, the links to these events will be on this webpage and in the application form itself. Furthermore, feel free to email us at <a href='mailto:hello@paragonfellowship.org' target='_blank' style='color: darkgray; text-decoration: underline;'>hello@paragonfellowship.org</a> for general inquiries and <a href='mailto:apply@paragonfellowship.org' target='_blank' style='color: darkgray; text-decoration: underline;'>apply@paragonfellowship.org</a> for application-specific questions."
         />
       </Section>
       <Section>
@@ -234,7 +241,7 @@ export default function About() {
           <Button url={FELLOW_APP_URL} inNewTab className='mt-4 justify-center'>Apply Now</Button>
           <Button url={INFO_SESSION_URL} inNewTab className='mt-4 ml-5 justify-center'>RSVP for an Info Session</Button>
 		*/}
-		<Button url={"mailto:apply@paragonfellowship.org"} className='mt-4 justify-center'>Contact Us</Button>
+		<Button url={"mailto:apply@paragonfellowship.org"} className='mt-4 justify-center'>Contact our Admissions Team</Button>
         </div>
 
       </Section>
