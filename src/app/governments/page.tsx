@@ -147,7 +147,7 @@ export default async function About() {
           className="fade-in md:z-30"
           style="secondary"
           inNewTab 
-          url="https://forms.gle/Y2tckRZyg5Yice3f7"
+          url="/interest-form"
         >
           Interest Form
         </Button>

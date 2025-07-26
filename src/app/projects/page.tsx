@@ -232,7 +232,7 @@ export default function Projects() {
       <Section>
         <Subheading className='flex justify-center text-center'>What can Paragon<br />do for you?</Subheading>
         <div className='flex justify-center'>
-          <Button url={"mailto:partnerships@paragonfellowship.org"} className='mt-4 justify-center'>Contact Us</Button>
+          <Button url={"mailto:partnerships@paragonfellowship.org"} className='mt-4 justify-center'>Contact our Partnerships Team</Button>
         </div>
 
       </Section>
