@@ -4,5 +4,11 @@
 			"path": "/api/process-images",
 			"schedule": "0 10 * * 1,4"
 		}
-	]
+	],
+	"redirects": [
+    {
+      "source": "/apply",
+      "destination": "https://airtable.com/appmkvSiORszz5i5k/pagItVzXaicgbWZwJ/form",
+      "permanent": true
+    }
 }

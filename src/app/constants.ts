@@ -6,7 +6,7 @@ export const NODE_ENV= process.env.NODE_ENV;
 export const AIRTABLE_URL = process.env.AIRTABLE_URL;
 //export const MAIL_LIST_URL = "https://forms.gle/hAVRwpTkid44jAZY8"
 export const NEWSLETTER_URL = "https://paragonpolicyfellowship.substack.com/"
-export const FELLOW_APP_URL = "https://airtable.com/appmkvSiORszz5i5k/pagItVzXaicgbWZwJ/form"
+export const FELLOW_APP_URL = "/apply"
 //export const INFO_SESSION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeZ_J0hEEbbIJomUj0dKmTVDUxpGzzXingl0GYLkQvUav4FmQ/viewform?usp=sharing&ouid=112773205827349133372"
 export const MENTOR_APP_URL = "https://forms.gle/765xgqcBfxAjpEKR7"
 export const MENTEE_APP_URL = "https://forms.gle/765xgqcBfxAjpEKR7"
