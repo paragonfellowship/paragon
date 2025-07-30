@@ -189,73 +189,59 @@ export default async function Home() {
       </div>
     </Section>
       <Section className='overflow-y-hidden'>
-      <Subheading>Our Program</Subheading>
-      <GrayDivider />
-      <Text>
-        Paragon is a tech policy fellowship that connects local governments with a team of talented students
-        from local colleges and universities to conduct in-depth research on a tech policy issue. Our Fellows
-        are passionate about public service and are eager to make a difference in their community.
-      </Text>
-      {/*
-        Key changes for the card layout:
-        1. Parent div:
-           - On medium screens and up (md:), it's now `md:flex-row` and `md:items-stretch`.
-             `items-stretch` makes all direct children (the card wrapper divs) the same height.
-           - Added `md:gap-x-6` (or `md:gap-x-8`) for horizontal spacing between cards on desktop.
-             `gap-y-8` is kept for vertical spacing on mobile when cards stack.
-        2. Card wrapper divs (each of the three columns):
-           - On medium screens and up, `md:flex-1` is used. This makes each of these divs
-             take up an equal share of the available width in the row.
-           - `flex flex-col` is maintained so that the Card inside (with flex-grow: 1) can expand vertically.
-           - Removed `md:max-w-[30%]` as `md:flex-1` will manage the width more effectively for this goal.
-      */}
-      <div className="flex flex-col md:flex-row md:items-stretch md:justify-between w-full py-8 md:py-16 gap-y-8 md:gap-x-6 lg:gap-x-8 px-4">
-        {/* Card 1 Wrapper */}
-        <div className="flex flex-col md:flex-1">
-          <Card style={{ flexGrow: 1 }} className="h-full"> {/* Added h-full for explicitness, flex-grow should handle it */}
-            <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">Talent Pipeline</p>
-            <p className="text-base md:text-lg font-light text-black">
-              Fellows contribute 5-10 hours per week for twelve weeks to the project; this
-              provides a similar time commitment to a college course while building
-              early-career policy experience that prepares them to join the public
-              service workforce.
-            </p>
-          </Card>
-        </div>
+       <Subheading>Our Program</Subheading>
+       <GrayDivider />
+       <Text>
+         Paragon is a tech policy fellowship that connects local governments with a team of talented students
+         from local colleges and universities to conduct in-depth research on a tech policy issue. Our Fellows
+         are passionate about public service and are eager to make a difference in their community.
+       </Text>
+        
+       {/* --- MODIFIED CONTAINER --- */}
+       {/* Changed from 'flex' to 'grid' and updated column/gap classes. */}
+       <div className="grid grid-cols-1 md:grid-cols-2 w-full py-8 md:py-16 gap-8 px-4">
+        
+         {/* Card 1 Wrapper - 'md:flex-1' is removed */}
+         <div className="flex flex-col">
+           <Card style={{ flexGrow: 1 }} className="h-full">
+             <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">Hands-On Policy Experience</p>
+             <p className="text-base md:text-lg font-light text-black">
+               Fellows contribute 5-10 hours per week for three months developing technology policy for a state or local government. Fellows get to work directly with the people responsible for implementing their policy. Fellows&apos; policy has already touched the lives of 10+ million people.
+             </p>
+           </Card>
+         </div>
 
-        {/* Card 2 Wrapper */}
-        <div className="flex flex-col md:flex-1">
-          {/* Added px-0 md:px-0 to the wrapper and rely on parent gap for spacing */}
-          {/* The original md:px-8 on this middle item might create uneven actual card widths if flex-1 is also used.
-              It's better to let the parent gap control spacing and have flex-1 distribute space for the items themselves.
-              If specific padding inside the column but outside the card is needed, it can be added,
-              but for card width uniformity, it's simpler to manage gaps at the parent level.
-              For now, I'm removing the md:px-8 from this wrapper.
-           */}
-          <Card style={{ flexGrow: 1 }} className="h-full">
-            <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">Field Exposure</p>
-            <p className="text-base md:text-lg font-light text-black">
-              We introduce Fellows to a diverse cohort of leaders in the technology policy
-              space from both public and private sectors and at all levels of
-              government.
-            </p>
-          </Card>
-        </div>
+         {/* Card 2 Wrapper */}
+         <div className="flex flex-col">
+           <Card style={{ flexGrow: 1 }} className="h-full">
+             <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">Training & Resources</p>
+             <p className="text-base md:text-lg font-light text-black">
+               Fellows learn how to think about and write policy through our bootcamps and policy workshops. They also get to hear from <a href="/team/speakers" style={{color: 'blue', textDecoration: 'underline'}}>our guest speakers</a>, who are academics, activists, and public and private sector leaders.
+             </p>
+           </Card>
+         </div>
 
-        {/* Card 3 Wrapper */}
-        <div className="flex flex-col md:flex-1">
-          <Card style={{ flexGrow: 1 }} className="h-full">
-            <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">Hands-On Training</p>
-            <p className="text-base md:text-lg font-light text-black">
-              We offer policy workshops and bootcamps instructed by experienced policy
-              researchers. Current and former Fellows also can take advantage of our <a href="/students/mentorship" style={{color: 'blue', textDecoration: 'underline'}}>
-  exclusive mentorship program
-</a>.
-            </p>
-          </Card>
-        </div>
-      </div>
-    </Section>
+         {/* Card 3 Wrapper */}
+         <div className="flex flex-col">
+           <Card style={{ flexGrow: 1 }} className="h-full">
+             <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">Entry into the Tech Policy Community</p>
+             <p className="text-base md:text-lg font-light text-black">
+               Fellows join our growing alumni network and network with some of the most promising future leaders in the tech policy field. Current and former Fellows also can take advantage of our <a href="/students/mentorship" style={{color: 'blue', textDecoration: 'underline'}}>exclusive mentorship program</a>, where they form deep relationships with and gain guidance from established names in the tech policy space.
+             </p>
+           </Card>
+         </div>
+         
+         {/* Card 4 Wrapper */}
+         <div className="flex flex-col">
+           <Card style={{ flexGrow: 1 }} className="h-full">
+             <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">$500 Stipend</p>
+             <p className="text-base md:text-lg font-light text-black">
+               Fellows who successfully complete the program receive a $500 stipend, allowing more people to get involved in technology policy.
+             </p>
+           </Card>
+         </div>
+       </div>
+     </Section>
 	<Section className="overflow-y-hidden">
       <Subheading>Our Reach</Subheading>
       <GrayDivider />
