@@ -206,7 +206,7 @@ export default async function Home() {
            <Card style={{ flexGrow: 1 }} className="h-full">
              <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">Hands-On Policy Experience</p>
              <p className="text-base md:text-lg font-light text-black">
-               Fellows contribute 5-10 hours per week for three months developing technology policy for a state or local government. Fellows get to work directly with the people responsible for implementing their policy. Fellows&apos; policy has already touched the lives of 10+ million people.
+               Fellows contribute 5-10 hours of remote work per week for three months to develop technology policy for a state or local government. They develop policy in direct collaboration with the government officials responsible for implementing their ideas. So far, our Fellows&apos; policy in AI, cybersecurity, digital accessiblity, and more has already touched the lives of 10+ million people.
              </p>
            </Card>
          </div>
@@ -216,7 +216,7 @@ export default async function Home() {
            <Card style={{ flexGrow: 1 }} className="h-full">
              <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">Training & Resources</p>
              <p className="text-base md:text-lg font-light text-black">
-               Fellows learn how to think about and write policy through our bootcamps and policy workshops. They also get to hear from <a href="/team/speakers" style={{color: 'blue', textDecoration: 'underline'}}>our guest speakers</a>, who are academics, activists, and public and private sector leaders.
+               Fellows learn how to think about and write policy through our bootcamps and the policy workshops we run throughout the cohort. They also get to hear from <a href="/team/speakers" style={{color: 'blue', textDecoration: 'underline'}}>our guest speakers</a>, who are academics, activists, and public and private sector leaders.
              </p>
            </Card>
          </div>
@@ -236,7 +236,7 @@ export default async function Home() {
            <Card style={{ flexGrow: 1 }} className="h-full">
              <p className="text-xl font-semibold text-gray-500 mb-3 md:mb-5">$500 Stipend</p>
              <p className="text-base md:text-lg font-light text-black">
-               Fellows who successfully complete the program receive a $500 stipend, allowing more people to get involved in technology policy.
+               Fellows who successfully complete the program receive a $500 stipend to compensate them for their hard work.
              </p>
            </Card>
          </div>
