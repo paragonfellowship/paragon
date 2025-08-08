@@ -9,15 +9,16 @@ import GrayDivider from '@/components/GrayDivider';
 import FAQuestion from '@/components/FAQuestion';
 import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
-import {FA_APP_URL , INFO_SESSION_URL} from '@/app/constants';
-
+import {FELLOW_APP_URL , CURRENTLY_APPLYING} from '@/app/constants';
+import TestimonialsServer from '@/components/Testimonials';
 
 const sections = [
-  { id: "expectations", title: "PROJECT EXPECTATIONS" },
+  { id: "overview", title: "OVERVIEW" },
   { id: "eligibility", title: "ELIGIBILITY" },
   { id: "process", title: "APP PROCESS" },
-  { id: "timeline", title: "TIMELINE" },
+  { id: "timeline", title: "APPLICATION TIMELINE" },
   { id: "dates", title: "IMPORTANT DATES" },
+  { id: "student testimonials", title: "STUDENT TESTIMONIALS" },
   { id: "faq", title: "FAQ" },
 ];
 
@@ -64,18 +65,21 @@ export default function About() {
             </Text>
 
             <Text className="fade-in text-xl md:text-3xl mt-16 md:mt-[5%] mb-12 md:mb-5 text-center md:text-right md:ml-auto md:mr-20">
-              Applications for the Summer 2025 cohort are now open.
+              Applications for the 2025 Fall Cohort are now open. <br />
             </Text>
 
             <div className="flex justify-center md:justify-end md:pr-[6%] mb-20 md:mb-0">
+			{CURRENTLY_APPLYING && (
               <Button 
                 className="fade-in"
                 style="secondary" 
                 inNewTab 
-                url={FA_APP_URL}
+                url={FELLOW_APP_URL}
               >
                 apply now
               </Button>
+			)}{/*
+			{CURRENTLY_APPLYING && (
               <Button 
                 className="fade-in ml-5"
                 style="secondary" 
@@ -84,6 +88,8 @@ export default function About() {
               >
                 Sign up for an info session
               </Button>
+			)}*/}
+
             </div>
           </div>
         </div>
@@ -101,47 +107,54 @@ export default function About() {
         <Navbar sections={sections} />
       </Section>
 
-      <Section id="expectations">
-  <Subheading className='text-3xl md:text-5xl mb-4'>Project Expectations</Subheading>
+      <Section id="Overview">
+  <Subheading className='text-3xl md:text-5xl mb-4'>Overview</Subheading>
   <GrayDivider />
-  <Text className="text-base md:text-lg">The Paragon Policy Fellowship connects students and recent graduates with opportunities in the science and tech policy space. Fellows typically spend 5–10 hours a week researching and writing a policy brief on key issues for their state or local governments. Our Fellows work on pressing tech policy issues such as broadband infrastructure, renewable energy, and AI procurement. The Fellowship is meant to create a community of future tech policy leaders, and our project-based experiences are designed to introduce students to the tech policy landscape and grow their network and impact through local community engagement.</Text>
-  <Text className='font-semibold mt-6'>Fellows in good standing will be compensated with a $500 stipend.</Text>
+  <Text className="text-base md:text-lg">The Paragon Policy Fellowship connects students and recent graduates with opportunities in the science and tech policy space. Fellows typically spend 5–10 hours a week researching and writing a policy brief on key issues for their state or local governments. Our Fellows work on pressing tech policy issues such as broadband infrastructure, digital accessibility, and AI procurement. The Fellowship is meant to create a community of future tech policy leaders, and our project-based experiences are designed to introduce students to the tech policy landscape and grow their network and impact through local community engagement. In addition, all current and former Fellows are eligible to apply to our <a href="/students/mentorship" style={{color: 'blue', textDecoration: 'underline'}}>exclusive mentorship program</a>. <span className="font-semibold">Fellows (including Project Leads) in good standing at the end of the cohort will be compensated with a $500 stipend.</span>
+  
+  <br/><br/>Paragon will be hosting two info sessions to give applicants the opportunity to learn more about our mission, understand what the organizing team looks for in competitive applications, and hear from our current members on their experiences in the Fellowship. Furthermore, we will be holding office hours a couple of days before the application closes to give you the opportunity to ask last-minute questions. You can RSVP using the links below:</Text>
+  <ul className='list-disc list-inside text-base space-y-2 ml-4'>
+    <li><a href="https://calendar.app.google/ft7ZrPdkYqjPwFhK8" style={{color: 'blue', textDecoration: 'underline'}}>East Coast Info Session: August 16th 8:00-9:00 PM EST (5:00-6:00 PM PST)</a></li>
+  <li><a href="https://calendar.app.google/Lg1Apy6q9Wxp2Kvz7" style={{color: 'blue', textDecoration: 'underline'}}>West Coast Info Session: August 30th 8:00-9:00 PM PST (11:00 PM-12:00 AM EST)</a></li>
+  <li><a href="https://calendar.app.google/o74k1CxomxSVySBLA" style={{color: 'blue', textDecoration: 'underline'}}>Office Hours: September 3rd 5:00-6:00 PM PST (8:00-9:00 PM EST)</a></li>
+  </ul>
+  
 </Section>
 
 <Section id="eligibility">
   <Subheading className='text-3xl md:text-5xl mb-4'>Eligibility</Subheading>
   <GrayDivider />  
-  <Text className="text-base md:text-lg">This Fellowship is an entry-level opportunity geared towards undergraduate/graduate students and recent graduates based in the U.S. interested in entering the tech policy space. As such, we are not expecting applicants to have extensive experience in tech policy and will be evaluating applications based on demonstrated interest in the tech policy sphere (whether it be through relevant coursework, extracurricular activities, or other lived experiences). We enthusiastically welcome applications from those of all backgrounds and are open to accepting prospective Fellows from a wide range of educational backgrounds (i.e. not restricted to any specific major).</Text>
+  <Text className="text-base md:text-lg">This Fellowship is an entry-level opportunity geared towards undergraduate/graduate students and recent graduates based in the U.S. interested in entering the tech policy space. As such, we are not expecting applicants to have extensive experience in tech policy and will be evaluating applications based on demonstrated interest in the tech policy sphere (whether it be through relevant coursework, extracurricular activities, or other lived experiences). We enthusiastically welcome applications from those of all backgrounds and are open to accepting prospective Fellows from a wide range of educational backgrounds (i.e., not restricted to any specific major).</Text>
   
   <Text className='text-gray font-normal text-2xl md:text-3xl mt-8 mb-4'>Minimum Qualifications</Text>
   <ul className='list-disc list-inside text-base md:text-xl space-y-2 ml-4'>
-    <li>Currently enrolled (including undergraduate and graduate students) or recent graduate (graduated from a degree program within the last year).</li>
-    <li>Ability to consistently commit 5-10 hours of honest, focused work per week.</li>
-    <li>Ability to consistently e-meet with teammates 1-2 times per week and complete work asynchronously.</li>
+    <li>Ability to consistently commit 5-10 hours of honest, focused work per week. Depending on your schedule, you may need to work on evenings or during the weekend to meet the requirements of the program.</li>
+    <li>Ability to consistently e-meet with teammates 1–2 times per week and complete work asynchronously.</li>
+    <li>Currently enrolled in a degree program (including undergraduate, graduate, or PhD) or recently graduated from one (within the past year).</li>
     <li>Reside primarily in the United States and have work authorization during the Fellowship.</li>
   </ul>
 
   <Text className='mt-8'>We currently offer two tracks: one for Fellows and one for Project Leads.</Text>
 
   <Text className='text-gray font-normal text-2xl md:text-3xl mt-8 mb-4'>Track 1 - Fellows</Text>
-  <Text className="text-base md:text-lg">For the initial application, the essays are the most important component. While previous experiences and education will help round out an application, we care the most about a potential Fellow&apos;s passion and interest in the tech policy/public service space. Fellows work with their team, Project Lead, and government partner to complete their assigned policy project.</Text>
+  <Text className="text-base md:text-lg">Each Paragon project is made up of 6-8 Fellows. When selecting Fellows, we care the most about a potential Fellow&apos;s passion and interest in the tech policy and public service space (though past experience in tech policy helps). Fellows will be responsible for conducting key research in their government partner&apos;s area of interest and collaborating with other Fellows on drafting deliverables. Paragon supports its Fellows through its engaging guest speaker series, informative Policy workshops, and accessible office hours with members of the Organizing Team.</Text>
   
   <Text className='text-gray font-normal text-2xl md:text-3xl mt-8 mb-4'>Track 2 - Project Leads</Text>
-  <Text className="text-base md:text-lg">We are seeking Project Leads with prior managerial or policy experience. Project leads serve as key liaisons between the project teams and government partners, facilitating communication and cooperation to ensure the alignment of project goals and government expectations. Leads will work closely with the government partners and the organizing team to provide support and direction to the team of Fellows. Past candidates have shown a strong ability to steer the project&apos;s direction and navigate ambiguity.</Text>
+  <Text className="text-base md:text-lg">A Project Lead directs each Paragon project. Project Leads serve as key liaisons between the Fellows and government partners, facilitating communication and cooperation to ensure the alignment of project goals and government expectations. Project Leads must balance taking care of all administrative responsibilities so their Fellows can focus on the substantive portion of the project and shaping the overall direction and vision of the project. Generally, Project Leads are graduate or PhD students, though undergraduates with extensive leadership or project management experience are also encouraged to apply.</Text>
   
 </Section>
 
 <Section id="process">
   <Subheading className='text-3xl md:text-5xl mb-4'>APPLICATION PROCESS</Subheading>
   <GrayDivider/>
-  <Text className="text-base md:text-lg">Following the initial application round, we select a group of finalists to interview in a group setting. At this stage, students will be organized into teams of 5-8 and tasked to complete a mock policy assignment over the course of one week. From there, we will select Fellows based on their demonstrated effort, engagement with the rest of the team, and ability to collaborate asynchronously. We will select Project Leads based on their leadership qualities, problem-solving ability, and effectiveness in organizing and managing projects.</Text>
-  <Text className="text-base md:text-lg mt-6">If you are only applying to a Fellow position, we do not expect any previous policy expertise and will not evaluate your fit based on the deliverable. Instead, we will focus on how you approach this assignment and work as a team. If you are applying to be a Project Lead, we will be particularly interested in how you navigate challenges and motivate team members to complete the project.</Text>
+  <Text className="text-base md:text-lg">Following the initial application round, we select a group of finalists to interview in a group setting. At this stage, applicants will be organized into teams of 7–8 and tasked to complete a mock policy assignment over the course of a work week. From there, we will select Fellows based on their demonstrated effort, engagement with the rest of the team, and ability to collaborate asynchronously. We will select Project Leads based on their leadership qualities, problem-solving ability, and effectiveness in organizing and managing projects.</Text>
+  <Text className="text-base md:text-lg mt-6">If you are only applying to a Fellow position, we do not expect any previous policy expertise and will not evaluate your fit based solely on the deliverable. Instead, we will focus on how you approach this assignment and work as a team. If you are applying to be a Project Lead, we will be particularly interested in how you navigate challenges and motivate team members to complete the project.</Text>
 </Section>
 
 <Section id="timeline">
   <Subheading className='text-3xl md:text-5xl mb-4'>TIMELINE</Subheading>
   <GrayDivider/>
-  <Text className="text-base md:text-lg mb-6">Below is the timeline for the Spring 2025 cohort.</Text>
+  <Text className="text-base md:text-lg mb-6">Below is the timeline for the Fall 2025 Cohort application cycle.</Text>
   <Timeline/>
 </Section>
 
@@ -149,47 +162,51 @@ export default function About() {
   <Subheading className='text-3xl md:text-5xl mb-4'>Important Dates</Subheading>
   <GrayDivider/>
   <Text className="text-base md:text-lg">
-    We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Fellowship runs from late January to early May, our Summer program runs from late May to early September, and the Fall Fellowship runs from early October to late December. Applications for each cohort will be expected to open 1-2 months in advance.
+    We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Cohort runs from late January to early May, the Summer Cohort runs from late May to early September, and the Fall Cohort runs from late September to late December. Applications for each cohort open roughly two months before each cohort&apos;s start date. Specific dates are revealed for each cohort once applications open.
   </Text>
   <Text className="text-base md:text-lg mt-6">
-    Applications are now open for the Summer 2025 cohort. The Summer 2025 Fellowship will run from <span className="font-semibold underline">May 29th to September 5th, 2025</span>.
+    Applications are now <span className="font-semibold underline">open for the 2025 Fall Cohort</span> and will close on September 5th at 11:59 PM EST. <span className="font-semibold underline">The 2025 Fall Cohort will run from September 26th to December 19th</span>.
   </Text>
   {/* <Text className="text-base md:text-lg mt-6">
     Apps for the Fall 2025 cohort will be expected to open at a later date. Join our <a href={NEWSLETTER_URL} className="underline">mailing list</a> to be notified when apps open.
   </Text> */}
 </Section>
-
+<Section id="student testimonials">
+  <Subheading className='text-3xl md:text-5xl mb-4'>Student Testimonials</Subheading>
+  <GrayDivider/>
+  <TestimonialsServer view="students" />
+</Section>
       <Section id="faq">
         <Subheading>FAQ</Subheading>
         <GrayDivider/>
         <div>
         <FAQuestion
           question = "What is the Fellowship timeline?"
-          answer = "We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Fellowship runs from late January to early May, our Summer program runs from late May to early September, and the Fall Fellowship runs from early October to late December. Applications for each cohort will be expected to open 1-2 months in advance."
+          answer = "We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Cohort runs from late January to early May, the Summer Cohort runs from late May to early September, and the Fall Cohort runs from late September to late December. Applications for each cohort open roughly two months before each cohort&apos;s start date."
           />
         <FAQuestion
           question = "Is there a stipend given to Fellows?"
-          answer = "Yes! Fellows in good standing will receive a $500 stipend after the cohort's midpoint. Paragon will coordinate the stipend payments."
+          answer = "Yes! All Fellows (including Project Leads) in good standing will receive a $500 stipend. Paragon will coordinate the stipend payments."
         />
         <FAQuestion
           question = "Can I apply to both the Fellow and Project Lead positions? What happens if I'm not accepted as a Project Lead?"
-          answer = "If you are not accepted as a Project Lead, you will still be considered as a Fellow! The Project Lead application is largely the same as the Fellow application, just with a few more questions."
+          answer = "All Project Lead candidates are considered both for the Fellow and Project Lead position. If you are not accepted as a Project Lead, you will still be considered for the Fellow position. The Project Lead application is largely the same as the Fellow application, just with a few more questions in the written application and an additional individual interview during the group interview stage."
         />
         <FAQuestion
           question = "What are some past project examples?"
-          answer = "Our past cohorts have worked on the following topics: generative AI policies for state employees, technology for foreign language access of government services, combating deepfakes of government officials, and combating manipulation of public feedback forms to the government. You can find more information about our projects on the Past Projects page."
+          answer = "You can find information about our previous projects on our <a href='/projects' target='_blank' style='color: darkgray; text-decoration: underline;'>Projects page</a>."
         />
         <FAQuestion
           question = "How long do the projects run?"
-          answer = "Projects run for about 3 months each. Fellows will also have the opportunity to remain in the Fellowship for a second cohort."
+          answer = "Projects run for about 3 months each."
         />
         <FAQuestion
           question = "How will Fellows be matched with government partners?"
-          answer = "Since many of our government partners are excited to work with local students and we are seeking to build a strong student community, we will prioritize matching Fellows with projects in their region."
+          answer = "Since many of our government partners are excited to work with local students and we are seeking to build a strong student community, we will prioritize matching Fellows with projects in their region. In addition, we will seek to match Fellows with projects that match their policy interests."
         />
         <FAQuestion
           question = "Will the Fellowship be remote?"
-          answer = "The Fellowship will be remote. However, Fellows may have the opportunity to present their work at policy events or attend in-person social gatherings throughout the Fellowship!"
+          answer = "Yes, the Fellowship will be remote. However, Fellows may have the opportunity to present their work at policy events or attend in-person social gatherings throughout the Fellowship!"
         />
         </div>
         <FAQuestion
@@ -198,18 +215,38 @@ export default function About() {
         />
         <FAQuestion
           question = "I am an international student. Can I still be a Fellow?"
-          answer = "All students who will reside in the United States during the Fellowship and have work authorization are eligible to apply. We will work with international students to attempt to provide them a stipend, though we cannot guarantee this depending on the type of visa you possess."
+          answer = "All students who will reside in the United States during the Fellowship and have work authorization are eligible to apply. We will work with international students to attempt to provide them a stipend, though we cannot guarantee this depending on the type of visa you possess. In their application, all international students must communicate what they would require from Paragon in order to be accepted and to receive a stipend if accepted into the program."
         />
+		<FAQuestion
+          question = "I am a high school student excited to enter the world of tech policy. Can I apply?"
+          answer = "Unfortunately, we do not accept high school applicants at this time. All Fellows must have, at minimum, started their first semester of a degree program by the time of the opening ceremony for the cohort they are applying to."
+        />
+		<FAQuestion
+          question = "Are admissions rolling?"
+          answer = "No, they are not. Feel free to take the necessary time to refine your application before submitting it."
+        />
+		<FAQuestion
+          question = "How are Fellows supported after the program?"
+          answer = "All Fellows are given the opportunity at the end of the program to apply to either return for an additional semester (either as a Fellow or Project Lead) or join our organizing team, where they gain valuable experience in running an organization. Regardless of whether Fellows apply to remain with Paragon or not, they join our alumni network where they continue to gain access to our guest speaker events, regional meet-ups, and our <a href='/students/mentorship' target='_blank' style='color: darkgray; text-decoration: underline;'>exclusive mentorship program</a>."
+        />
+		<FAQuestion
+			question = "Am I allowed to use generative AI to help develop my application?"
+			answer ="The use of generative AI tools in Fellowship applications is not expressly forbidden. We allow applicants to leverage generative AI as a collaborative tool while ensuring their authentic voice, original insights, and genuine passion remain at the forefront of their application. However, applicants must use these tools thoughtfully and strategically rather than as a substitute for original thinking and personalized expression. Poor utilization of generative AI (such as producing generic, formulaic, or contextually inappropriate responses) will result in penalties for each affected answer. Please note that our evaluators are researchers who are extremely well-versed in generative AI capabilities and trends in language and can readily distinguish between generative AI used as a helpful tool and generative AI used as a crutch. 
+			
+			<br/><br/>Applications are partially assessed on clarity, specificity, grammatical structure, genuineness, and passion. Superficial and/or careless generative AI usage will negatively impact your scores across these critical evaluation categories.  Applicants are permitted to use generative AI for tasks such as editing or refining arguments, but all generative AI usage must be explicitly disclosed in your application when asked, including details about which tool was used, where it was used, and for what specific purpose. Failure to disclose any generative AI assistance will result in application penalties, and in cases of significant undisclosed usage or academic dishonesty, automatic rejection from consideration."/>
         <FAQuestion
           question = "How can I learn more about the Fellowship?"
-          answer = "Paragon will be hosting two info sessions to give applicants the opportunity to learn more about our mission, understand what the executive team looks for in competitive applications, and hear from our current members on their experiences in the Fellowship. Furthermore, we will be holding office hours a couple of days before the application closes to give you the opportunity to ask last-minute questions. RSVP to an info session or our office hours using the button below."
+          answer = "During each application season, we host two info sessions in addition to a last minute office hours. These are the perfect place for you to come and ask any questions you may have. When applications are open, the links to these events will be on this webpage and in the application form itself. Furthermore, feel free to email us at <a href='mailto:hello@paragonfellowship.org' target='_blank' style='color: darkgray; text-decoration: underline;'>hello@paragonfellowship.org</a> for general inquiries and <a href='mailto:apply@paragonfellowship.org' target='_blank' style='color: darkgray; text-decoration: underline;'>apply@paragonfellowship.org</a> for application-specific questions."
         />
       </Section>
       <Section>
         <Subheading className='flex justify-center text-center'>What impact will you<br />make with Paragon?</Subheading>
         <div className='flex justify-center'>
-          <Button url={FA_APP_URL} inNewTab className='mt-4 justify-center'>Apply Now</Button>
+		{/*
+          <Button url={FELLOW_APP_URL} inNewTab className='mt-4 justify-center'>Apply Now</Button>
           <Button url={INFO_SESSION_URL} inNewTab className='mt-4 ml-5 justify-center'>RSVP for an Info Session</Button>
+		*/}
+		<Button url={"mailto:apply@paragonfellowship.org"} className='mt-4 justify-center'>Contact our Admissions Team</Button>
         </div>
 
       </Section>

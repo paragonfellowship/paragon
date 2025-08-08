@@ -1,0 +1,13 @@
+.map-container {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Or 4 / 3, or any ratio you prefer */
+  overflow: hidden; /* Hides anything that might spill out */
+  border-radius: 12px; /* Adds soft, rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for depth */
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none; /* Removes the default iframe border */
+}

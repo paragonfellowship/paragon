@@ -6,8 +6,8 @@ import Image from "next/image";
 //   description: string;
 // };
 //Timeline assets
-import summerTimelineDesktop from '@/assets/Desktop Timeline - Summer.svg';
-import summerTimelineMobile from '@/assets/Mobile Timeline - Summer.svg';
+import TimelineDesktop from '@/assets/Desktop Timeline - Fall.svg';
+import TimelineMobile from '@/assets/Mobile Timeline - Fall.svg';
 
 const timelineAlt = "Cohort events arranged in chronological order. Application phase dates: April 6th: Applications open. April 19th: Info Session 1. May 3rd: Info Session 2. MAy 7th: Office Hours. May 9th: Applications Close. MAy 16th: Group Interview Invitations. May 19th-23rd: Group Interview. May 25th: Final Notifications. Project Phase: May 29th: Opening Ceremony. May 31st-June 1st: Policy Bootcamp. Mid-July: Midpoint Presentation. September 5th: Closing ceremony"
 
@@ -16,7 +16,7 @@ export default function Timeline(/*{ events }: { events: TimelineEvent[] }*/) {
     <div className="w-full overflow-x-hidden">
       {/* Desktop Timeline */}
       <div className="hidden md:flex w-full">
-        <Image src={summerTimelineDesktop} alt={timelineAlt}/>
+        <Image src={TimelineDesktop} alt={timelineAlt}/>
         {/* Old code that dynamically rendered the timeline based on a child array of events. cool idea, but svgs are easier to get consistent
         Line connecting the events
         <div className="absolute transform -translate-y-8 w-full h-1 bg-gray-200 z-0"></div>
@@ -38,7 +38,7 @@ export default function Timeline(/*{ events }: { events: TimelineEvent[] }*/) {
 
       {/* Mobile Timeline */}
       <div className="md:hidden">
-      <Image src={summerTimelineMobile} alt={timelineAlt}/>
+      <Image src={TimelineMobile} alt={timelineAlt}/>
         {/* Vertical line
         <div className="absolute left-4 top-0 bottom-0 w-1 bg-gray-200"></div>
         
