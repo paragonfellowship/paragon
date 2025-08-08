@@ -11,6 +11,7 @@ import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
 import {FA_APP_URL , INFO_SESSION_URL} from '@/app/constants';
 
+
 const sections = [
   { id: "expectations", title: "PROJECT EXPECTATIONS" },
   { id: "eligibility", title: "ELIGIBILITY" },
@@ -20,33 +21,33 @@ const sections = [
   { id: "faq", title: "FAQ" },
 ];
 
-const events = [
-  {
-    date: "April 6th",
-    title: "Applications Open",
-    description: "",
-  },
-  {
-    date: "May 9th",
-    title: "Applications Close",
-    description: "",
-  },
-  {
-    date: "May 25th",
-    title: "Final Decisions Announced",
-    description: "",
-  },
-  {
-    date: "May 29th-June 1st",
-    title: "Opening Ceremony and Bootcamp",
-    description: "",
-  },
-  {
-    date: "September 5th",
-    title: "End of Cohort",
-    description: "",
-  },
-];
+// const events = [
+//   {
+//     date: "April 6th",
+//     title: "Applications Open",
+//     description: "",
+//   },
+//   {
+//     date: "May 9th",
+//     title: "Applications Close",
+//     description: "",
+//   },
+//   {
+//     date: "May 25th",
+//     title: "Final Decisions Announced",
+//     description: "",
+//   },
+//   {
+//     date: "May 29th-June 1st",
+//     title: "Opening Ceremony and Bootcamp",
+//     description: "",
+//   },
+//   {
+//     date: "September 5th",
+//     title: "End of Cohort",
+//     description: "",
+//   },
+// ];
 
 export default function About() {
   return (
@@ -141,7 +142,7 @@ export default function About() {
   <Subheading className='text-3xl md:text-5xl mb-4'>TIMELINE</Subheading>
   <GrayDivider/>
   <Text className="text-base md:text-lg mb-6">Below is the timeline for the Spring 2025 cohort.</Text>
-  <Timeline events={events} />
+  <Timeline/>
 </Section>
 
 <Section id="dates">

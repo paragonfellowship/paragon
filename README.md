@@ -5,3 +5,10 @@
 
 
 ### TECH DEBT: ON THIS DOC (https://docs.google.com/document/d/1tgA6LNNiWhx2jtxl4eNBdsRU4PpQgvlS8RE5AmGjbAg/edit?pli=1&tab=t.0)
+
+TODO:
+- fix projects page + add component
+- add mentorship page
+- remove airtable
+- refactor entire website and add real documentation
+- fix team page logos
