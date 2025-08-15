@@ -59,7 +59,7 @@ export default function HeroSection() {
                 url={NEWSLETTER_URL}
               >
                 <span className="block w-full text-center">
-                  Read Our Newsletter
+                  Subscribe To Our Newsletter
                 </span>
               </Button>
             </div>
