@@ -90,7 +90,8 @@ We recommend a phased approach to implement this system. The county should begin
             { name: 'Pranav Dulepet', role: '', school: 'University of Maryland' },
             { name: 'Priti Rangekar', role: '', school: 'Stanford University' },
             { name: 'Tony Wang', role: '', school: 'Stanford University' },
-			{ name: 'Atharva Nihalani', role: '', school: 'Brown University' }
+			{ name: 'Atharva Nihalani', role: '', school: 'Brown University' },
+			{ name: 'Abiha Kashif', role: '', school: 'University of Minnesota' }
           ].map((contributor, index) => (
             <div key={index} className='border border-gray-300 p-4 rounded-lg flex flex-col items-center justify-center'>
               <Text className='text-center font-semibold'>{contributor.name} {contributor.role}</Text>
