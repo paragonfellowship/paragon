@@ -35,7 +35,7 @@ export default function HeroSection() {
               url={FELLOW_APP_URL}
             >
               <span className="block w-full text-center">
-                Apply for Fall 2025
+                Apply Now
               </span>
             </Button>
             <Button
@@ -59,7 +59,7 @@ export default function HeroSection() {
                 url={NEWSLETTER_URL}
               >
                 <span className="block w-full text-center">
-                  Read Our Newsletter
+                  Subscribe To Our Newsletter
                 </span>
               </Button>
             </div>

@@ -9,14 +9,13 @@ import GrayDivider from '@/components/GrayDivider';
 import FAQuestion from '@/components/FAQuestion';
 import Timeline from '@/components/Timeline';
 import Navbar from '@/components/Navbar';
-import {FELLOW_APP_URL , CURRENTLY_APPLYING} from '@/app/constants';
+import {FELLOW_APP_URL , CURRENTLY_APPLYING, EC_INFO_SESSION_URL, WC_INFO_SESSION_URL, OFFICE_HOURS_URL} from '@/app/constants';
 import TestimonialsServer from '@/components/Testimonials';
 
 const sections = [
   { id: "overview", title: "OVERVIEW" },
   { id: "eligibility", title: "ELIGIBILITY" },
-  { id: "process", title: "APP PROCESS" },
-  { id: "timeline", title: "APPLICATION TIMELINE" },
+  { id: "process-and-timeline", title: "APPLICATION PROCESS & TIMELINE" },
   { id: "dates", title: "IMPORTANT DATES" },
   { id: "student testimonials", title: "STUDENT TESTIMONIALS" },
   { id: "faq", title: "FAQ" },
@@ -63,10 +62,15 @@ export default function About() {
               <span className="font-semibold"> university students and new grads</span> to work on real policy issues at the
               <span className="font-semibold"> state and local level.</span>
             </Text>
-
-            <Text className="fade-in text-xl md:text-3xl mt-16 md:mt-[5%] mb-12 md:mb-5 text-center md:text-right md:ml-auto md:mr-20">
-              Applications for the 2025 Fall Cohort are now open. <br />
-            </Text>
+{CURRENTLY_APPLYING ? (
+  <Text className="fade-in text-xl md:text-3xl mt-16 md:mt-[5%] mb-12 md:mb-5 text-center md:text-right md:ml-auto md:mr-20">
+    Applications are now open for the next cohort. <br />
+  </Text>
+) : (
+  <Text className="fade-in text-xl md:text-3xl mt-16 md:mt-[5%] mb-12 md:mb-5 text-center md:text-right md:ml-auto md:mr-20">
+    Applications are currently closed. <br />
+  </Text>
+)}
 
             <div className="flex justify-center md:justify-end md:pr-[6%] mb-20 md:mb-0">
 			{CURRENTLY_APPLYING && (
@@ -78,17 +82,7 @@ export default function About() {
               >
                 apply now
               </Button>
-			)}{/*
-			{CURRENTLY_APPLYING && (
-              <Button 
-                className="fade-in ml-5"
-                style="secondary" 
-                inNewTab 
-                url={INFO_SESSION_URL}
-              >
-                Sign up for an info session
-              </Button>
-			)}*/}
+			)}{}
 
             </div>
           </div>
@@ -110,15 +104,23 @@ export default function About() {
       <Section id="Overview">
   <Subheading className='text-3xl md:text-5xl mb-4'>Overview</Subheading>
   <GrayDivider />
-  <Text className="text-base md:text-lg">The Paragon Policy Fellowship connects students and recent graduates with opportunities in the science and tech policy space. Fellows typically spend 5–10 hours a week researching and writing a policy brief on key issues for their state or local governments. Our Fellows work on pressing tech policy issues such as broadband infrastructure, digital accessibility, and AI procurement. The Fellowship is meant to create a community of future tech policy leaders, and our project-based experiences are designed to introduce students to the tech policy landscape and grow their network and impact through local community engagement. In addition, all current and former Fellows are eligible to apply to our <a href="/students/mentorship" style={{color: 'blue', textDecoration: 'underline'}}>exclusive mentorship program</a>. <span className="font-semibold">Fellows (including Project Leads) in good standing at the end of the cohort will be compensated with a $500 stipend.</span>
-  
-  <br/><br/>Paragon will be hosting two info sessions to give applicants the opportunity to learn more about our mission, understand what the organizing team looks for in competitive applications, and hear from our current members on their experiences in the Fellowship. Furthermore, we will be holding office hours a couple of days before the application closes to give you the opportunity to ask last-minute questions. You can RSVP using the links below:</Text>
-  <ul className='list-disc list-inside text-base space-y-2 ml-4'>
-    <li><a href="https://calendar.app.google/ft7ZrPdkYqjPwFhK8" style={{color: 'blue', textDecoration: 'underline'}}>East Coast Info Session: August 16th 8:00-9:00 PM EST (5:00-6:00 PM PST)</a></li>
-  <li><a href="https://calendar.app.google/Lg1Apy6q9Wxp2Kvz7" style={{color: 'blue', textDecoration: 'underline'}}>West Coast Info Session: August 30th 8:00-9:00 PM PST (11:00 PM-12:00 AM EST)</a></li>
-  <li><a href="https://calendar.app.google/o74k1CxomxSVySBLA" style={{color: 'blue', textDecoration: 'underline'}}>Office Hours: September 3rd 5:00-6:00 PM PST (8:00-9:00 PM EST)</a></li>
-  </ul>
-  
+  <Text className="text-base md:text-lg">
+    The Paragon Policy Fellowship connects students and recent graduates with opportunities in the science and tech policy space. Fellows typically spend 5–10 hours a week researching and writing a policy brief on key issues for their state or local governments. Our Fellows work on pressing tech policy issues such as broadband infrastructure, digital accessibility, and AI procurement. The Fellowship is meant to create a community of future tech policy leaders, and our project-based experiences are designed to introduce students to the tech policy landscape and grow their network and impact through local community engagement. In addition, all current and former Fellows are eligible to apply to our <a href="/students/mentorship" style={{color: 'blue', textDecoration: 'underline'}}>exclusive mentorship program</a>. <span className="font-semibold">Fellows (including Project Leads) in good standing at the end of the cohort will be compensated with a $500 stipend.</span>
+    
+    {/* --- The conditional block is now INSIDE the Text component --- */}
+    {CURRENTLY_APPLYING && (
+      <>
+        <p className="mt-4">
+          Paragon will be hosting two info sessions to give applicants the opportunity to learn more about our mission, understand what the organizing team looks for in competitive applications, and hear from our current members on their experiences in the Fellowship. Furthermore, we will be holding office hours a couple of days before the application closes to give you the opportunity to ask last-minute questions. You can RSVP using the links below:
+        </p>
+        <ul className='list-disc list-inside text-base space-y-2 ml-4'>
+          <li><a href={EC_INFO_SESSION_URL} style={{color: 'blue', textDecoration: 'underline'}}>East Coast Info Session: August 16th 8:00-9:00 PM EST (5:00-6:00 PM PST)</a></li>
+          <li><a href={WC_INFO_SESSION_URL} style={{color: 'blue', textDecoration: 'underline'}}>West Coast Info Session: August 30th 8:00-9:00 PM PST (11:00 PM-12:00 AM EST)</a></li>
+          <li><a href={OFFICE_HOURS_URL} style={{color: 'blue', textDecoration: 'underline'}}>Office Hours: September 3rd 5:00-6:00 PM PST (8:00-9:00 PM EST)</a></li>
+        </ul>
+      </>
+    )}
+  </Text>
 </Section>
 
 <Section id="eligibility">
@@ -144,19 +146,24 @@ export default function About() {
   
 </Section>
 
-<Section id="process">
-  <Subheading className='text-3xl md:text-5xl mb-4'>APPLICATION PROCESS</Subheading>
+<Section id="process-and-timeline">
+  <Subheading className='text-3xl md:text-5xl mb-4'>APPLICATION PROCESS & TIMELINE</Subheading>
   <GrayDivider/>
   <Text className="text-base md:text-lg">Following the initial application round, we select a group of finalists to interview in a group setting. At this stage, applicants will be organized into teams of 7–8 and tasked to complete a mock policy assignment over the course of a work week. From there, we will select Fellows based on their demonstrated effort, engagement with the rest of the team, and ability to collaborate asynchronously. We will select Project Leads based on their leadership qualities, problem-solving ability, and effectiveness in organizing and managing projects.</Text>
   <Text className="text-base md:text-lg mt-6">If you are only applying to a Fellow position, we do not expect any previous policy expertise and will not evaluate your fit based solely on the deliverable. Instead, we will focus on how you approach this assignment and work as a team. If you are applying to be a Project Lead, we will be particularly interested in how you navigate challenges and motivate team members to complete the project.</Text>
+
+  {/* --- CORRECTED CODE --- */}
+  {CURRENTLY_APPLYING && (
+    <>
+      <Text className="text-base md:text-lg mt-6 mb-6">
+        Below is the timeline for the Fall 2025 Cohort application cycle.
+      </Text>
+      <Timeline/>
+    </>
+  )}
+
 </Section>
 
-<Section id="timeline">
-  <Subheading className='text-3xl md:text-5xl mb-4'>TIMELINE</Subheading>
-  <GrayDivider/>
-  <Text className="text-base md:text-lg mb-6">Below is the timeline for the Fall 2025 Cohort application cycle.</Text>
-  <Timeline/>
-</Section>
 
 <Section id="dates">
   <Subheading className='text-3xl md:text-5xl mb-4'>Important Dates</Subheading>
@@ -164,12 +171,13 @@ export default function About() {
   <Text className="text-base md:text-lg">
     We offer semester-based tech policy projects 3 times a year: Spring, Summer, and Fall. The Spring Cohort runs from late January to early May, the Summer Cohort runs from late May to early September, and the Fall Cohort runs from late September to late December. Applications for each cohort open roughly two months before each cohort&apos;s start date. Specific dates are revealed for each cohort once applications open.
   </Text>
-  <Text className="text-base md:text-lg mt-6">
+  {CURRENTLY_APPLYING && (
+    <>
+      <Text className="text-base md:text-lg mt-6">
     Applications are now <span className="font-semibold underline">open for the 2025 Fall Cohort</span> and will close on September 5th at 11:59 PM EST. <span className="font-semibold underline">The 2025 Fall Cohort will run from September 26th to December 19th</span>.
   </Text>
-  {/* <Text className="text-base md:text-lg mt-6">
-    Apps for the Fall 2025 cohort will be expected to open at a later date. Join our <a href={NEWSLETTER_URL} className="underline">mailing list</a> to be notified when apps open.
-  </Text> */}
+    </>
+  )}
 </Section>
 <Section id="student testimonials">
   <Subheading className='text-3xl md:text-5xl mb-4'>Student Testimonials</Subheading>
