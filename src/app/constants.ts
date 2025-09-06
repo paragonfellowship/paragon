@@ -9,11 +9,15 @@ export const NEWSLETTER_URL = "https://paragonpolicyfellowship.substack.com/"
 export const FELLOW_APP_URL = "/apply"
 //export const INFO_SESSION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeZ_J0hEEbbIJomUj0dKmTVDUxpGzzXingl0GYLkQvUav4FmQ/viewform?usp=sharing&ouid=112773205827349133372"
 export const MENTOR_APP_URL = "https://forms.gle/765xgqcBfxAjpEKR7"
-export const MENTEE_APP_URL = "https://forms.gle/765xgqcBfxAjpEKR7"
+export const MENTEE_APP_URL = "https://example.com"
+export const EC_INFO_SESSION_URL = "https://example.com"
+export const WC_INFO_SESSION_URL = "https://example.com"
+export const OFFICE_HOURS_URL = "https://example.com"
+
 
 export const REVALIDATE_NUM = 60*60*168 //1 week
 
-export const CURRENTLY_APPLYING=true
+export const CURRENTLY_APPLYING=false
 
 
 export type MenuOption = {
